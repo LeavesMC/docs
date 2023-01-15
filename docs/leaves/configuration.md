@@ -151,6 +151,42 @@ This is an bug of old version of minecraft
 - **default**: `true`
 - **description**: Just fix a bug.
 
+#### remove.tick-guard-lambda
+
+- **default**: `true`
+- **description**: Remove lambda to improve performance.
+
+#### remove.get-nearby-players-streams
+
+- **default**: `true`
+- **description**: Remove streams to improve performance.
+
+#### remove.range-check-streams-and-iterators
+
+- **default**: `true`
+- **description**: Remove streams and iterators to improve performance.
+
+#### remove.inventory-contains-iterators
+
+- **default**: `true`
+- **description**: Remove iterators to improve performance.
+
+#### optimize-chunk-ticking
+
+- **default**: `true`
+- **description**: Depending on configuration for things that tick in a chunk, this is a
+ 5-10% improvement.
+	- Lightning: Each chunk now keeps an int of how many ticks until the
+	 lightning should strike. This int is a random number from 0 to 100000 * 2,
+	 the multiplication is required to keep the probability the same.
+	- Ice and snow: We just generate a single random number 0-16 and increment
+	 it, while checking if it's 0 for the current chunk.
+	 
+#### cache-climb-check
+
+- **default**: `true`
+- **description**: Cache climbing check for activation.
+
 ### protocol
 
 #### carpet-alternative-block-placement

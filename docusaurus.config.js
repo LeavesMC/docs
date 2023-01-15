@@ -36,7 +36,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
 		  routeBasePath: '/',
           editUrl:
-            'https://github.com/LeavesMC/docs/blob/main/',
+            'https://github.com/LeavesMC/docs/blob/master/',
 		  editLocalizedFiles: true
         },
         blog: false,
@@ -63,10 +63,15 @@ const config = {
             position: 'left',
             label: 'Leaves',
           },
-		  { type: 'localeDropdown', position: 'right' },		  
+		  { type: 'localeDropdown', position: 'right' },
+		  {
+			href: "https://discord.gg/5hgtU72w33",
+			className: "header-icon-link header-discord-link",
+			position: "right",
+		  },
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/LeavesMC',
+			className: "header-icon-link header-github-link",
             position: 'right',
           },
         ],
@@ -88,7 +93,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord,gg/5hgtU72w33',
               }
             ],
           },
