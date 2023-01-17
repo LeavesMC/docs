@@ -187,6 +187,134 @@ This is an bug of old version of minecraft
 - **default**: `true`
 - **description**: Cache climbing check for activation.
 
+#### improve-fluid-direction-caching
+
+- **default**: `true`
+- **description**: This is a replacement for the cache used in FluidTypeFlowing.
+ This accomplishes something similar, however has a few different requirements
+ put into place to make this more optimize.
+
+#### enable-suffocation-optimization
+
+- **default**: `true`
+- **description**: Only check for suffocation once per 20 ticks. The maximum
+no-damage ticks value means that this change should be extremely
+difficult, if not impossible, for players to notice.
+
+#### strip-raytracing-for-entity
+
+- **default**: `true`
+- **description**: Old rayTrace method is very wasteful in both allocations,
+ and in logic. As well, since the fluid collision option is set to NONE, the 
+ entire fluid collision system is completely unneeded, yet used anyways.
+
+#### skip-clone-loot-parameters
+
+- **default**: `true`
+- **description**: Small improvement in CPU, much larger improvement in allocations.
+ As a new loot context is created every time a player moves (along with a lot
+ of other times) the constant cloning churns out a lot of useless objects.
+
+#### check-spooky-season-once-an-hour
+
+- **default**: `true`
+- **description**: Only check for spooky season once an hour.
+
+#### reduce-chuck-load-and-lookup
+
+- **default**: `true`
+- **description**: Reduce chunk loading & lookups.
+
+#### reduce-entity-fluid-lookup
+
+- **default**: `true`
+- **description**: Reduce entity fluid lookups if no fluids, fluid lookups is wasteful.
+
+#### inactive-goal-selector-disable
+
+- **default**: `false`
+- **description**: Throttles the AI goal selector in entity inactive ticks. This can
+ improve performance by a few percent, but has minor gameplay implications.
+
+#### biome-temperatures-use-aging-cache
+
+- **default**: `true`
+- **description**: Use aging cache for biome temperatures, This will bring some
+ performance improvements.
+
+#### simpler-vanilla-shapeless-recipes
+
+- **default**: `true`
+- **description**: Paper added a fancy sorting comparison due to Bukkit recipes
+ breaking the vanilla one, however this is far more advanced than what you need
+ for all the vanilla recipes.
+
+#### skip-poi-find-in-vehicle
+
+- **default**: `true`
+- **description**: Skip POI finding if stuck in vehicle, optimize the performance
+ of villagers' trading hall.
+
+#### optimize-entity-coordinate-key
+
+- **default**: `true`
+- **description**: When executing getCoordinateKey for entities (a hotpath), the
+ JVM is required to repeatedly cast doubles to longs. The performance impact of
+ this depends on the CPU architecture, but generally switching between
+ FPU and ALU incurs a significant performance hit. The casted/rounded
+ data is already available in the blockPosition struct, so we use that
+ instead of re-doing the casting.
+
+#### use-more-thread-unsafe-random
+
+- **default**: `true`
+- **description**: Use more thread unsafe random, it is fast.
+
+#### dont-send-useless-entity-packets
+
+- **default**: `true`
+- **description**: Only send entity packet if it useful.
+
+#### reduce-entity-allocations
+
+- **default**: `true`
+- **description**: Reduce entity allocations.
+
+#### async-mob-spawning
+
+- **default**: `false`
+- **description**: It aims to reduce the main-thread impact of mob spawning by
+offloading as much work as possible to other threads. It is possible for
+inconsistencies to come up, but when they happen they never interfere
+with the server's operation (they don't produce errors), and side
+effects are limited to more or less mobs being spawned in any particular
+tick.
+
+:::caution
+
+It is possible to disable this optimization if it is not required or if
+it interferes with any plugins. On servers with thousands of entities,
+this can result in performance gains of up to 15%, which is significant
+and, in my opinion, worth the low risk of minor mob-spawning-related
+inconsistencies.
+
+:::
+
+#### async-pathfinding
+
+- **default**: `false`
+- **description**: 
+
+#### async-entity-tracker
+
+- **default**: `false`
+- **description**: 
+
+#### entity-target-find-optimization
+
+- **default**: `true`
+- **description**: 
+
 ### protocol
 
 #### carpet-alternative-block-placement
