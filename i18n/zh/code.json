@@ -235,7 +235,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Close navigation bar",
+    "message": "收起侧边栏",
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
@@ -243,7 +243,7 @@
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Toggle navigation bar",
+    "message": "切换侧边栏",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.docs.sidebar.expandButtonTitle": {
@@ -263,18 +263,18 @@
     "description": "The title of the tag list page"
   },
   "Fork of Paper aimed at repairing broken vanilla properties.": {
-    "message": "Fork of Paper aimed at repairing broken vanilla properties."
+    "message": "致力于修复被破坏原版特性的Paper分支"
   },
   "LeavesMC Documentation": {
-    "message": "LeavesMC Documentation",
+    "message": "LeavesMC 文档",
     "description": "Home page title"
   },
   "Documentation for all projects under the LeavesMC umbrella": {
-    "message": "Documentation for all projects under the LeavesMC umbrella",
+    "message": "包含LeavesMC所有项目的文档",
     "description": "Home page subtitle"
   },
   "Home": {
-    "message": "Home",
+    "message": "主页", 
     "description": "Home page head tag"
   }
 }

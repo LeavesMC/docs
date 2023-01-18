@@ -1,10 +1,10 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "下一页",
     "description": "The label for version current"
   },
   "sidebar.leaves.category.Getting Started": {
-    "message": "Getting Started",
+    "message": "开始使用",
     "description": "The label for category Getting Started in sidebar leaves"
   }
 }

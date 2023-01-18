@@ -302,18 +302,31 @@ inconsistencies.
 
 #### async-pathfinding
 
+:::danger
+
+This function is temporarily unavailable.
+
+:::
+
 - **default**: `false`
-- **description**: 
+- **description**: Asynchronous entity pathfinding.
 
 #### async-entity-tracker
 
+:::danger
+
+This function is temporarily unavailable.
+
+:::
+
 - **default**: `false`
-- **description**: 
+- **description**: Asynchronous entity tracker.
 
 #### entity-target-find-optimization
 
 - **default**: `true`
-- **description**: 
+- **description**: Return to the target earlier when the target cannot be found,
+ ignoring some redundant calculations.
 
 ### protocol
 

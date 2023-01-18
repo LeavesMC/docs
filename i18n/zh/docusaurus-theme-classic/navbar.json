@@ -6,9 +6,5 @@
   "item.label.Leaves": {
     "message": "Leaves",
     "description": "Navbar item with label Leaves"
-  },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
   }
 }

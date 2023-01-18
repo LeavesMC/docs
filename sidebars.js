@@ -23,7 +23,8 @@ const sidebars = {
             slug: "leaves/cat/getting-started",
 		},
         items: [
-			"leaves/getting-started/getting-started"
+			"leaves/getting-started/getting-started",
+			"leaves/getting-started/migration"
         ],
 	},
 	"leaves/configuration"
