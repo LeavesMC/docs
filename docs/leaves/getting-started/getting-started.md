@@ -19,7 +19,7 @@ Like Paper, migrating from Vanilla is easy.
 
 Leaves will handle all conversion for you automatically. No additional consideration is required.
 
-### From Craftbukkit or Spigot
+### From Craftbukkit, Spigot or Paper
 
 Leaves is a drop in replacement for both CraftBukkit and Spigot or Paper, you don't need to make any changes.
 
@@ -64,7 +64,7 @@ documentation before continuing.
 
 Updating Leaves is simple.
 
-1. Download a new JAR from [github releases](https://github.com/LeavesMC/Leaves/releases)
+1. Download a new JAR from [github releases](https://github.com/LeavesMC/Leaves/releases).
 2. Stop your server. It is not recommended and may cause issues to replace your Leaves JAR while the
    server is running.
 3. Replace your old Leaves JAR file with the new one.

@@ -6,7 +6,7 @@ keywords:
   - leaves.yml settings
 ---
 
-# Leaves Configuration
+# Leaves配置
 
 Leaves configuration is in `leaves.yml`.
 
@@ -33,7 +33,7 @@ server function itself.
 - **description**: Whether to let the server delete the signature in the player
  chat. This option also controls whether the server will send the server security
  information to NoChatReports Mod.
- 
+
 #### disable-method-profiler
 
 - **default**: `true`
@@ -60,13 +60,13 @@ server function itself.
 - **default**: `true`
 - **description**: Whether the shears can rotate part of the redstone element
  by right clicking.
- 
+
 #### player-can-edit-sign
 
 - **default**: `true`
-- **description**: Whether the player can edit the text in the sign by 
+- **description**: Whether the player can edit the text in the sign by
  right-clicking it empty-handed.
- 
+
 #### budding-amethyst-can-push-by-piston
 
 - **default**: `false`
@@ -86,7 +86,7 @@ server function itself.
 #### fakeplayer.limit
 
 - **default**: `10`
-- **description**: The maximum number of existing bots 
+- **description**: The maximum number of existing bots
  (bot counts into the total number of players).
 
 #### stackable-shulker-boxes
@@ -95,7 +95,7 @@ server function itself.
 - **description**: Whether to allow the stacking of empty shulker boxes, the value must
  be a string, which can be false/true or a number not exceeding 64. When the value is
  true, the stacking number of shulker boxes is 2, otherwise it is the corresponding number.
- 
+
 :::note
 
 Empty shulker boxes will be stacked on the ground, and can also be merged manually in the player's
@@ -120,7 +120,7 @@ canceled when the hopper is running.
 - **default**: `-1.0`
 - **description**: The probability that the shulker kills the phantom and drops the elytra. If the value
  is negative, it is disabled.
- 
+
 #### shears-in-dispenser-can-zero-amount
 
 - **default**: `false`
@@ -137,7 +137,7 @@ This is an bug of old version of minecraft
 - **default**: `false`
 - **description**: Change all triangle distribution in Minecraft randomizers into uniform distribution. With
  that edge cases are more likely to happen.
- 
+
 #### instant-block-updater-reintroduced
 
 - **default**: `false`
@@ -203,7 +203,7 @@ If you find that there are other configurations that need to be overwritten, ple
 	 the multiplication is required to keep the probability the same.
 	- Ice and snow: We just generate a single random number 0-16 and increment
 	 it, while checking if it's 0 for the current chunk.
-	 
+
 #### cache-climb-check
 
 - **default**: `true`
@@ -227,7 +227,7 @@ difficult, if not impossible, for players to notice.
 
 - **default**: `true`
 - **description**: Old rayTrace method is very wasteful in both allocations,
- and in logic. As well, since the fluid collision option is set to NONE, the 
+ and in logic. As well, since the fluid collision option is set to NONE, the
  entire fluid collision system is completely unneeded, yet used anyways.
 
 #### skip-clone-loot-parameters
@@ -374,13 +374,13 @@ This function is temporarily unavailable.
 	- `OPS_AND_SELF`: bot and player's own data can be sync, and the op can sync
 	 the data of all players.
 	- `EVERYONE`: Everyone's data can be sync.
-	
+
 #### bbor-protocol
 
 - **default**: `false`
 - **description**: Whether the server supports the
  [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded).
- 
+
 #### jade-protocol
 
 - **default**: `false`

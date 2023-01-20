@@ -16,7 +16,7 @@ Before you begin, please ensure you have a full backup of your server.
 :::tip
 
 If you encounter any issues, do not hesitate to reach out for support on 
-[our Discord server](https://discord.gg/5hgtU72w33) (`#leaves-help` channel).
+[our Discord server](https://discord.gg/5hgtU72w33) (`#support` channel).
 
 :::
 
