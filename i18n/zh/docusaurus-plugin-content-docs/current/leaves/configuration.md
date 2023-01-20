@@ -8,11 +8,11 @@ keywords:
 
 # Leaves配置
 
-Leaves configuration is in `leaves.yml`.
+所有Leaves配置都存于 `leaves.yml` 文件内。
 
 :::tip
 
-Some options may override the upstream configuration (such as paper.yml).
+部分配置可能覆盖上游服务端的配置（比如paper.yml）。
 
 :::
 
@@ -20,8 +20,7 @@ Some options may override the upstream configuration (such as paper.yml).
 
 :::tip
 
-Configuration under this option will affect all worlds on a server, or the
-server function itself.
+此节点下的配置会作用于所有世界或更改服务器本身的功能。
 
 :::
 
@@ -29,126 +28,110 @@ server function itself.
 
 #### no-chat-sign
 
-- **default**: `true`
-- **description**: Whether to let the server delete the signature in the player
- chat. This option also controls whether the server will send the server security
- information to NoChatReports Mod.
+- **默认值**: `true`
+- **简介**: 是否删除玩家聊天内的签名来保护玩家聊天。如果开启此选项，服务器也会向安装了NoChatReport的玩家发送此服务器安全的信息。
 
 #### disable-method-profiler
 
-- **default**: `true`
-- **description**: Whether the server disables the method profiler. Disabling it will
- have a partial impact on testing and a small amount of performance improvement, but
- will not affect the use of the production environment.
+- **默认值**: `true`
+- **简介**: 是否禁用方法检查器。这可能会对测试造成一定影响，但不影响生产环境的使用并可以获得一定的性能提升。
 
 ### modify
 
 #### snowball-and-egg-can-knockback-player
 
-- **default**: `true`
-- **description**: Can snowballs and eggs knockback players.
+- **默认值**: `true`
+- **简介**: 雪球和鸡蛋是否可以击退玩家。
 
 #### player-operation-limiter
 
-- **default**: `false`
-- **description**: Each gt player can place 2 blocks and insta mine 1 block.
- Only one of these two operations can be done per gt
-(for prevent automatic bedrock breaking mod)
+- **默认值**: `false`
+- **简介**: 每gt每个玩家只能秒破1个或放置2个方块，这可以对抗自动破基岩mod并且不会影响正常的破基岩。
 
 #### redstone-shears-wrench
 
-- **default**: `true`
-- **description**: Whether the shears can rotate part of the redstone element
- by right clicking.
+- **默认值**: `true`
+- **简介**: 剪刀是否可以右键来旋转部分红石元件。（如果你需要旋转更多红石元件，请发issue提出）
 
 #### player-can-edit-sign
 
-- **default**: `true`
-- **description**: Whether the player can edit the text in the sign by
- right-clicking it empty-handed.
+- **默认值**: `true`
+- **简介**: 玩家是否可以空手右键告示牌来修改其中的内容。
 
 #### budding-amethyst-can-push-by-piston
 
-- **default**: `false`
-- **description**: Whether the budding amethyst can be **pushed** by the piston.
+- **默认值**: `false`
+- **简介**: 活塞是否可以**推**动紫水晶母岩。
 
 #### fakeplayer.enable
 
-- **default**: `true`
-- **description**: Whether to enable bot and `/bot` command.
+- **默认值**: `true`
+- **简介**: 是否启用假人功能和 `/bot` 指令。
 
 #### fakeplayer.unable-fakeplayer-names
 
-- **default**:
-	- player-name`
-- **description**: Name prohibited for bot.
+- **默认值**:
+	- player-name
+- **简介**: 假人禁止使用的名称列表。
 
 #### fakeplayer.limit
 
-- **default**: `10`
-- **description**: The maximum number of existing bots
- (bot counts into the total number of players).
+- **默认值**: `10`
+- **简介**: 假人的数量限制。（假人同时会计算到玩家数量中）
 
 #### stackable-shulker-boxes
 
-- **default**: `'false'`
-- **description**: Whether to allow the stacking of empty shulker boxes, the value must
- be a string, which can be false/true or a number not exceeding 64. When the value is
- true, the stacking number of shulker boxes is 2, otherwise it is the corresponding number.
+- **默认值**: `'false'`
+- **简介**: 是否启用空潜影盒堆叠功能。此项值必须为一个字符串并为 `true` / `false` 或一个64及以下的整数。
+ 如值为一个整数，则为空潜影盒的可堆叠数量，如为 `true` 则视为 `2`，如为 `false` 则视为1。
 
 :::note
 
-Empty shulker boxes will be stacked on the ground, and can also be merged manually in the player's
-backpack using mod. However, in order not to damage the machine, the stack of shulker boxes will be
-canceled when the hopper is running.
+空潜影盒会在地上和被玩家捡起时自动堆叠，如果玩家安装了支持的mod则也可以在背包内手动堆叠。
+但为了不破坏机器，空潜影盒不会在漏斗内被堆叠，并且堆叠的空潜影盒会在漏斗运行时被分开。
 
 :::
 
 #### spectator-dont-get-advancement
 
-- **default**: `false`
-- **description**: Whether players can't get advancements in spectator mode.
+- **默认值**: `false`
+- **简介**: 观察者模式的玩家是否不会获得进度。
 
 #### stick-change-armorstand-arm-status
 
-- **default**: `true`
-- **description**: Can the player change the display state of the arm of the armorstand by using stick
- on the armorstand in the shift state.
+- **默认值**: `true`
+- **简介**: 玩家是否在下蹲时可以使用木棍右键盔甲架来改变盔甲架手臂的显示状态。
 
 #### renewable-elytra
 
-- **default**: `-1.0`
-- **description**: The probability that the shulker kills the phantom and drops the elytra. If the value
- is negative, it is disabled.
+- **默认值**: `-1.0`
+- **简介**: 当潜影贝杀死幻翼时掉落破损的鞘翅的概率，如值为负则禁用此功能。
 
 #### shears-in-dispenser-can-zero-amount
 
-- **default**: `false`
-- **description**: Whether the durability of shears can be negative and not damaged when used by the dispenser.
+- **默认值**: `false`
+- **简介**: 剪刀在发射器内是否可以被使用到负耐久并且不会损坏。
 
 :::note
 
-This is an bug of old version of minecraft
+这是一个老版本Minecraft的bug。
 
 :::
 
 #### flatten-triangular-distribution
 
-- **default**: `false`
-- **description**: Change all triangle distribution in Minecraft randomizers into uniform distribution. With
- that edge cases are more likely to happen.
+- **默认值**: `false`
+- **简介**: 是否将Minecraft中的随机数发生器从三角分布改为平均分布，这会使得边缘事件更可能发生。
 
 #### instant-block-updater-reintroduced
 
-- **default**: `false`
-- **description**: Reintroduce the instant block update behavior from versions before 1.19, with that update
- suppression is doable in 1.19+ again.
+- **默认值**: `false`
+- **简介**: 是否重新引入1.19前的瞬时方块更新机制，这会让更新抑制重新可用。
 
 #### mc-technical-survival-mode
 
-- **default**: `true`
-- **description**: Whether to enter MC technical surviva mode. In this mode, the following configurations will
- be forcibly overwritten.
+- **默认值**: `true`
+- **简介**: 是否启用生电模式。此模式下，以下配置会被强制覆盖来修复各种被影响的生电机制。
     - paper-global.yml unsupported-settings.allow-headless-pistons: true
     - paper-global.yml allow-permanent-block-break-exploits: true
     - paper-global.yml allow-piston-duplication: true
@@ -162,7 +145,7 @@ This is an bug of old version of minecraft
 
 :::note
 
-If you find that there are other configurations that need to be overwritten, please submit an issue.
+如果你发现了更多需要被覆盖的配置，欢迎提出issue。
 
 :::
 
@@ -170,155 +153,128 @@ If you find that there are other configurations that need to be overwritten, ple
 
 #### fix.fix-paper-6045
 
-- **default**: `true`
-- **description**: Just fix a bug.
+- **默认值**: `true`
+- **简介**: 修复了一个Paper的bug。
 
 #### remove.tick-guard-lambda
 
-- **default**: `true`
-- **description**: Remove lambda to improve performance.
+- **默认值**: `true`
+- **简介**: 删除lambda表达式来提高性能。
 
 #### remove.get-nearby-players-streams
 
-- **default**: `true`
-- **description**: Remove streams to improve performance.
+- **默认值**: `true`
+- **简介**: 删除流来提高性能。
 
 #### remove.range-check-streams-and-iterators
 
-- **default**: `true`
-- **description**: Remove streams and iterators to improve performance.
+- **默认值**: `true`
+- **简介**: 删除流和选择器来提高性能。
 
 #### remove.inventory-contains-iterators
 
-- **default**: `true`
-- **description**: Remove iterators to improve performance.
+- **默认值**: `true`
+- **简介**: 删除选择器来提高性能。
 
 #### optimize-chunk-ticking
 
-- **default**: `true`
-- **description**: Depending on configuration for things that tick in a chunk, this is a
- 5-10% improvement.
-	- Lightning: Each chunk now keeps an int of how many ticks until the
-	 lightning should strike. This int is a random number from 0 to 100000 * 2,
-	 the multiplication is required to keep the probability the same.
-	- Ice and snow: We just generate a single random number 0-16 and increment
-	 it, while checking if it's 0 for the current chunk.
+- **默认值**: `true`
+- **简介**: 优化了以下的区块刻，可以提高5%到10%的性能。
+	- 闪电
+	- 冰和雪的生成
 
 #### cache-climb-check
 
-- **default**: `true`
-- **description**: Cache climbing check for activation.
+- **默认值**: `true`
+- **简介**: 将缓存攀爬检查结果。
 
 #### improve-fluid-direction-caching
 
-- **default**: `true`
-- **description**: This is a replacement for the cache used in FluidTypeFlowing.
- This accomplishes something similar, however has a few different requirements
- put into place to make this more optimize.
+- **默认值**: `true`
+- **简介**: 重新实现了FluidTypeFlowing的缓存系统，并使其性能更高。
 
 #### enable-suffocation-optimization
 
-- **default**: `true`
-- **description**: Only check for suffocation once per 20 ticks. The maximum
-no-damage ticks value means that this change should be extremely
-difficult, if not impossible, for players to notice.
+- **默认值**: `true`
+- **简介**: 每隔20tick才检查一次窒息，玩家很难（但不是不可能）注意到这一变化。
 
 #### strip-raytracing-for-entity
 
-- **default**: `true`
-- **description**: Old rayTrace method is very wasteful in both allocations,
- and in logic. As well, since the fluid collision option is set to NONE, the
- entire fluid collision system is completely unneeded, yet used anyways.
+- **默认值**: `true`
+- **简介**: 旧rayTrace方法十分浪费性能的在不需要流体碰撞计算的时候依然计算，我们修复了这个问题。
 
 #### skip-clone-loot-parameters
 
-- **default**: `true`
-- **description**: Small improvement in CPU, much larger improvement in allocations.
- As a new loot context is created every time a player moves (along with a lot
- of other times) the constant cloning churns out a lot of useless objects.
+- **默认值**: `true`
+- **简介**: 关闭了在很多玩家操作时都会创建一个新战利品上下文的分配浪费问题。
 
 #### check-spooky-season-once-an-hour
 
-- **default**: `true`
-- **description**: Only check for spooky season once an hour.
+- **默认值**: `true`
+- **简介**: 每小时检测一次万圣节（检测那么频繁干什么）。
 
 #### reduce-chuck-load-and-lookup
 
-- **default**: `true`
-- **description**: Reduce chunk loading & lookups.
+- **默认值**: `true`
+- **简介**: 减少了没有必要的区块查找和加载。
 
 #### reduce-entity-fluid-lookup
 
-- **default**: `true`
-- **description**: Reduce entity fluid lookups if no fluids, fluid lookups is wasteful.
+- **默认值**: `true`
+- **简介**: 如果实体附近根本没有流体，则禁用低效率的流体查找。
 
 #### inactive-goal-selector-disable
 
-- **default**: `false`
-- **description**: Throttles the AI goal selector in entity inactive ticks. This can
- improve performance by a few percent, but has minor gameplay implications.
+- **默认值**: `false`
+- **简介**: 在非活动的实体上限制实体目标查找器的运行。这可以提高一些性能并对游戏影响较小。
 
 #### biome-temperatures-use-aging-cache
 
-- **default**: `true`
-- **description**: Use aging cache for biome temperatures, This will bring some
- performance improvements.
+- **默认值**: `true`
+- **简介**: 使用了更好的生态群落温度缓存。
 
 #### simpler-vanilla-shapeless-recipes
 
-- **default**: `true`
-- **description**: Paper added a fancy sorting comparison due to Bukkit recipes
- breaking the vanilla one, however this is far more advanced than what you need
- for all the vanilla recipes.
+- **默认值**: `true`
+- **简介**: 替换掉过于复杂的无序配方系统。
 
 #### skip-poi-find-in-vehicle
 
-- **default**: `true`
-- **description**: Skip POI finding if stuck in vehicle, optimize the performance
- of villagers' trading hall.
+- **默认值**: `true`
+- **简介**: 跳过在载具内村民的poi计算，这对密集的村民交易大厅的优化十分明显。
 
 #### optimize-entity-coordinate-key
 
-- **default**: `true`
-- **description**: When executing getCoordinateKey for entities (a hotpath), the
- JVM is required to repeatedly cast doubles to longs. The performance impact of
- this depends on the CPU architecture, but generally switching between
- FPU and ALU incurs a significant performance hit. The casted/rounded
- data is already available in the blockPosition struct, so we use that
- instead of re-doing the casting.
+- **默认值**: `true`
+- **简介**: 当为实体（热路径）执行getCoordinateKey时，JVM需要重复将double转换为long。
+ 这对性能的影响取决于CPU架构，但通常在FPU和ALU之间切换会导致严重的性能损失。
+ blockPosition结构中已提供了已转换/舍入的数据，因此我们使用该数据而不是重新进行转换。
 
 #### use-more-thread-unsafe-random
 
-- **default**: `true`
-- **description**: Use more thread unsafe random, it is fast.
+- **默认值**: `true`
+- **简介**: 使用更多线程不安全的随机数发生器，它们虽然不安全，但是运行快。
 
 #### dont-send-useless-entity-packets
 
-- **default**: `true`
-- **description**: Only send entity packet if it useful.
+- **默认值**: `true`
+- **简介**: 减少根本没用的一些实体包的发送。（这可能会破坏一些利用这些无用实体包的mod）
 
 #### reduce-entity-allocations
 
-- **default**: `true`
-- **description**: Reduce entity allocations.
+- **默认值**: `true`
+- **简介**: 减少对实体的分配。
 
 #### async-mob-spawning
 
-- **default**: `false`
-- **description**: It aims to reduce the main-thread impact of mob spawning by
-offloading as much work as possible to other threads. It is possible for
-inconsistencies to come up, but when they happen they never interfere
-with the server's operation (they don't produce errors), and side
-effects are limited to more or less mobs being spawned in any particular
-tick.
+- **默认值**: `false`
+- **简介**: 它的目的是通过将尽可能多的工作卸载到其他线程来减少实体生成对主线程的影响。
+可能会出现生成不一致的情况，但当问题发生时并不会出现错误，只会造成在任何特定的时间点产生的实体或多或少的问题。
 
 :::caution
 
-It is possible to disable this optimization if it is not required or if
-it interferes with any plugins. On servers with thousands of entities,
-this can result in performance gains of up to 15%, which is significant
-and, in my opinion, worth the low risk of minor mob-spawning-related
-inconsistencies.
+如果不想干扰任何生成机制，则可禁用此功能。但是此功能在拥有上千实体的服务器上可以带来足足15%的性能提升。
+在我看来，为了这些性能提升而承担较小的实体生成不一致的风险是非常值得的。
 
 :::
 
@@ -326,63 +282,63 @@ inconsistencies.
 
 :::danger
 
-This function is temporarily unavailable.
+此功能暂时不可用。
 
 :::
 
-- **default**: `false`
-- **description**: Asynchronous entity pathfinding.
+- **默认值**: `false`
+- **简介**: 异步化的实体寻路。
 
 #### async-entity-tracker
 
 :::danger
 
-This function is temporarily unavailable.
+此功能暂时不可用。
 
 :::
 
-- **default**: `false`
-- **description**: Asynchronous entity tracker.
+- **默认值**: `false`
+- **简介**: 异步化的实体追踪。
 
 #### entity-target-find-optimization
 
-- **default**: `true`
-- **description**: Return to the target earlier when the target cannot be found,
- ignoring some redundant calculations.
+- **默认值**: `true`
+- **简介**: 在实体寻找目标时，如果找不到目标则直接停止寻找，可以减少一些冗余运算。
 
 ### protocol
 
 #### carpet-alternative-block-placement
 
-- **default**: `false`
-- **description**: Whether the server supports the carpet alternative block placement.
+- **默认值**: `false`
+- **简介**: 是否支持carpet的精确放置协议。
+
+:::tip
+
+如果想在投影模组的轻松放置功能上使用精确放置协议，你需要手动调整投影模组使用的协议类型为 `V2` 而不能使用 `Auto` 模式。
+
+:::
 
 #### pca-sync-protocol
 
-- **default**: `false`
-- **description**: Whether the server supports the
- [pca sync protocol](https://github.com/plusls/plusls-carpet-addition).
+- **默认值**: `false`
+- **简介**: 是否支持 [pca数据同步协议](https://github.com/plusls/plusls-carpet-addition)。
 
 #### pca-sync-player-entity
 
-- **default**: `OPS`
-- **description**: List of player data that the server can sync by pca.
-	- `NOBODY`: All player data cannot be sync.
-	- `BOT`: The data of the bot can be sync.
-	- `OPS`: The data of the bot can be sync, and the op can sync the data of
-	 all players.
-	- `OPS_AND_SELF`: bot and player's own data can be sync, and the op can sync
-	 the data of all players.
-	- `EVERYONE`: Everyone's data can be sync.
+- **默认值**: `OPS`
+- **简介**: 控制pca同步协议可以同步的玩家。
+    - `NOBODY`: 任何玩家数据都不能被同步。
+    - `BOT`: 假人的数据可以被同步。
+    - `OPS`: 假人的数据可以被同步，OP可以同步所有玩家的数据。
+    - `OPS_AND_SELF`: 假人的数据可以被同步，OP可以同步所有玩家的数据，同时玩家可以同步自己的数据。
+    - `EVERYONE`: 所有玩家数据都可以被同步。
 
 #### bbor-protocol
 
-- **default**: `false`
-- **description**: Whether the server supports the
- [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded).
+- **默认值**: `false`
+- **简介**: 是否开启对 [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded) 的支持。
 
 #### jade-protocol
 
-- **default**: `false`
-- **description**: Whether the server supports the
- [Jade](https://github.com/Snownee/Jade) to display more information.
+- **默认值**: `false`
+- **简介**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后Jade可以显示更多信息。
