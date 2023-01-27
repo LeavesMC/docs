@@ -140,12 +140,22 @@ keywords:
     - paper-world.yml entities.spawning.per-player-mob-spawns: false
     - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
     - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
-    - spigot.yml world-settings.entity-activation-range.misc: 0
     - spigot.yml world-settings.max-tnt-per-tick: 2000
 
 :::note
 
 如果你发现了更多需要被覆盖的配置，欢迎提出issue。
+
+:::
+
+#### return-nether-portal-fix
+
+- **默认值**: `false`
+- **简介**: 可以修复玩家从地狱返回主世界时串门的问题。
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
 
 :::
 
@@ -342,3 +352,14 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后Jade可以显示更多信息。
+
+#### appleskin-protocol
+
+- **默认值**: `false`
+- **简介**: 是否开启对 [AppleSkin](https://github.com/squeek502/AppleSkin) 的支持来显示饥饿值和饱和度。
+
+#### xaero-map-protocol
+ 
+- **默认值**: `false`
+- **简介**: 是否开启对 [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) 和
+ [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持来自动在服务器间切换地图。

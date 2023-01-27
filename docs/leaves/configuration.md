@@ -157,12 +157,23 @@ This is an bug of old version of minecraft
     - paper-world.yml entities.spawning.per-player-mob-spawns: false
     - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
     - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
-    - spigot.yml world-settings.entity-activation-range.misc: 0
     - spigot.yml world-settings.max-tnt-per-tick: 2000
 
 :::note
 
 If you find that there are other configurations that need to be overwritten, please submit an issue.
+
+:::
+
+#### return-nether-portal-fix
+
+- **default**: `false`
+- **description**: It can fix the problem that players incorrectly transfer to other portals when returning 
+from nether to the overworld.
+
+:::caution
+
+This function is experimental and may not work properly.
 
 :::
 
@@ -386,3 +397,17 @@ This function is temporarily unavailable.
 - **default**: `false`
 - **description**: Whether the server supports the
  [Jade](https://github.com/Snownee/Jade) to display more information.
+
+#### appleskin-protocol
+
+- **default**: `false`
+- **description**: Whether the server supports the
+ [AppleSkin](https://github.com/squeek502/AppleSkin) to display saturation and exhaustion.
+
+#### xaero-map-protocol
+ 
+- **default**: `false`
+- **description**: Whether the server supports the
+ [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) and
+ [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) to
+ auto change map.
