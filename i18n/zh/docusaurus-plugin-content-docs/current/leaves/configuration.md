@@ -36,6 +36,23 @@ keywords:
 - **默认值**: `true`
 - **简介**: 是否禁用方法检查器。这可能会对测试造成一定影响，但不影响生产环境的使用并可以获得一定的性能提升。
 
+#### extra-yggdrasil-service.enable
+
+- **默认值**: `false`
+- **简介**: 是否启用非官方的 [外置登录](https://github.com/yushijinhun/authlib-injector) 支持。
+ 
+:::caution
+
+这是一个测试功能且为非官方实现，使用此功能可能会导致未知的错误。
+
+:::
+ 
+#### extra-yggdrasil-service.urls
+
+- **默认值**: 
+	- 'https://url.with.authlib-injector-yggdrasil'
+- **简介**: 外置登录服务器的连接，链接最后应不加 `/` 。
+
 ### modify
 
 #### snowball-and-egg-can-knockback-player

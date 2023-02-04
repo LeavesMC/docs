@@ -27,7 +27,8 @@ const sidebars = {
 			"leaves/getting-started/migration"
         ],
 	},
-	"leaves/configuration"
+	"leaves/configuration",
+	"leaves/fakeplayer"
   ],
 };
 

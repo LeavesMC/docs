@@ -41,6 +41,24 @@ server function itself.
  have a partial impact on testing and a small amount of performance improvement, but
  will not affect the use of the production environment.
 
+#### extra-yggdrasil-service.enable
+
+- **default**: `false`
+- **description**: Whether to enable support for
+ [unofficial authentication servers](https://github.com/yushijinhun/authlib-injector).
+ 
+:::caution
+
+This is a test function and is unofficial. Using this feature may cause unknown problems with your server.
+
+:::
+ 
+#### extra-yggdrasil-service.urls
+
+- **default**: 
+	- 'https://url.with.authlib-injector-yggdrasil'
+- **description**: urls with authlib-injector yggdrasil server.
+
 ### modify
 
 #### snowball-and-egg-can-knockback-player
