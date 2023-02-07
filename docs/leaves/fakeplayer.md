@@ -65,7 +65,7 @@ You can also use the command `/bot remove <Bot Name>` to kill a specified fakepl
 ## Actions
 
 Action is an important component of a fakeplayer, which allows the fakeplayer to do more work.
-Up to now, the fakeplayer has a total of 11 actions. However, each fakeplayer can only perform 
+Up to now, the fakeplayer has a total of 12 actions. However, each fakeplayer can only perform 
 one action at the same time. Any change to the fakeplayer action will cause the fakeplayer to 
 lose the data of the old action.
 
@@ -178,3 +178,9 @@ The behavior of the fakeplayer trying to use a block with GUI is undefined.
 The behavior of the fakeplayer trying to use a entity with GUI is undefined.
 
 :::
+
+### Fish Action
+
+- **name**: `fish`
+- **args**: `[TickDelay]` `[DoNumber]`
+- **description**: The fakeplayer will try auto fish.

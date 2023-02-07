@@ -150,11 +150,12 @@ keywords:
 - **默认值**: `true`
 - **简介**: 是否启用生电模式。此模式下，以下配置会被强制覆盖来修复各种被影响的生电机制。
     - paper-global.yml unsupported-settings.allow-headless-pistons: true
+	- paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
     - paper-global.yml allow-permanent-block-break-exploits: true
     - paper-global.yml allow-piston-duplication: true
     - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
+	- paper-global.yml packet-limiter.overrides: Empty
     - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
-    - paper-world.yml entities.spawning.per-player-mob-spawns: false
     - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
     - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
     - spigot.yml world-settings.max-tnt-per-tick: 2000
