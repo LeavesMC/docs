@@ -107,6 +107,24 @@ This is a test function and is unofficial. Using this feature may cause unknown 
 - **description**: The maximum number of existing bots 
  (bot counts into the total number of players).
 
+#### fakeplayer.always-send-data
+
+- **default**: `true`
+- **description**: Whether to send fakeplayer data to players in the same world, regardless of
+ distance limit.
+ 
+#### fakeplayer.resident-fakeplayer
+
+- **default**: `false`
+- **description**: Whether to save fakeplayer when shutting down the server and automatically create
+ the fakeplayer at the next startup.
+ 
+:::caution
+
+This is an experimental function, and the actions of the fakeplayer will not be saved temporarily.
+
+:::
+
 #### stackable-shulker-boxes
 
 - **default**: `'false'`
@@ -195,6 +213,12 @@ from nether to the overworld.
 This function is experimental and may not work properly.
 
 :::
+
+#### use-vanilla-random
+
+- **default**: `false`
+- **description**: Use the vanilla entity random number, which may lose some performance but will make RNG 
+ manipulation available.
 
 ### performance
 
