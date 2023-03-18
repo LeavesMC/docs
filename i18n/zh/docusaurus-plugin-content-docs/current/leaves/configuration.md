@@ -112,6 +112,11 @@ keywords:
 
 :::
 
+#### fakeplayer.open-fakeplayer-inventory
+
+- **默认值**: `false`
+- **简介**: 是否可以空手右键假人来打开假人背包。
+
 #### stackable-shulker-boxes
 
 - **默认值**: `'false'`
@@ -197,6 +202,11 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 是否使用原版的随机数，这可能会丢失一些性能，但会让RNG控制可以在服务器内使用。
+
+#### fix-update-suppression-crash
+
+- **默认值**: `true`
+- **简介**: 是否修复更新抑制造成的崩溃。
 
 ### performance
 

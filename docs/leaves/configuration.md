@@ -125,6 +125,11 @@ This is an experimental function, and the actions of the fakeplayer will not be 
 
 :::
 
+#### fakeplayer.open-fakeplayer-inventory
+
+- **default**: `false`
+- **description**: Whether can right click by empty hand to open the fakeplayer inventory.
+
 #### stackable-shulker-boxes
 
 - **default**: `'false'`
@@ -219,6 +224,11 @@ This function is experimental and may not work properly.
 - **default**: `false`
 - **description**: Use the vanilla entity random number, which may lose some performance but will make RNG 
  manipulation available.
+
+#### fix-update-suppression-crash
+
+- **default**: `true`
+- **description**: Fix crash by update suppression.
 
 ### performance
 
