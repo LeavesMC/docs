@@ -230,6 +230,11 @@ This function is experimental and may not work properly.
 - **default**: `true`
 - **description**: Fix crash by update suppression.
 
+#### bedrock-break-list
+
+- **default**: `false`
+- **description**: A bedrock break list like [this](https://gitee.com/harvey-husky/YH-BBL).
+
 ### performance
 
 #### fix.fix-paper-6045

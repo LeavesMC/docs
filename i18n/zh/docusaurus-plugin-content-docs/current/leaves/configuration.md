@@ -208,6 +208,11 @@ keywords:
 - **默认值**: `true`
 - **简介**: 是否修复更新抑制造成的崩溃。
 
+#### bedrock-break-list
+
+- **默认值**: `false`
+- **简介**: 是否启用破基岩榜，此功能的行为和此 [mod](https://gitee.com/harvey-husky/YH-BBL) 一致。
+
 ### performance
 
 #### fix.fix-paper-6045
