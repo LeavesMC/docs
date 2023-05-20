@@ -373,6 +373,12 @@ difficult, if not impossible, for players to notice.
 
 #### async-mob-spawning
 
+:::danger
+
+This function is temporarily unavailable.
+
+:::
+
 - **default**: `false`
 - **description**: It aims to reduce the main-thread impact of mob spawning by
 offloading as much work as possible to other threads. It is possible for
