@@ -117,6 +117,11 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否可以空手右键假人来打开假人背包。
 
+#### fakeplayer.skip-sleep-check
+
+- **默认值**: `false`
+- **简介**: 是否让假人不计入睡眠计数。
+
 #### stackable-shulker-boxes
 
 - **默认值**: `'false'`
@@ -212,6 +217,11 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 是否启用破基岩榜，此功能的行为和此 [mod](https://gitee.com/harvey-husky/YH-BBL) 一致。
+
+#### disable-distance-check-for-use-item
+
+- **默认值**: `false`
+- **简介**: 是否禁用对方块使用物品的距离检测，如果你无法破基岩，开启此选项可能有一定帮助。
 
 ### performance
 
@@ -423,3 +433,18 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否开启对 [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) 和
  [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持来自动在服务器间切换地图。
+
+#### syncmatica.enable
+
+- **默认值**: `false`
+- **简介**: 是否开启对 [Syncmatica](https://github.com/End-Tech/syncmatica) 的支持来共享原理图。
+ 
+#### syncmatica.quota
+
+- **默认值**: `false`
+- **简介**: 是否限制玩家可上传原理图的最大大小。
+
+#### syncmatica.quota-limit
+
+- **默认值**: `40000000`
+- **简介**: 玩家可上传原理图的最大大小，单位为byte。

@@ -130,6 +130,11 @@ This is an experimental function, and the actions of the fakeplayer will not be 
 - **default**: `false`
 - **description**: Whether can right click by empty hand to open the fakeplayer inventory.
 
+#### fakeplayer.skip-sleep-check
+
+- **default**: `false`
+- **description**: Whether fakeplayer can skip sleep check.
+
 #### stackable-shulker-boxes
 
 - **default**: `'false'`
@@ -234,6 +239,11 @@ This function is experimental and may not work properly.
 
 - **default**: `false`
 - **description**: A bedrock break list like [this](https://gitee.com/harvey-husky/YH-BBL).
+
+#### disable-distance-check-for-use-item
+
+- **default**: `false`
+- **description**: Disable distance check for UseItemOnPacket.
 
 ### performance
 
@@ -475,3 +485,19 @@ This function is temporarily unavailable.
  [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) and
  [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) to
  auto change map.
+
+#### syncmatica.enable
+
+- **default**: `false`
+- **description**: Whether the server supports the
+ [Syncmatica](https://github.com/End-Tech/syncmatica).
+ 
+#### syncmatica.quota
+
+- **default**: `false`
+- **description**: Whether check the max size of the schematic that player can upload.
+
+#### syncmatica.quota-limit
+
+- **default**: `40000000`
+- **description**: The size of the schematic diagram that players can upload, in bytes.
