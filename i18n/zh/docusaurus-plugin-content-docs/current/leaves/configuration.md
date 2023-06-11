@@ -179,7 +179,7 @@ keywords:
 #### shared-villager-discounts
 
 - **默认值**: `false`
-- **简介**: TODO 村民之间是否共享折扣。
+- **简介**: 玩家是否共享在同一个村民的折扣。
 
 #### bedrock-break-list
 
