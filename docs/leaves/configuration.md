@@ -196,11 +196,11 @@ This is an bug of old version of minecraft
 - **description**: Whether to enter MC technical surviva mode. In this mode, the following configurations will
  be forcibly overwritten.
     - paper-global.yml unsupported-settings.allow-headless-pistons: true
-	- paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
+    - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
     - paper-global.yml allow-permanent-block-break-exploits: true
     - paper-global.yml allow-piston-duplication: true
     - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
-	- paper-global.yml packet-limiter.overrides: Empty
+    - paper-global.yml packet-limiter.overrides: Empty
     - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
     - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
     - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
