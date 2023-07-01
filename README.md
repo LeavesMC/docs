@@ -1,5 +1,7 @@
 # LeavesMC Docs
 
+***Maintenance Required***
+
 This is the repository for all project documentation under the LeavesMC umbrella.
 Content in this repository is published to [docs.leavesmc.top](https://docs.leavesmc.top) for viewing.
 
