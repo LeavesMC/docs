@@ -228,6 +228,89 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否让假人不计入睡眠计数。
 
+#### redstone-wire-dont-connect-if-on-trapdoor
+
+- **默认值**: `false`
+- **简介**: 是否让红石粉不再连接到活板门上，这可以恢复1.20前的简易更新抑制。
+
+#### disable-check-out-of-order-command
+
+- **默认值**: `false`
+- **简介**: 是否禁用聊天信息顺序检查，这可以修复使用Velocity作为上游代理时粘贴原理图失败的问题。
+
+#### despawn-enderman-with-block
+
+- **默认值**: `false`
+- **简介**: 是否让手中有方块的末影人会被刷新，这可以消除服务器里一堆刷不掉的末影人。
+
+#### creative-no-clip
+
+- **默认值**: `false`
+- **简介**: 是否让玩家在创造飞行时没有碰撞箱。
+
+:::note
+
+此功能需要启用leaves-carpet-support并且需要玩家安装carpet才可正常使用。
+
+:::
+
+#### mending-compatibility-infinity
+
+- **默认值**: `false`
+- **简介**: 使得经验修补和无限可以重叠。
+
+#### shave-snow-layers
+
+- **默认值**: `true`
+- **简介**: 使得雪片可以被铲子一层层铲。
+
+#### ignore-lc
+
+- **默认值**: `false`
+- **简介**: 使生物生成无视lc值进行。
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
+
+:::
+
+#### elytra-aeronautics.no-chunk-load
+
+- **默认值**: `false`
+- **简介**: 使玩家在一定高度和一定速度时鞘翅飞行不加载区块也不进行世界生成，以此减少服务器负荷。
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
+
+:::
+
+#### elytra-aeronautics.no-chunk-height
+
+- **默认值**: `500.0`
+- **简介**: 玩家进入不加载区块状态时飞行需要的高度。
+
+#### elytra-aeronautics.no-chunk-speed
+
+- **默认值**: `-1.0`
+- **简介**: 玩家进入不加载区块状态时飞行需要的速度。
+
+#### elytra-aeronautics.message
+
+- **默认值**: `true`
+- **简介**: 是否在玩家进入和退出不加载区块状态时进行提示。
+
+#### elytra-aeronautics.message-start
+
+- **默认值**: `Flight enter cruise mode`
+- **简介**: 玩家进入不加载区块状态时的提升。
+
+#### elytra-aeronautics.message-end
+
+- **默认值**: `Flight exit cruise mode`
+- **简介**: 玩家退出不加载区块状态时的提升。。
+
 ### performance
 
 #### cache-climb-check
@@ -385,12 +468,23 @@ keywords:
 
 :::
 
+#### optimized-dragon-respawn
+
+- **默认值**: `false`
+- **简介**: 是否对龙战进行优化。
+
+:::caution
+
+此功能和原版表现不完全一致。
+
+:::
+
 ### protocol
 
 #### carpet-alternative-block-placement
 
 - **默认值**: `false`
-- **简介**: 是否支持carpet的精确放置协议。
+- **简介**: 是否是否支持carpet的精确放置协议。
 
 :::tip
 
@@ -448,3 +542,8 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否开启对 [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) 和
  [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持来自动在服务器间切换地图。
+
+#### leaves-carpet-support
+
+ - **默认值**: `false`
+ - **简介**: 是否启用由Leaves实现的carpet协议，这可以让客户端认为自己进入了一个带有carpet的服务器并提供一些客户端支持。
