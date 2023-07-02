@@ -8,11 +8,11 @@ keywords:
 
 # Leaves Configuration
 
-Leaves configuration is in `leaves.yml`.
+Any configuration for the "Leaves" server is in file leaves.yml.
 
 :::tip
 
-Some options may override the upstream configuration (such as paper.yml).
+Some configurations may override the upstream configuration (such as paper.yml).
 
 :::
 
@@ -20,36 +20,20 @@ Some options may override the upstream configuration (such as paper.yml).
 
 :::tip
 
-Configuration under this option will affect all worlds on a server, or the
-server function itself.
+Configurations under this section will affect all worlds on a server, or the server function itself.
 
 :::
 
 ### misc
 
-#### no-chat-sign
-
-- **default**: `true`
-- **description**: Whether to let the server delete the signature in the player
- chat. This option also controls whether the server will send the server security
- information to NoChatReports Mod.
- 
-#### disable-method-profiler
-
-- **default**: `true`
-- **description**: Whether the server disables the method profiler. Disabling it will
- have a partial impact on testing and a small amount of performance improvement, but
- will not affect the use of the production environment.
-
 #### extra-yggdrasil-service.enable
 
 - **default**: `false`
-- **description**: Whether to enable support for
- [unofficial authentication servers](https://github.com/yushijinhun/authlib-injector).
+- **description**: If "true", enable support for [unofficial authentication servers](https://github.com/yushijinhun/authlib-injector).
  
 :::caution
 
-This is a test function and is unofficial. Using this feature may cause unknown problems with your server.
+This is a test function and is unofficial. Enable this configuration may cause unknown problems with your server.
 
 :::
  
@@ -57,144 +41,40 @@ This is a test function and is unofficial. Using this feature may cause unknown 
 
 - **default**: 
 	- 'https://url.with.authlib-injector-yggdrasil'
-- **description**: urls with authlib-injector yggdrasil server.
+- **description**: The url of the unofficial authentication server (authlib-injector yggdrasil server), the url should not add "/" at the end. Will take effect when configuration "extra-yggdrasil-service.enable" is "true".
+
+#### no-chat-sign
+
+- **default**: `true`
+- **description**: If "true", disable the signature in player chat. If this option is turned on, the server will also send a message that the server is safe to players who have installed ["No Chat Reports"](https://github.com/Aizistral-Studios/No-Chat-Reports) Mod.
+
+#### disable-method-profiler
+
+- **default**: `true`
+- **description**: If "true", disable the method profiler on server. Disabling it will have a partial impact on testing and a small amount of performance improvement, but will not affect the use of the production environment.
 
 ### modify
+
+#### return-nether-portal-fix
+
+- **default**: `false`
+- **description**: If "true", fix the problem that players incorrectly transfer to other portals when returning from nether to the overworld.
+
+:::caution
+
+This configuration is a experimental function and may not work properly.
+
+:::
 
 #### snowball-and-egg-can-knockback-player
 
 - **default**: `true`
-- **description**: Can snowballs and eggs knockback players.
-
-#### player-operation-limiter
-
-- **default**: `false`
-- **description**: Each gt player can place 2 blocks and insta mine 1 block.
- Only one of these two operations can be done per gt
-(for prevent automatic bedrock breaking mod)
-
-#### redstone-shears-wrench
-
-- **default**: `true`
-- **description**: Whether the shears can rotate part of the redstone element
- by right clicking.
- 
-#### player-can-edit-sign
-
-- **default**: `true`
-- **description**: Whether the player can edit the text in the sign by 
- right-clicking it empty-handed.
- 
-#### budding-amethyst-can-push-by-piston
-
-- **default**: `false`
-- **description**: Whether the budding amethyst can be **pushed** by the piston.
-
-#### fakeplayer.enable
-
-- **default**: `true`
-- **description**: Whether to enable bot and `/bot` command.
-
-#### fakeplayer.unable-fakeplayer-names
-
-- **default**:
-	- player-name`
-- **description**: Name prohibited for bot.
-
-#### fakeplayer.limit
-
-- **default**: `10`
-- **description**: The maximum number of existing bots 
- (bot counts into the total number of players).
-
-#### fakeplayer.always-send-data
-
-- **default**: `true`
-- **description**: Whether to send fakeplayer data to players in the same world, regardless of
- distance limit.
- 
-#### fakeplayer.resident-fakeplayer
-
-- **default**: `false`
-- **description**: Whether to save fakeplayer when shutting down the server and automatically create
- the fakeplayer at the next startup.
- 
-:::caution
-
-This is an experimental function, and the actions of the fakeplayer will not be saved temporarily.
-
-:::
-
-#### fakeplayer.open-fakeplayer-inventory
-
-- **default**: `false`
-- **description**: Whether can right click by empty hand to open the fakeplayer inventory.
-
-#### fakeplayer.skip-sleep-check
-
-- **default**: `false`
-- **description**: Whether fakeplayer can skip sleep check.
-
-#### stackable-shulker-boxes
-
-- **default**: `'false'`
-- **description**: Whether to allow the stacking of empty shulker boxes, the value must
- be a string, which can be false/true or a number not exceeding 64. When the value is
- true, the stacking number of shulker boxes is 2, otherwise it is the corresponding number.
- 
-:::note
-
-Empty shulker boxes will be stacked on the ground, and can also be merged manually in the player's
-backpack using mod. However, in order not to damage the machine, the stack of shulker boxes will be
-canceled when the hopper is running.
-
-:::
-
-#### spectator-dont-get-advancement
-
-- **default**: `false`
-- **description**: Whether players can't get advancements in spectator mode.
-
-#### stick-change-armorstand-arm-status
-
-- **default**: `true`
-- **description**: Can the player change the display state of the arm of the armorstand by using stick
- on the armorstand in the shift state.
-
-#### renewable-elytra
-
-- **default**: `-1.0`
-- **description**: The probability that the shulker kills the phantom and drops the elytra. If the value
- is negative, it is disabled.
- 
-#### shears-in-dispenser-can-zero-amount
-
-- **default**: `false`
-- **description**: Whether the durability of shears can be negative and not damaged when used by the dispenser.
-
-:::note
-
-This is an bug of old version of minecraft
-
-:::
-
-#### flatten-triangular-distribution
-
-- **default**: `false`
-- **description**: Change all triangle distribution in Minecraft randomizers into uniform distribution. With
- that edge cases are more likely to happen.
- 
-#### instant-block-updater-reintroduced
-
-- **default**: `false`
-- **description**: Reintroduce the instant block update behavior from versions before 1.19, with that update
- suppression is doable in 1.19+ again.
+- **description**: If "true", snowballs and eggs can knock players back.
 
 #### mc-technical-survival-mode
 
 - **default**: `true`
-- **description**: Whether to enter MC technical surviva mode. In this mode, the following configurations will
- be forcibly overwritten.
+- **description**: Whether to enable the "Minecraft technical survival mode". In this mode, the following configurations will be forcibly overwritten to "restore" to its vanilla form.
     - paper-global.yml unsupported-settings.allow-headless-pistons: true
     - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
     - paper-global.yml allow-permanent-block-break-exploits: true
@@ -212,292 +92,457 @@ If you find that there are other configurations that need to be overwritten, ple
 
 :::
 
-#### return-nether-portal-fix
+#### instant-block-updater-reintroduced
 
 - **default**: `false`
-- **description**: It can fix the problem that players incorrectly transfer to other portals when returning 
-from nether to the overworld.
+- **description**: If "true", reintroduce the instant block update behavior from versions before 1.19, with that "update suppression" is doable in 1.19+ again.
 
-:::caution
+#### flatten-triangular-distribution
 
-This function is experimental and may not work properly.
+- **default**: `false`
+- **description**: If "true", change triangle distributional randomizers in Minecraft into uniform distributional randomizers, with that edge cases are more likely to happen.
 
-:::
+#### redstone-shears-wrench
+
+- **default**: `true`
+- **description**:  If "true", shears can rotate part of the redstone component by right clicking. (If you need to rotate more redstone components, please submit an issue)
+
+#### player-operation-limiter
+
+- **default**: `false`
+- **description**: If "true", each player can only instantly break 1 or place 2 blocks per game tick, which works against automatic bedrock breaker mods (such as: [Fabric-Bedrock-Miner
+](https://github.com/LXYan2333/Fabric-Bedrock-Miner)) and doesn't affect normal bedrock breakings.
 
 #### use-vanilla-random
 
 - **default**: `false`
-- **description**: Use the vanilla entity random number, which may lose some performance but will make RNG 
- manipulation available.
+- **description**: If "true", use vanilla random number generator; it may lose some performance, but will allow RNG manipulation to be used within the server.
+
+#### no-feather-falling-trample
+
+- **default**: `false`
+- **description**: If "true", jump in boots on farmland while boot is enchanted with "Feather Falling" will not decay the farmland
+
+#### renewable-elytra
+
+- **default**: `-1.0`
+- **description**: The value is the probability that a phantom will drop a broken elytra when a shulker bullet killed him, if value is negative (value < 0, sgn(value) = -1), disable this configuration.
+
+#### shears-in-dispenser-can-zero-amount
+
+- **default**: `false`
+- **description**: If "true", the shears can be used to negative durability in the dispenser without breaking.
+
+:::note
+
+This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
+
+:::
 
 #### fix-update-suppression-crash
 
 - **default**: `true`
-- **description**: Fix crash by update suppression.
-
-#### bedrock-break-list
-
-- **default**: `false`
-- **description**: A bedrock break list like [this](https://gitee.com/harvey-husky/YH-BBL).
+- **description**: If "true", fix crashes by update suppression.
 
 #### disable-distance-check-for-use-item
 
 - **default**: `false`
-- **description**: Disable distance check for UseItemOnPacket.
+- **description**: If "true", disable distance check for UseItemOnPacket.
+
+#### spectator-dont-get-advancement
+
+- **default**: `false`
+- **description**: If "true", players in spectator mode will not get advancements.
+#### budding-amethyst-can-push-by-piston
+
+- **default**: `false`
+- **description**: If "true", piston can push the budding amethyst.
+
+#### stick-change-armorstand-arm-status
+
+- **default**: `true`
+- **description**: If "true", players can use the "stick" (minecraft:stick) to right-click the armor stand when sneaking to change the display state of the arm of the armor stand.
+
+#### stackable-shulker-boxes
+
+- **default**: `'false'`
+- **description**: If "true", empty shulker boxes can be stacked. This must be a string and either `true` / `false` or a positive integer (integer as a string) of 64 or less.
+	If the string is an integer as string, the stackable amount of empty shulker boxes, which is treated as `2` if `true`, or 1 if `false`.
+
+:::note
+
+Empty shulker boxes are automatically stacked on the ground (as drops) and when picked up by the player, or can be manually stacked in the backpack if the player has a supported mod installed.
+However, in order not to break down the machine, empty shulker boxes are not stacked inside the hopper, and stacked empty shulker boxes are separated when the hopper is running.
+
+:::
+
+#### shared-villager-discounts
+
+- **default**: `false`
+- **description**: If "true", for each villager, all players have the same villager discount. If one player got a discount on villager A, all players get same discount on villager A.
+#### bedrock-break-list
+
+- **default**: `false`
+- **description**: Set "true" to open. A bedrock break list like [this mod](https://gitee.com/harvey-husky/YH-BBL).
+
+#### fakeplayer.enable
+
+- **default**: `true`
+- **description**: If "true", enable bot function and '/bot' command
+
+#### fakeplayer.unable-fakeplayer-names
+
+- **default**:
+	- player-name
+- **description**: Blacklist list of name-using for bots.
+
+#### fakeplayer.limit
+
+- **default**: `10`
+- **description**: The maximum number of existing bots (bot counts into the total number of players).
+
+#### fakeplayer.always-send-data
+
+- **default**: `true`
+- **description**: If "true", send fakeplayer data to players in the same world, regardless of distance limit.
+ 
+#### fakeplayer.resident-fakeplayer
+
+- **default**: `false`
+- **description**: If "true", save fakeplayer when shutting down the server and automatically create the fakeplayer at the next startup.
+ 
+:::caution
+
+This is an experimental function, and the actions of the fakeplayer will not be saved temporarily.
+
+:::
+
+#### fakeplayer.open-fakeplayer-inventory
+
+- **default**: `false`
+- **description**: If "true", can right click by empty hand to open the fakeplayer inventory.
+
+#### fakeplayer.skip-sleep-check
+
+- **default**: `false`
+- **description**: 是否让假人不计入睡眠计数。
+
+#### redstone-wire-dont-connect-if-on-trapdoor
+
+- **default**: `false`
+- **description**: 是否让红石粉不再连接到活板门上，这可以恢复1.20前的简易更新抑制。
+
+#### disable-check-out-of-order-command
+
+- **default**: `false`
+- **description**: 是否禁用聊天信息顺序检查，这可以修复使用Velocity作为上游代理时粘贴原理图失败的问题。
+
+#### despawn-enderman-with-block
+
+- **default**: `false`
+- **description**: 是否让手中有方块的末影人会被刷新，这可以消除服务器里一堆刷不掉的末影人。
+
+#### creative-no-clip
+
+- **default**: `false`
+- **description**: 是否让玩家在创造飞行时没有碰撞箱。
+
+:::note
+
+此功能需要启用leaves-carpet-support并且需要玩家安装carpet才可正常使用。
+
+:::
+
+#### mending-compatibility-infinity
+
+- **default**: `false`
+- **description**: 使得经验修补和无限可以重叠。
+
+#### shave-snow-layers
+
+- **default**: `true`
+- **description**: 使得雪片可以被铲子一层层铲。
+
+#### ignore-lc
+
+- **default**: `false`
+- **description**: 使生物生成无视lc值进行。
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
+
+:::
+
+#### elytra-aeronautics.no-chunk-load
+
+- **default**: `false`
+- **description**: 使玩家在一定高度和一定速度时鞘翅飞行不加载区块也不进行世界生成，以此减少服务器负荷。
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
+
+:::
+
+#### elytra-aeronautics.no-chunk-height
+
+- **default**: `500.0`
+- **description**: 玩家进入不加载区块状态时飞行需要的高度。
+
+#### elytra-aeronautics.no-chunk-speed
+
+- **default**: `-1.0`
+- **description**: 玩家进入不加载区块状态时飞行需要的速度。
+
+#### elytra-aeronautics.message
+
+- **default**: `true`
+- **description**: 是否在玩家进入和退出不加载区块状态时进行提示。
+
+#### elytra-aeronautics.message-start
+
+- **default**: `Flight enter cruise mode`
+- **description**: 玩家进入不加载区块状态时的提升。
+
+#### elytra-aeronautics.message-end
+
+- **default**: `Flight exit cruise mode`
+- **description**: 玩家退出不加载区块状态时的提升。。
 
 ### performance
 
-#### fix.fix-paper-6045
-
-- **default**: `true`
-- **description**: Just fix a bug.
-
-#### remove.tick-guard-lambda
-
-- **default**: `true`
-- **description**: Remove lambda to improve performance.
-
-#### remove.get-nearby-players-streams
-
-- **default**: `true`
-- **description**: Remove streams to improve performance.
-
-#### remove.range-check-streams-and-iterators
-
-- **default**: `true`
-- **description**: Remove streams and iterators to improve performance.
-
-#### remove.inventory-contains-iterators
-
-- **default**: `true`
-- **description**: Remove iterators to improve performance.
-
-#### optimize-chunk-ticking
-
-- **default**: `true`
-- **description**: Depending on configuration for things that tick in a chunk, this is a
- 5-10% improvement.
-	- Lightning: Each chunk now keeps an int of how many ticks until the
-	 lightning should strike. This int is a random number from 0 to 100000 * 2,
-	 the multiplication is required to keep the probability the same.
-	- Ice and snow: We just generate a single random number 0-16 and increment
-	 it, while checking if it's 0 for the current chunk.
-	 
 #### cache-climb-check
 
 - **default**: `true`
-- **description**: Cache climbing check for activation.
+- **description**: 将缓存攀爬检查结果。
 
-#### improve-fluid-direction-caching
-
-- **default**: `true`
-- **description**: This is a replacement for the cache used in FluidTypeFlowing.
- This accomplishes something similar, however has a few different requirements
- put into place to make this more optimize.
-
-#### enable-suffocation-optimization
+#### entity-target-find-optimization
 
 - **default**: `true`
-- **description**: Only check for suffocation once per 20 ticks. The maximum
-no-damage ticks value means that this change should be extremely
-difficult, if not impossible, for players to notice.
-
-#### strip-raytracing-for-entity
-
-- **default**: `true`
-- **description**: Old rayTrace method is very wasteful in both allocations,
- and in logic. As well, since the fluid collision option is set to NONE, the 
- entire fluid collision system is completely unneeded, yet used anyways.
-
-#### skip-clone-loot-parameters
-
-- **default**: `true`
-- **description**: Small improvement in CPU, much larger improvement in allocations.
- As a new loot context is created every time a player moves (along with a lot
- of other times) the constant cloning churns out a lot of useless objects.
+- **description**: 在实体寻找目标时，如果找不到目标则直接停止寻找，可以减少一些冗余运算。
 
 #### check-spooky-season-once-an-hour
 
 - **default**: `true`
-- **description**: Only check for spooky season once an hour.
+- **description**: 每小时检测一次万圣节（检测那么频繁干什么）。
 
 #### reduce-chuck-load-and-lookup
 
 - **default**: `true`
-- **description**: Reduce chunk loading & lookups.
+- **description**: 减少了没有必要的区块查找和加载。
+
+#### optimize-chunk-ticking
+
+- **default**: `true`
+- **description**: 优化了以下的区块刻，可以提高5%到10%的性能。
+	- 闪电
+	- 冰和雪的生成
+
+#### remove.tick-guard-lambda
+
+- **default**: `true`
+- **description**: 删除lambda表达式来提高性能。
+
+#### remove.get-nearby-players-streams
+
+- **default**: `true`
+- **description**: 删除流来提高性能。
+
+#### remove.inventory-contains-iterators
+
+- **default**: `true`
+- **description**: 删除选择器来提高性能。
+
+#### remove.range-check-streams-and-iterators
+
+- **default**: `true`
+- **description**: 删除流和选择器来提高性能。
 
 #### reduce-entity-fluid-lookup
 
 - **default**: `true`
-- **description**: Reduce entity fluid lookups if no fluids, fluid lookups is wasteful.
+- **description**: 如果实体附近根本没有流体，则禁用低效率的流体查找。
+
+#### enable-suffocation-optimization
+
+- **default**: `true`
+- **description**: 每隔20tick才检查一次窒息，玩家很难（但不是不可能）注意到这一变化。
+
+#### strip-raytracing-for-entity
+
+- **default**: `true`
+- **description**: 旧rayTrace方法十分浪费性能的在不需要流体碰撞计算的时候依然计算，我们修复了这个问题。
 
 #### inactive-goal-selector-disable
 
 - **default**: `false`
-- **description**: Throttles the AI goal selector in entity inactive ticks. This can
- improve performance by a few percent, but has minor gameplay implications.
+- **description**: 在非活动的实体上限制实体目标查找器的运行。这可以提高一些性能并对游戏影响较小。
 
-#### biome-temperatures-use-aging-cache
-
-- **default**: `true`
-- **description**: Use aging cache for biome temperatures, This will bring some
- performance improvements.
-
-#### simpler-vanilla-shapeless-recipes
+#### improve-fluid-direction-caching
 
 - **default**: `true`
-- **description**: Paper added a fancy sorting comparison due to Bukkit recipes
- breaking the vanilla one, however this is far more advanced than what you need
- for all the vanilla recipes.
+- **description**: 重新实现了FluidTypeFlowing的缓存系统，并使其性能更高。
 
-#### skip-poi-find-in-vehicle
+#### fix.fix-paper-6045
 
 - **default**: `true`
-- **description**: Skip POI finding if stuck in vehicle, optimize the performance
- of villagers' trading hall.
-
-#### optimize-entity-coordinate-key
-
-- **default**: `true`
-- **description**: When executing getCoordinateKey for entities (a hotpath), the
- JVM is required to repeatedly cast doubles to longs. The performance impact of
- this depends on the CPU architecture, but generally switching between
- FPU and ALU incurs a significant performance hit. The casted/rounded
- data is already available in the blockPosition struct, so we use that
- instead of re-doing the casting.
-
-#### use-more-thread-unsafe-random
-
-- **default**: `true`
-- **description**: Use more thread unsafe random, it is fast.
+- **description**: 修复了一个Paper的bug。
 
 #### dont-send-useless-entity-packets
 
 - **default**: `true`
-- **description**: Only send entity packet if it useful.
+- **description**: 减少根本没用的一些实体包的发送。（这可能会破坏一些利用这些无用实体包的mod）
+
+#### optimize-entity-coordinate-key
+
+- **default**: `true`
+- **description**: 当为实体（热路径）执行getCoordinateKey时，JVM需要重复将double转换为long。
+ 这对性能的影响取决于CPU架构，但通常在FPU和ALU之间切换会导致严重的性能损失。
+ blockPosition结构中已提供了已转换/舍入的数据，因此我们使用该数据而不是重新进行转换。
+
+#### use-more-thread-unsafe-random
+
+- **default**: `true`
+- **description**: 使用更多线程不安全的随机数发生器，它们虽然不安全，但是运行快。
+
+#### skip-poi-find-in-vehicle
+
+- **default**: `true`
+- **description**: 跳过在载具内村民的poi计算，这对密集的村民交易大厅的优化十分明显。
+
+#### simpler-vanilla-shapeless-recipes
+
+- **default**: `true`
+- **description**: 替换掉过于复杂的无序配方系统。
 
 #### reduce-entity-allocations
 
 - **default**: `true`
-- **description**: Reduce entity allocations.
+- **description**: 减少对实体的分配。
 
-#### async-mob-spawning
+#### biome-temperatures-use-aging-cache
 
-:::danger
-
-This function is temporarily unavailable.
-
-:::
-
-- **default**: `false`
-- **description**: It aims to reduce the main-thread impact of mob spawning by
-offloading as much work as possible to other threads. It is possible for
-inconsistencies to come up, but when they happen they never interfere
-with the server's operation (they don't produce errors), and side
-effects are limited to more or less mobs being spawned in any particular
-tick.
-
-:::caution
-
-It is possible to disable this optimization if it is not required or if
-it interferes with any plugins. On servers with thousands of entities,
-this can result in performance gains of up to 15%, which is significant
-and, in my opinion, worth the low risk of minor mob-spawning-related
-inconsistencies.
-
-:::
+- **default**: `true`
+- **description**: 使用了更好的生态群落温度缓存。
 
 #### async-pathfinding
 
 :::danger
 
-This function is temporarily unavailable.
+此功能暂时不可用。
 
 :::
 
 - **default**: `false`
-- **description**: Asynchronous entity pathfinding.
+- **description**: 异步化的实体寻路。
 
 #### async-entity-tracker
 
 :::danger
 
-This function is temporarily unavailable.
+此功能暂时不可用。
 
 :::
 
 - **default**: `false`
-- **description**: Asynchronous entity tracker.
+- **description**: 异步化的实体追踪。
 
-#### entity-target-find-optimization
+#### async-mob-spawning
 
-- **default**: `true`
-- **description**: Return to the target earlier when the target cannot be found,
- ignoring some redundant calculations.
+:::danger
+
+此功能暂时不可用。
+
+:::
+
+- **default**: `false`
+- **description**: 它的目的是通过将尽可能多的工作卸载到其他线程来减少实体生成对主线程的影响。
+可能会出现生成不一致的情况，但当问题发生时并不会出现错误，只会造成在任何特定的时间点产生的实体或多或少的问题。
+
+:::caution
+
+如果不想干扰任何生成机制，则可禁用此功能。但是此功能在拥有上千实体的服务器上可以带来足足15%的性能提升。
+在我看来，为了这些性能提升而承担较小的实体生成不一致的风险是非常值得的。
+
+:::
+
+#### optimized-dragon-respawn
+
+- **default**: `false`
+- **description**: 是否对龙战进行优化。
+
+:::caution
+
+此功能和原版表现不完全一致。
+
+:::
 
 ### protocol
 
 #### carpet-alternative-block-placement
 
 - **default**: `false`
-- **description**: Whether the server supports the carpet alternative block placement.
+- **description**: 是否是否支持carpet的精确放置协议。
+
+:::tip
+
+如果想在投影模组的轻松放置功能上使用精确放置协议，你需要手动调整投影模组使用的协议类型为 `V2` 而不能使用 `Auto` 模式。
+
+:::
 
 #### pca-sync-protocol
 
 - **default**: `false`
-- **description**: Whether the server supports the
- [pca sync protocol](https://github.com/plusls/plusls-carpet-addition).
-
-#### pca-sync-player-entity
-
-- **default**: `OPS`
-- **description**: List of player data that the server can sync by pca.
-	- `NOBODY`: All player data cannot be sync.
-	- `BOT`: The data of the bot can be sync.
-	- `OPS`: The data of the bot can be sync, and the op can sync the data of
-	 all players.
-	- `OPS_AND_SELF`: bot and player's own data can be sync, and the op can sync
-	 the data of all players.
-	- `EVERYONE`: Everyone's data can be sync.
-	
-#### bbor-protocol
-
-- **default**: `false`
-- **description**: Whether the server supports the
- [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded).
- 
-#### jade-protocol
-
-- **default**: `false`
-- **description**: Whether the server supports the
- [Jade](https://github.com/Snownee/Jade) to display more information.
-
-#### appleskin-protocol
-
-- **default**: `false`
-- **description**: Whether the server supports the
- [AppleSkin](https://github.com/squeek502/AppleSkin) to display saturation and exhaustion.
-
-#### xaero-map-protocol
- 
-- **default**: `false`
-- **description**: Whether the server supports the
- [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) and
- [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) to
- auto change map.
+- **description**: 是否支持 [pca数据同步协议](https://github.com/plusls/plusls-carpet-addition)。
 
 #### syncmatica.enable
 
 - **default**: `false`
-- **description**: Whether the server supports the
- [Syncmatica](https://github.com/End-Tech/syncmatica).
+- **description**: 是否开启对 [Syncmatica](https://github.com/End-Tech/syncmatica) 的支持来共享原理图。
  
 #### syncmatica.quota
 
 - **default**: `false`
-- **description**: Whether check the max size of the schematic that player can upload.
+- **description**: 是否限制玩家可上传原理图的最大大小。
 
 #### syncmatica.quota-limit
 
 - **default**: `40000000`
-- **description**: The size of the schematic diagram that players can upload, in bytes.
+- **description**: 玩家可上传原理图的最大大小，单位为byte。
+
+#### jade-protocol
+
+- **default**: `false`
+- **description**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后Jade可以显示更多信息。
+
+#### bbor-protocol
+
+- **default**: `false`
+- **description**: 是否开启对 [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded) 的支持。
+
+#### pca-sync-player-entity
+
+- **default**: `OPS`
+- **description**: 控制pca同步协议可以同步的玩家。
+    - `NOBODY`: 任何玩家数据都不能被同步。
+    - `BOT`: 假人的数据可以被同步。
+    - `OPS`: 假人的数据可以被同步，OP可以同步所有玩家的数据。
+    - `OPS_AND_SELF`: 假人的数据可以被同步，OP可以同步所有玩家的数据，同时玩家可以同步自己的数据。
+    - `EVERYONE`: 所有玩家数据都可以被同步。
+
+#### appleskin-protocol
+
+- **default**: `false`
+- **description**: 是否开启对 [AppleSkin](https://github.com/squeek502/AppleSkin) 的支持来显示饥饿值和饱和度。
+
+#### xaero-map-protocol
+ 
+- **default**: `false`
+- **description**: 是否开启对 [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) 和
+ [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持来自动在服务器间切换地图。
+
+#### leaves-carpet-support
+
+ - **default**: `false`
+ - **description**: 是否启用由Leaves实现的carpet协议，这可以让客户端认为自己进入了一个带有carpet的服务器并提供一些客户端支持。
