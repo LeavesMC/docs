@@ -225,256 +225,248 @@ This is an experimental function, and the actions of the fakeplayer will not be 
 #### fakeplayer.skip-sleep-check
 
 - **default**: `false`
-- **description**: 是否让假人不计入睡眠计数。
+- **description**: If "true", fakeplayers do not count towards the sleep cap
 
 #### redstone-wire-dont-connect-if-on-trapdoor
 
 - **default**: `false`
-- **description**: 是否让红石粉不再连接到活板门上，这可以恢复1.20前的简易更新抑制。
+- **description**: If "true", redstone dust can be linked to redstone dust on an open trapdoor.
 
 #### disable-check-out-of-order-command
 
 - **default**: `false`
-- **description**: 是否禁用聊天信息顺序检查，这可以修复使用Velocity作为上游代理时粘贴原理图失败的问题。
+- **description**: If "true", disable updatechatorder
 
 #### despawn-enderman-with-block
 
 - **default**: `false`
-- **description**: 是否让手中有方块的末影人会被刷新，这可以消除服务器里一堆刷不掉的末影人。
+- **description**: If "true", Endermen with blocks in their hands will be cleared away like other mobs, which can purge a bunch of Endermen that longlived in the server.
 
 #### creative-no-clip
 
 - **default**: `false`
-- **description**: 是否让玩家在创造飞行时没有碰撞箱。
+- **description**: If "true", players in gamemode "Creative" without collision box when flying.
 
 :::note
 
-此功能需要启用leaves-carpet-support并且需要玩家安装carpet才可正常使用。
+This feature needs to enable configuration "leaves-carpet-support" and requires the player to install the carpet mod to work properly.
 
 :::
 
 #### mending-compatibility-infinity
 
 - **default**: `false`
-- **description**: 使得经验修补和无限可以重叠。
+- **description**: If "true", both "mending" and "infinity" can exist on a bow
 
 #### shave-snow-layers
 
 - **default**: `true`
-- **description**: 使得雪片可以被铲子一层层铲。
+- **description**: If "true", the shovel can dig snow layer by layer.
 
 #### ignore-lc
 
 - **default**: `false`
-- **description**: 使生物生成无视lc值进行。
+- **description**: If "true", mobs spawn ignore the effect of lc value.
 
 :::caution
 
-此功能是一个实验性功能，它不一定可以正常工作。
+This feature is an experimental feature and may or may not work correctly.
 
 :::
 
 #### elytra-aeronautics.no-chunk-load
 
 - **default**: `false`
-- **description**: 使玩家在一定高度和一定速度时鞘翅飞行不加载区块也不进行世界生成，以此减少服务器负荷。
+- **description**: If "true", when the player flies at a certain height and speed, the elytra does not load chunks or do world generation, thereby reducing server load.
 
 :::caution
 
-此功能是一个实验性功能，它不一定可以正常工作。
+This feature is an experimental feature and may or may not work correctly.
 
 :::
 
 #### elytra-aeronautics.no-chunk-height
 
 - **default**: `500.0`
-- **description**: 玩家进入不加载区块状态时飞行需要的高度。
+- **description**: The height (Y-value) required for the player to fly when entering the state of not loading chunks. (elytra-aeronautics.no-chunk-load)
 
 #### elytra-aeronautics.no-chunk-speed
 
 - **default**: `-1.0`
-- **description**: 玩家进入不加载区块状态时飞行需要的速度。
+- **description**: The speed required for the player to fly when entering the state of not loading chunks. Units: block/s. (elytra-aeronautics.no-chunk-load)
 
 #### elytra-aeronautics.message
 
 - **default**: `true`
-- **description**: 是否在玩家进入和退出不加载区块状态时进行提示。
+- **description**: If "true", send notice when the player enters and exits the unloaded chunk state.
 
 #### elytra-aeronautics.message-start
 
 - **default**: `Flight enter cruise mode`
-- **description**: 玩家进入不加载区块状态时的提升。
+- **description**: The notice when the player enters the state of not loading chunks.
 
 #### elytra-aeronautics.message-end
 
 - **default**: `Flight exit cruise mode`
-- **description**: 玩家退出不加载区块状态时的提升。。
+- **description**: The notice when the player exits the state of not loading chunks.
 
 ### performance
 
 #### cache-climb-check
 
 - **default**: `true`
-- **description**: 将缓存攀爬检查结果。
+- **description**: If "true", cache climb check result.
 
 #### entity-target-find-optimization
 
 - **default**: `true`
-- **description**: 在实体寻找目标时，如果找不到目标则直接停止寻找，可以减少一些冗余运算。
+- **description**: If "true", when the entity is looking for the target, if the target cannot be found, the search will be stopped directly, which can reduce some redundant calculations.
 
 #### check-spooky-season-once-an-hour
 
 - **default**: `true`
-- **description**: 每小时检测一次万圣节（检测那么频繁干什么）。
+- **description**: If "true", detect Halloween every hour. (Do Mojang staffs have Halloween every day?)
 
 #### reduce-chuck-load-and-lookup
 
 - **default**: `true`
-- **description**: 减少了没有必要的区块查找和加载。
+- **description**: If "true", reduce unnecessary chunk lookups and loads.
 
 #### optimize-chunk-ticking
 
 - **default**: `true`
-- **description**: 优化了以下的区块刻，可以提高5%到10%的性能。
-	- 闪电
-	- 冰和雪的生成
+- **description**: If "true", optimize the following chunk ticks, which can improve performance by 5% to 10%.
+	- Lightning
+	- Ice and Snow Generation
 
 #### remove.tick-guard-lambda
 
 - **default**: `true`
-- **description**: 删除lambda表达式来提高性能。
+- **description**: If "true", remove lambda expressions to improve performance.
 
 #### remove.get-nearby-players-streams
 
 - **default**: `true`
-- **description**: 删除流来提高性能。
+- **description**: If "true", remove streams to improve performance.
 
 #### remove.inventory-contains-iterators
 
 - **default**: `true`
-- **description**: 删除选择器来提高性能。
+- **description**: If "true", remove lambda expressions to improve performance.
 
 #### remove.range-check-streams-and-iterators
 
 - **default**: `true`
-- **description**: 删除流和选择器来提高性能。
+- **description**: If "true", remove inventory contains iterators to improve performance.
 
 #### reduce-entity-fluid-lookup
 
 - **default**: `true`
-- **description**: 如果实体附近根本没有流体，则禁用低效率的流体查找。
+- **description**: If "true", disables inefficient fluid lookup if there are no fluids near the entity at all.
 
 #### enable-suffocation-optimization
 
 - **default**: `true`
-- **description**: 每隔20tick才检查一次窒息，玩家很难（但不是不可能）注意到这一变化。
+- **description**: If "true", suffocation is only checked every 20 ticks, it is difficult (but not impossible) for the player to notice the change.
 
 #### strip-raytracing-for-entity
 
 - **default**: `true`
-- **description**: 旧rayTrace方法十分浪费性能的在不需要流体碰撞计算的时候依然计算，我们修复了这个问题。
+- **description**: If "true", change the old rayTrace method to improve performance.
 
 #### inactive-goal-selector-disable
 
 - **default**: `false`
-- **description**: 在非活动的实体上限制实体目标查找器的运行。这可以提高一些性能并对游戏影响较小。
+- **description**: If "true", restricts the running of entity target finders on inactive entities. This can improve some performance and have less impact on the game.
 
 #### improve-fluid-direction-caching
 
 - **default**: `true`
-- **description**: 重新实现了FluidTypeFlowing的缓存系统，并使其性能更高。
+- **description**: If "true", use a reimplemented higher performance FluidTypeFlowing caching system.
 
 #### fix.fix-paper-6045
 
 - **default**: `true`
-- **description**: 修复了一个Paper的bug。
+- **description**: If "true", fix a bug of paper.
 
 #### dont-send-useless-entity-packets
 
 - **default**: `true`
-- **description**: 减少根本没用的一些实体包的发送。（这可能会破坏一些利用这些无用实体包的mod）
+- **description**: If "true", reduce the sending of some entity packets that are not used at all. (This may break some mods that utilize these useless entity packs)
 
 #### optimize-entity-coordinate-key
 
 - **default**: `true`
-- **description**: 当为实体（热路径）执行getCoordinateKey时，JVM需要重复将double转换为long。
- 这对性能的影响取决于CPU架构，但通常在FPU和ALU之间切换会导致严重的性能损失。
- blockPosition结构中已提供了已转换/舍入的数据，因此我们使用该数据而不是重新进行转换。
+- **description**: When executing getCoordinateKey for entities (a hotpath), the JVM is required to repeatedly cast doubles to longs. The performance impact of this depends on the CPU architecture, but generally switching between FPU and ALU incurs a significant performance hit. The casted/rounded data is already available in the blockPosition struct, so we use that instead of re-doing the casting.
 
 #### use-more-thread-unsafe-random
 
 - **default**: `true`
-- **description**: 使用更多线程不安全的随机数发生器，它们虽然不安全，但是运行快。
+- **description**: If "true", use more thread-unsafe random number generators, which are not safe but fast.
 
 #### skip-poi-find-in-vehicle
 
 - **default**: `true`
-- **description**: 跳过在载具内村民的poi计算，这对密集的村民交易大厅的优化十分明显。
+- **description**: If "true", skip POI finding if stuck in vehicle, which optimize the performance of villagers' trading hall.
 
 #### simpler-vanilla-shapeless-recipes
 
 - **default**: `true`
-- **description**: 替换掉过于复杂的无序配方系统。
+- **description**: If "true", replace the overly complex shapeless recipe system.
 
 #### reduce-entity-allocations
 
 - **default**: `true`
-- **description**: 减少对实体的分配。
+- **description**: If "true", reduce entity allocations.
 
 #### biome-temperatures-use-aging-cache
 
 - **default**: `true`
-- **description**: 使用了更好的生态群落温度缓存。
+- **description**: If "true", use aging cache for biome temperatures, This will bring some performance improvements.
 
 #### async-pathfinding
 
 :::danger
 
-此功能暂时不可用。
+This feature is temporarily unavailable.
 
 :::
 
 - **default**: `false`
-- **description**: 异步化的实体寻路。
+- **description**: xxxxxx
 
 #### async-entity-tracker
 
 :::danger
 
-此功能暂时不可用。
+This feature is temporarily unavailable.
 
 :::
 
 - **default**: `false`
-- **description**: 异步化的实体追踪。
+- **description**: xxxxxx
 
 #### async-mob-spawning
 
 :::danger
 
-此功能暂时不可用。
+This feature is temporarily unavailable.
 
 :::
 
 - **default**: `false`
-- **description**: 它的目的是通过将尽可能多的工作卸载到其他线程来减少实体生成对主线程的影响。
-可能会出现生成不一致的情况，但当问题发生时并不会出现错误，只会造成在任何特定的时间点产生的实体或多或少的问题。
+- **description**: xxxxxxx
 
-:::caution
 
-如果不想干扰任何生成机制，则可禁用此功能。但是此功能在拥有上千实体的服务器上可以带来足足15%的性能提升。
-在我看来，为了这些性能提升而承担较小的实体生成不一致的风险是非常值得的。
-
-:::
 
 #### optimized-dragon-respawn
 
 - **default**: `false`
-- **description**: 是否对龙战进行优化。
+- **description**: If "true", optimize dragon respawn
 
 :::caution
 
-此功能和原版表现不完全一致。
+This function is not exactly the same as the original function.
 
 :::
 
@@ -483,66 +475,66 @@ This is an experimental function, and the actions of the fakeplayer will not be 
 #### carpet-alternative-block-placement
 
 - **default**: `false`
-- **description**: 是否是否支持carpet的精确放置协议。
+- **description**: If "true", support alternative block placement protocol.
 
 :::tip
 
-如果想在投影模组的轻松放置功能上使用精确放置协议，你需要手动调整投影模组使用的协议类型为 `V2` 而不能使用 `Auto` 模式。
+If you want to use the alternative block placement protocol on the easy placement function of the litematica mod, you need to manually adjust the protocol type used by the litematica mod to `V2` instead of using `Auto` mode.
 
 :::
 
 #### pca-sync-protocol
 
 - **default**: `false`
-- **description**: 是否支持 [pca数据同步协议](https://github.com/plusls/plusls-carpet-addition)。
+- **description**: If "true", support [pcaSyncProtocol](https://github.com/plusls/plusls-carpet-addition).
 
 #### syncmatica.enable
 
 - **default**: `false`
-- **description**: 是否开启对 [Syncmatica](https://github.com/End-Tech/syncmatica) 的支持来共享原理图。
+- **description**: If "true", support [Syncmatica](https://github.com/End-Tech/syncmatica).
  
 #### syncmatica.quota
 
 - **default**: `false`
-- **description**: 是否限制玩家可上传原理图的最大大小。
+- **description**: If "true", can limit the maximum size a player can upload a schematic.
 
 #### syncmatica.quota-limit
 
 - **default**: `40000000`
-- **description**: 玩家可上传原理图的最大大小，单位为byte。
+- **description**: The maximum size of schematic uploaded by player, unit: byte.
 
 #### jade-protocol
 
 - **default**: `false`
-- **description**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后Jade可以显示更多信息。
+- **description**: If "true", support [Jade](https://github.com/Snownee/Jade).
 
 #### bbor-protocol
 
 - **default**: `false`
-- **description**: 是否开启对 [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded) 的支持。
+- **description**: If "true", support [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded).
 
 #### pca-sync-player-entity
 
 - **default**: `OPS`
-- **description**: 控制pca同步协议可以同步的玩家。
-    - `NOBODY`: 任何玩家数据都不能被同步。
-    - `BOT`: 假人的数据可以被同步。
-    - `OPS`: 假人的数据可以被同步，OP可以同步所有玩家的数据。
-    - `OPS_AND_SELF`: 假人的数据可以被同步，OP可以同步所有玩家的数据，同时玩家可以同步自己的数据。
-    - `EVERYONE`: 所有玩家数据都可以被同步。
+- **description**: Control which players the pca sync protocol can sync.
+    - `NOBODY`: Nobody can be synced
+    - `BOT`: Fakeplayer can be synced
+    - `OPS`: Fakeplayer can be synced, OP can syncs all player datas
+    - `OPS_AND_SELF`: Fakeplayer can be synced, OP can sync all player datas, players can sync themselves datas
+    - `EVERYONE`: Everyone can be synced by everyone.
 
 #### appleskin-protocol
 
 - **default**: `false`
-- **description**: 是否开启对 [AppleSkin](https://github.com/squeek502/AppleSkin) 的支持来显示饥饿值和饱和度。
+- **description**: If "true", support [AppleSkin](https://github.com/squeek502/AppleSkin).
 
 #### xaero-map-protocol
  
 - **default**: `false`
-- **description**: 是否开启对 [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) 和
- [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持来自动在服务器间切换地图。
+- **description**: If "true", support [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) and
+ [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap).
 
 #### leaves-carpet-support
 
  - **default**: `false`
- - **description**: 是否启用由Leaves实现的carpet协议，这可以让客户端认为自己进入了一个带有carpet的服务器并提供一些客户端支持。
+ - **description**: If "true", enable support carpet protocol implemented by LeavesMC, this lets the client think it's entering a server with a carpet and provides some client support.
