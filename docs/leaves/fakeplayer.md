@@ -5,6 +5,12 @@ slug: /leaves/fakeplayer
 
 # Leaves Fakeplayer
 
+:::caution
+
+Some information on this page is outdated.
+
+:::
+
 Leaves provides the support of carpet-like fakeplayer, but not completely the same.
 The command of the fakeplayer is `/bot`
 

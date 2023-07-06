@@ -390,6 +390,11 @@ keywords:
 - **默认值**: `true`
 - **简介**: 修复了一个Paper的bug。
 
+#### fix.fix-paper-9372
+
+- **默认值**: `true`
+- **简介**: 修复了一个Paper的bug。
+
 #### dont-send-useless-entity-packets
 
 - **默认值**: `true`
@@ -479,6 +484,11 @@ keywords:
 
 :::
 
+#### cache-ignite-odds
+
+- **默认值**: `true`
+- **简介**: 是否开启对火焰蔓延检测中对方块燃烧概率的短暂缓存，这比原版的检测要快70%左右。
+
 ### protocol
 
 #### carpet-alternative-block-placement
@@ -547,3 +557,8 @@ keywords:
 
  - **默认值**: `false`
  - **简介**: 是否启用由Leaves实现的carpet协议，这可以让客户端认为自己进入了一个带有carpet的服务器并提供一些客户端支持。
+
+#### bladeren.mspt-sync-protocol
+
+ - **默认值**: `false`
+ - **简介**: 是否启用对 [Bladeren](https://github.com/LeavesMC/Bladeren) 中的mspt信息同步的支持。

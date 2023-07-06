@@ -2,7 +2,7 @@
 slug: /leaves/migration
 ---
 
-# Migrating to or form Leaves
+# Migrating to or from Leaves
 
 It's simple to migrate your server to or from Leaves. The steps below will help
 you get started.
@@ -28,10 +28,10 @@ It's easy to migrate from CraftBukkit, Spigot or Paper to Leaves. Follow
 the steps below.
 
 1. Stop your server and create a full backup.
-2. Download Leaves form [github releases](https://github.com/LeavesMC/Leaves/releases).
+2. Download Leaves from [github releases](https://github.com/LeavesMC/Leaves/releases).
 3. Replace your existing server jar with your freshly downloaded Leaves jar.
 4. Edit your strat.bat/sh (if you have), replace your old jar name to Levaes
- jar name (such as leaves-1.19.3.jar).
+ jar name (such as leaves-1.20.1.jar).
 5. Start your new server.
 
 Leaves retains full compatibility with all Paper/Spigot plugins, allowing a seamless transition.
@@ -50,10 +50,10 @@ Should you ever want to go back to Vanilla, follow the [Vanilla Migration Guide]
 closely, as manual changes will be required.
 
 1. Stop your Vanilla server and create a full backup.
-2. Download Leaves form [github releases](https://github.com/LeavesMC/Leaves/releases).
+2. Download Leaves from [github releases](https://github.com/LeavesMC/Leaves/releases).
 3. Replace your existing Vanilla server jar with your freshly downloaded Leaves jar.
 4. Edit your strat.bat/sh (if you have), replace your Vanilla jar name to Levaes
- jar name (such as leaves-1.19.3.jar).
+ jar name (such as leaves-1.20.1.jar).
 5. Start your new server.
 
 ### From Fabric/Forge
@@ -73,7 +73,7 @@ If you must use a hybrid that support both mods and plugins, we have some sugges
 And We are not responsible for any loss caused by using such server!
 
 - 1.12.2 [SpongeForge](https://github.com/SpongePowered/SpongeForge)
-- 1.19.x/1.18.x/1.16.x [Arclight](https://github.com/IzzelAliz/Arclight)
+- 1.20.x/1.19.x/1.18.x/1.16.x [Arclight](https://github.com/IzzelAliz/Arclight)
 
 :::
 

@@ -5,6 +5,12 @@ slug: /leaves/fakeplayer
 
 # Leaves假人
 
+:::caution
+
+此页面的一些信息可能已过时。
+
+:::
+
 Leaves提供了类似carpet的假人支持，假人的总指令为 `/bot` 。
 
 ## 什么是假人

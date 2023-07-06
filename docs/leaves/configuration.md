@@ -389,6 +389,11 @@ This feature is an experimental feature and may or may not work correctly.
 - **default**: `true`
 - **description**: If "true", fix a bug of paper.
 
+#### fix.fix-paper-9372
+
+- **default**: `true`
+- **description**: If "true", fix a bug of paper.
+
 #### dont-send-useless-entity-packets
 
 - **default**: `true`
@@ -462,13 +467,18 @@ This feature is temporarily unavailable.
 #### optimized-dragon-respawn
 
 - **default**: `false`
-- **description**: If "true", optimize dragon respawn
+- **description**: If "true", optimize dragon respawn.
 
 :::caution
 
 This function is not exactly the same as the original function.
 
 :::
+
+#### cache-ignite-odds
+
+- **default**: `true`
+- **description**: If "true", optimize fire ignite odds getter.
 
 ### protocol
 
@@ -538,3 +548,8 @@ If you want to use the alternative block placement protocol on the easy placemen
 
  - **default**: `false`
  - **description**: If "true", enable support carpet protocol implemented by LeavesMC, this lets the client think it's entering a server with a carpet and provides some client support.
+
+#### bladeren.mspt-sync-protocol
+
+ - **default**: `false`
+ - **description**: If "true", support [Bladeren](https://github.com/LeavesMC/Bladeren)'s mspt sync.
