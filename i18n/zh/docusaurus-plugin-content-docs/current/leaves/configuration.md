@@ -26,6 +26,11 @@ keywords:
 
 ### misc
 
+#### dont-respond-ping-before-start-fully
+
+- **默认值**: `true`
+- **简介**: 是否在服务器未完全启动时不回应客户端的ping。
+
 #### extra-yggdrasil-service.enable
 
 - **默认值**: `false`
@@ -283,6 +288,7 @@ keywords:
 :::caution
 
 此功能是一个实验性功能，它不一定可以正常工作。
+同时，它需要客户端装载 [Elytra Aeronautics](https://www.mcmod.cn/class/7844.html) 作为配合以使用该功能。
 
 :::
 
@@ -310,6 +316,38 @@ keywords:
 
 - **默认值**: `Flight exit cruise mode`
 - **简介**: 玩家退出不加载区块状态时的提升。。
+
+#### disable-packet-limit
+
+- **默认值**: `false`
+- **简介**: 是否禁用发包限制。
+
+:::caution
+
+如果您的服务端装载了如ViaVersion这类包含限制发包的插件，请在相应的配置文件中禁用相关项。
+
+:::
+
+#### container-passthrough
+
+- **默认值**: `false`
+- **简介**: 如果此项为**true**，那么玩家可以无视挂在箱子上的告示牌直接打开箱子。此时玩家需要主副手均不拿物品，按住潜行的同时右键才能编辑告示牌。
+
+#### lava-riptide
+
+- **默认值**: `false`
+- **简介**: 是否允许玩家在岩浆中使用激流进行突刺。
+
+#### raider-die-skip-self-raid-check
+
+- **默认值**：`false`
+- **简介**: 是否跳过一部分袭击迁移的检测。
+
+:::caution
+
+这个配置将会通过十分激进的方案尝试修复袭击塔断流。当值为**true**时会让袭击塔的效率提高10%~50%，会对服务器的性能造成较大影响，请酌情考虑是否开启。
+
+:::
 
 ### performance
 
@@ -359,6 +397,11 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 删除流和选择器来提高性能。
+
+#### performance.remove.damage-lambda
+
+- **默认值**: `true`
+- **简介**: 删除伤害检测中的lambda。可以些微提高性能。
 
 #### reduce-entity-fluid-lookup
 
@@ -488,6 +531,91 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 是否开启对火焰蔓延检测中对方块燃烧概率的短暂缓存，这比原版的检测要快70%左右。
+
+#### cache-CubeVoxelShape-shape-array
+
+- **默认值**: `true`
+- **简介**: 是否在CubeVoxelShape中加入缓存。可以优化一些位置计算。
+
+#### use-fast-item-merge-raytracing
+
+- **默认值**: `true`
+- **简介**: 在paper修复物品穿墙合并的时候使用更快的射线。需要在**paper.yml**中打开fixItemsMergingThroughWalls。
+
+#### skip-secondary-POI-sensor-if-absent
+
+- **默认值**: `true`
+- **简介**: 是否在村民寻找的次要职业兴趣点（secondary POI）不存在时，跳过之后的检测。
+
+#### cache-BlockStatePairKey-hash
+
+- **默认值**: `true`
+- **简介**: 是否在BlockStatePairKey的哈希值计算上增加缓存。
+
+#### faster-chunk-serialization
+
+- **默认值**: `true`
+- **简介**: 是否使用的 [Lithium](https://github.com/CaffeineMC/lithium-fabric) 快速区块保存序列化。
+
+#### optimize-world-generation-and-block-access
+
+- **默认值**: `true`
+- **简介**: 是否在世界生成时优化区块和方块获取流程。这有助于优化世界生成速度。
+
+#### store-mob-counts-in-array
+
+- **默认值**: `true`
+- **简介**: 是否在生物生成上限计算时使用array。这可能对于性能有优化。使用了 [VMP](https://github.com/RelativityMC/VMP-fabric) 的方案。
+
+#### optimize-noise-generation
+
+- **默认值**: `false`
+- **简介**: 是否使用 [C2ME](https://github.com/RelativityMC/C2ME-fabric) 的世界生成噪声优化。
+
+#### cache-world-generator-sea-level
+
+- **默认值**: `true`
+- **简介**: 是否在世界生成时缓存海平面高度，以避免重复获取。这可能对于世界生成有帮助。
+
+#### dont-trigger-lootable-refresh-for-non-player
+
+- **默认值**：`true`
+- **简介**: 是否在方块实体尝试更新战利品表，但触发更新的玩家不存在时不触发战利品表更新。
+
+#### optimize-sun-burn-tick
+
+- **默认值**: `true`
+- **简介**: 是否优化实体的阳光照射检测。这可能使部分生物的AI开销有所降低。
+
+#### use-optimized-collection
+
+- **默认值**: `true`
+- **简介**: 是否在一些调用集合类的代码执行片段中使用优化后的集合类替代原版的集合类。
+
+#### optimized-CubePointRange
+
+- **默认值**: `true`
+- **简介**: 是否优化CubePointRange。这可能对一些位置计算有一定优化。
+
+#### check-frozen-ticks-before-landing-block
+
+- **默认值**: `true`
+- **简介**: 是否在尝试生成冰的时候优先对游戏刻进行检查，而不是先检查方块是否为空气（因为检查方块是否为空气较慢）。
+
+#### cache-ominous-banner-item
+
+- **默认值**: `true`
+- **简介**: 是否缓存灾厄旗帜的NBT。（因为没有必要每次都创建一个新的物品，这会拖累一些性能）
+
+#### skip-entity-move-if-movement-is-zero
+
+- **默认值**: `true`
+- **简介**: 是否在实体完全没有移动的时候直接跳过之后的位移计算。
+
+#### skip-cloning-advancement-criteria
+
+- **默认值**: `true`
+- **简介**: 是否跳过进度判断的复制。这可能有助于优化部分数据包。
 
 ### protocol
 
