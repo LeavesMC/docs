@@ -304,12 +304,12 @@ keywords:
 #### elytra-aeronautics.message-start
 
 - **默认值**: `Flight enter cruise mode`
-- **简介**: 玩家进入不加载区块状态时的提升。
+- **简介**: 玩家进入不加载区块状态时的提示。
 
 #### elytra-aeronautics.message-end
 
 - **默认值**: `Flight exit cruise mode`
-- **简介**: 玩家退出不加载区块状态时的提升。。
+- **简介**: 玩家退出不加载区块状态时的提示。
 
 ### performance
 
