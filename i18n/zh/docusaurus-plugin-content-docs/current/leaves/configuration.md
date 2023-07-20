@@ -285,10 +285,15 @@ keywords:
 - **默认值**: `false`
 - **简介**: 使玩家在一定高度和一定速度时鞘翅飞行不加载区块也不进行世界生成，以此减少服务器负荷。
 
+:::tip
+
+此功能最初是为了配合 [Elytra Aeronautics](https://www.mcmod.cn/class/7844.html)。
+
+:::
+
 :::caution
 
 此功能是一个实验性功能，它不一定可以正常工作。
-同时，它需要客户端装载 [Elytra Aeronautics](https://www.mcmod.cn/class/7844.html) 作为配合以使用该功能。
 
 :::
 
