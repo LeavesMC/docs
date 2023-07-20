@@ -2,9 +2,9 @@
 slug: /leaves/migration
 ---
 
-# Migrating to or from Leaves
+# Migrating to / from Leaves
 
-It's simple to migrate your server to or from Leaves. The steps below will help
+It's simple to migrate your server to / from Leaves. The steps below will help
 you get started.
 
 :::caution Backup your data before you start!
@@ -28,9 +28,9 @@ It's easy to migrate from CraftBukkit, Spigot or Paper to Leaves. Follow
 the steps below.
 
 1. Stop your server and create a full backup.
-2. Download Leaves from [github releases](https://github.com/LeavesMC/Leaves/releases).
+2. Download Leaves from [GitHub Releases](https://github.com/LeavesMC/Leaves/releases).
 3. Replace your existing server jar with your freshly downloaded Leaves jar.
-4. Edit your strat.bat/sh (if you have), replace your old jar name to Levaes
+4. Edit your strat.bat/sh (if you have), replace your old jar name to Leaves
  jar name (such as leaves-1.20.1.jar).
 5. Start your new server.
 
@@ -46,13 +46,13 @@ and paper world configuration, only adding new configuration options in `leaves.
 ### From Vanilla
 
 When migrating to Leaves from Vanilla, the way worlds are stored will automatically be changed.
-Should you ever want to go back to Vanilla, follow the [Vanilla Migration Guide](#to-vanilla)
+Whenever you want to go back to Vanilla, follow the [Vanilla Migration Guide](#to-vanilla)
 closely, as manual changes will be required.
 
 1. Stop your Vanilla server and create a full backup.
 2. Download Leaves from [github releases](https://github.com/LeavesMC/Leaves/releases).
 3. Replace your existing Vanilla server jar with your freshly downloaded Leaves jar.
-4. Edit your strat.bat/sh (if you have), replace your Vanilla jar name to Levaes
+4. Edit your strat.bat/sh (if you have), replace your Vanilla jar name to Leaves
  jar name (such as leaves-1.20.1.jar).
 5. Start your new server.
 
@@ -120,8 +120,8 @@ case for you, replace `world` with your `level-name` for all steps below.
 
 ### To CraftBukkit, Spigot or Paper
 
-Leaves does **not** support migration to either CraftBukkit or Spigot! And it may be safe to migrate
-to Paper, but we are not sure. While you may find success(both CraftBukkit, Spigot and Paper use the 
+Leaves does **NOT** support migration to either CraftBukkit or Spigot! And it may be safe to migrate
+to Paper, but we are not sure. While you may find success (both CraftBukkit, Spigot and Paper use the 
 same directory structure as Leaves), **do not** reach out for support with issues you encounter and
 note that data loss is possible.
 
