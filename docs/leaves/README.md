@@ -7,10 +7,10 @@ slug: /leaves
 
 :::caution
 
-This document is produced by Google Translation,
-so there may be some syntax errors and unclear translation
+This document is produced by Google Translator and was manually corrected,
+so there may be some syntax errors and unclear translation.
 
 :::
 
 Leaves is a fork of the Paper Minecraft Server that aims repairing broken vanilla properties. 
-Leaves contains some features, anti exploit preventions and performance improvements not found in Paper.
+Leaves contains some features, like anti exploit preventions and performance improvements not exists in Paper.
