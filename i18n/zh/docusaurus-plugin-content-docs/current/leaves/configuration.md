@@ -10,6 +10,12 @@ keywords:
 
 所有Leaves配置都存于 `leaves.yml` 文件内。
 
+:::note
+
+此文档的最后更新版本为 [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381)。
+
+:::
+
 :::tip
 
 部分配置可能覆盖上游服务端的配置（比如paper.yml）。

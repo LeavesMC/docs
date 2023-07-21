@@ -10,6 +10,12 @@ keywords:
 
 Any configuration for the "Leaves" server is in file `leaves.yml`.
 
+:::note
+
+The last updated version of the document is [Leaves-1.20.1-9df669b](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-9df669b).
+
+:::
+
 :::tip
 
 Some configurations may override the upstream configuration (such as paper.yml).
