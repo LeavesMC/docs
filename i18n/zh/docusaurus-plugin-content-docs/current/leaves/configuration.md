@@ -659,12 +659,12 @@ keywords:
 #### syncmatica.quota-limit
 
 - **默认值**: `40000000`
-- **简介**: 玩家可上传原理图的最大大小，单位为byte。
+- **简介**: 玩家可上传原理图的最大大小，单位为字节（Bytes）。
 
 #### jade-protocol
 
 - **默认值**: `false`
-- **简介**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后Jade可以显示更多信息。
+- **简介**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后 Jade 可以显示更多信息。
 
 #### bbor-protocol
 
@@ -674,11 +674,11 @@ keywords:
 #### pca-sync-player-entity
 
 - **默认值**: `OPS`
-- **简介**: 控制pca同步协议可以同步的玩家。
+- **简介**: 控制 pca 同步协议可以同步的玩家。
   - `NOBODY`: 任何玩家数据都不能被同步。
   - `BOT`: 假人的数据可以被同步。
-  - `OPS`: 假人的数据可以被同步，OP可以同步所有玩家的数据。
-  - `OPS_AND_SELF`: 假人的数据可以被同步，OP可以同步所有玩家的数据，同时玩家可以同步自己的数据。
+  - `OPS`: 假人的数据可以被同步，OP 可以同步所有玩家的数据。
+  - `OPS_AND_SELF`: 假人的数据可以被同步，OP 可以同步所有玩家的数据，同时玩家可以同步自己的数据。
   - `EVERYONE`: 所有玩家数据都可以被同步。
 
 #### appleskin-protocol
@@ -695,9 +695,9 @@ keywords:
 #### leaves-carpet-support
 
 - **默认值**: `false`
-- **简介**: 是否启用由Leaves实现的carpet协议，这可以让客户端认为自己进入了一个带有carpet的服务器并提供一些客户端支持。
+- **简介**: 是否启用由 Leaves 实现的 carpet 协议，这可以让客户端认为自己进入了一个带有 carpet 的服务器并提供一些客户端支持。
 
 #### bladeren.mspt-sync-protocol
 
 - **默认值**: `false`
-- **简介**: 是否启用对 [Bladeren](https://github.com/LeavesMC/Bladeren) 中的mspt信息同步的支持。
+- **简介**: 是否启用对 [Bladeren](https://github.com/LeavesMC/Bladeren) 中的 mspt 信息同步的支持。
