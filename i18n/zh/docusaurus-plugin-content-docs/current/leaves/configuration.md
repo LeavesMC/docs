@@ -35,23 +35,23 @@ keywords:
 #### dont-respond-ping-before-start-fully
 
 - **默认值**: `true`
-- **简介**: 是否在服务器未完全启动时不回应客户端的ping。
+- **简介**: 是否在服务器未完全启动时不回应客户端的 ping。
 
 #### extra-yggdrasil-service.enable
 
 - **默认值**: `false`
 - **简介**: 是否启用非官方的 [外置登录](https://github.com/yushijinhun/authlib-injector) 支持。
- 
+
 :::caution
 
 这是一个测试功能且为非官方实现，使用此功能可能会导致未知的错误。
 
 :::
- 
+
 #### extra-yggdrasil-service.urls
 
-- **默认值**: 
-	- 'https://url.with.authlib-injector-yggdrasil'
+- **默认值**:
+  - '<https://url.with.authlib-injector-yggdrasil>'
 - **简介**: 外置登录服务器的连接，链接最后应不加 `/` 。
 
 #### no-chat-sign
@@ -86,47 +86,47 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 是否启用生电模式。此模式下，以下配置会被强制覆盖来修复各种被影响的生电机制。
-    - paper-global.yml unsupported-settings.allow-headless-pistons: true
-    - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
-    - paper-global.yml allow-permanent-block-break-exploits: true
-    - paper-global.yml allow-piston-duplication: true
-    - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
-    - paper-global.yml packet-limiter.overrides: Empty
-    - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
-    - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
-    - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
-    - spigot.yml world-settings.max-tnt-per-tick: 2000
+  - paper-global.yml unsupported-settings.allow-headless-pistons: true
+  - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
+  - paper-global.yml allow-permanent-block-break-exploits: true
+  - paper-global.yml allow-piston-duplication: true
+  - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
+  - paper-global.yml packet-limiter.overrides: Empty
+  - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
+  - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
+  - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
+  - spigot.yml world-settings.max-tnt-per-tick: 2000
 
 :::note
 
-如果你发现了更多需要被覆盖的配置，欢迎提出issue。
+如果你发现了更多需要被覆盖的配置，欢迎提出 issue。
 
 :::
 
 #### instant-block-updater-reintroduced
 
 - **默认值**: `false`
-- **简介**: 是否重新引入1.19前的瞬时方块更新机制，这会让更新抑制重新可用。
+- **简介**: 是否重新引入 1.19 前的瞬时方块更新机制，这会让更新抑制重新可用。
 
 #### flatten-triangular-distribution
 
 - **默认值**: `false`
-- **简介**: 是否将Minecraft中的随机数发生器从三角分布改为平均分布，这会使得边缘事件更可能发生。
+- **简介**: 是否将 Minecraft 中的随机数发生器从三角分布改为平均分布，这会使得边缘事件更可能发生。
 
 #### redstone-shears-wrench
 
 - **默认值**: `true`
-- **简介**: 剪刀是否可以右键来旋转部分红石元件。（如果你需要旋转更多红石元件，请发issue提出）
+- **简介**: 剪刀是否可以右键来旋转部分红石元件。（如果你需要旋转更多红石元件，请发 issue 提出）
 
 #### player-operation-limiter
 
 - **默认值**: `false`
-- **简介**: 每gt每个玩家只能秒破1个或放置2个方块，这可以对抗自动破基岩mod并且不会影响正常的破基岩。
+- **简介**: 每 gt 每个玩家只能秒破1个或放置2个方块，这可以对抗自动破基岩mod并且不会影响正常的破基岩。
 
 #### use-vanilla-random
 
 - **默认值**: `false`
-- **简介**: 是否使用原版的随机数，这可能会丢失一些性能，但会让RNG控制可以在服务器内使用。
+- **简介**: 是否使用原版的随机数，这可能会丢失一些性能，但会让 RNG 控制可以在服务器内使用。
 
 #### no-feather-falling-trample
 
@@ -145,7 +145,7 @@ keywords:
 
 :::note
 
-这是一个老版本Minecraft的bug。
+这是一个老版本Minecraft的 bug。
 
 :::
 
@@ -205,7 +205,7 @@ keywords:
 #### fakeplayer.unable-fakeplayer-names
 
 - **默认值**:
-	- player-name
+  - player-name
 - **简介**: 假人禁止使用的名称列表。
 
 #### fakeplayer.limit
@@ -217,12 +217,12 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 是否无视距离始终向同世界的玩家发送假人数据。
- 
+
 #### fakeplayer.resident-fakeplayer
 
 - **默认值**: `false`
 - **简介**: 是否在关闭服务器后保存假人数据并在开启服务器后自动重新生成假人。
- 
+
 :::caution
 
 这是一个实验性功能，并且假人的动作暂时不会被保存。
@@ -268,7 +268,7 @@ keywords:
 #### mending-compatibility-infinity
 
 - **默认值**: `false`
-- **简介**: 使得经验修补和无限可以重叠。
+- **简介**: 使得经验修补和无限兼容。
 
 #### shave-snow-layers
 
@@ -278,7 +278,7 @@ keywords:
 #### ignore-lc
 
 - **默认值**: `false`
-- **简介**: 使生物生成无视lc值进行。
+- **简介**: 使生物生成无视 lc 值进行。
 
 :::caution
 
@@ -335,19 +335,19 @@ keywords:
 
 :::caution
 
-如果您的服务端装载了如ViaVersion这类包含限制发包的插件，请在相应的配置文件中禁用相关项。
+如果您的服务端装载了如 ViaVersion 这类包含限制发包的插件，请在相应的配置文件中禁用相关项。
 
 :::
 
 #### container-passthrough
 
 - **默认值**: `false`
-- **简介**: 如果此项为**true**，那么玩家可以无视挂在箱子上的告示牌直接打开箱子。此时玩家需要主副手均不拿物品，按住潜行的同时右键才能编辑告示牌。
+- **简介**: 如果此项为 **true**，那么玩家可以无视挂在箱子上的告示牌直接打开箱子。此时玩家需要**主副手**均不拿物品，按住潜行的同时右键才能编辑告示牌。
 
 #### lava-riptide
 
 - **默认值**: `false`
-- **简介**: 是否允许玩家在岩浆中使用激流进行突刺。
+- **简介**: 是否允许玩家在岩浆中使用激流进行突刺。（需要安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren)）
 
 #### raider-die-skip-self-raid-check
 
@@ -356,7 +356,7 @@ keywords:
 
 :::caution
 
-这个配置将会通过十分激进的方案尝试修复袭击塔断流。当值为**true**时会让袭击塔的效率提高10%~50%，会对服务器的性能造成较大影响，请酌情考虑是否开启。
+这个配置将会通过十分激进的方案尝试修复袭击塔断流。当值为 **true** 时会让袭击塔的效率提高 10%~50%，会对服务器的性能造成较大影响，请酌情考虑是否开启。
 
 :::
 
@@ -385,14 +385,14 @@ keywords:
 #### optimize-chunk-ticking
 
 - **默认值**: `true`
-- **简介**: 优化了以下的区块刻，可以提高5%到10%的性能。
-	- 闪电
-	- 冰和雪的生成
+- **简介**: 优化了以下的区块刻，可以提高 5% 到 10% 的性能。
+  - 闪电
+  - 冰和雪的生成
 
 #### remove.tick-guard-lambda
 
 - **默认值**: `true`
-- **简介**: 删除lambda表达式来提高性能。
+- **简介**: 删除 Lambda 表达式来提高性能。
 
 #### remove.get-nearby-players-streams
 
@@ -412,7 +412,7 @@ keywords:
 #### performance.remove.damage-lambda
 
 - **默认值**: `true`
-- **简介**: 删除伤害检测中的lambda。可以些微提高性能。
+- **简介**: 删除伤害检测中的 Lambda，可以些微提高性能。
 
 #### reduce-entity-fluid-lookup
 
@@ -427,7 +427,7 @@ keywords:
 #### strip-raytracing-for-entity
 
 - **默认值**: `true`
-- **简介**: 旧rayTrace方法十分浪费性能的在不需要流体碰撞计算的时候依然计算，我们修复了这个问题。
+- **简介**: 旧 rayTrace 方法十分浪费性能的在不需要流体碰撞计算的时候依然计算，我们修复了这个问题。
 
 #### inactive-goal-selector-disable
 
@@ -457,9 +457,9 @@ keywords:
 #### optimize-entity-coordinate-key
 
 - **默认值**: `true`
-- **简介**: 当为实体（热路径）执行getCoordinateKey时，JVM需要重复将double转换为long。
- 这对性能的影响取决于CPU架构，但通常在FPU和ALU之间切换会导致严重的性能损失。
- blockPosition结构中已提供了已转换/舍入的数据，因此我们使用该数据而不是重新进行转换。
+- **简介**: 当为实体（热路径）执行getCoordinateKey 时，JVM 需要重复将 double 转换为long。
+ 这对性能的影响取决于CPU架构，但通常在 FPU 和 ALU 之间切换会导致严重的性能损失。
+ blockPosition 结构中已提供了已转换/舍入的数据，因此我们使用该数据而不是重新进行转换。
 
 #### use-more-thread-unsafe-random
 
@@ -541,17 +541,17 @@ keywords:
 #### cache-ignite-odds
 
 - **默认值**: `true`
-- **简介**: 是否开启对火焰蔓延检测中对方块燃烧概率的短暂缓存，这比原版的检测要快70%左右。
+- **简介**: 是否开启对火焰蔓延检测中对方块燃烧概率的短暂缓存，这比原版的检测要快 70% 左右。
 
 #### cache-CubeVoxelShape-shape-array
 
 - **默认值**: `true`
-- **简介**: 是否在CubeVoxelShape中加入缓存。可以优化一些位置计算。
+- **简介**: 是否在 CubeVoxelShape 中加入缓存。可以优化一些位置计算。
 
 #### use-fast-item-merge-raytracing
 
 - **默认值**: `true`
-- **简介**: 在paper修复物品穿墙合并的时候使用更快的射线。需要在**paper.yml**中打开fixItemsMergingThroughWalls。
+- **简介**: 在 Paper 修复物品穿墙合并的时候使用更快的射线。需要在 **paper.yml** 中打开 fixItemsMergingThroughWalls。
 
 #### skip-secondary-POI-sensor-if-absent
 
@@ -561,7 +561,7 @@ keywords:
 #### cache-BlockStatePairKey-hash
 
 - **默认值**: `true`
-- **简介**: 是否在BlockStatePairKey的哈希值计算上增加缓存。
+- **简介**: 是否在 BlockStatePairKey 的哈希值计算上增加缓存。
 
 #### faster-chunk-serialization
 
@@ -576,12 +576,12 @@ keywords:
 #### store-mob-counts-in-array
 
 - **默认值**: `true`
-- **简介**: 是否在生物生成上限计算时使用array。这可能对于性能有优化。使用了 [VMP](https://github.com/RelativityMC/VMP-fabric) 的方案。
+- **简介**: 是否在生物生成上限计算时使用数组（Array）。这可能对于性能有优化。使用了 [VMP](https://github.com/RelativityMC/VMP-fabric) 的方案。
 
 #### optimize-noise-generation
 
 - **默认值**: `false`
-- **简介**: 是否使用 [C2ME](https://github.com/RelativityMC/C2ME-fabric) 的世界生成噪声优化。
+- **简介**: 是否使用 [C2ME](https://github.com/RelativityMC/C2ME-fabric) 的世界生成噪声优化（实验性）。
 
 #### cache-world-generator-sea-level
 
@@ -596,7 +596,7 @@ keywords:
 #### optimize-sun-burn-tick
 
 - **默认值**: `true`
-- **简介**: 是否优化实体的阳光照射检测。这可能使部分生物的AI开销有所降低。
+- **简介**: 是否优化实体的阳光照射检测。这可能使部分生物的 AI 开销有所降低。
 
 #### use-optimized-collection
 
@@ -606,7 +606,7 @@ keywords:
 #### optimized-CubePointRange
 
 - **默认值**: `true`
-- **简介**: 是否优化CubePointRange。这可能对一些位置计算有一定优化。
+- **简介**: 是否优化 CubePointRange。这可能对一些位置计算有一定优化。
 
 #### check-frozen-ticks-before-landing-block
 
@@ -616,7 +616,7 @@ keywords:
 #### cache-ominous-banner-item
 
 - **默认值**: `true`
-- **简介**: 是否缓存灾厄旗帜的NBT。（因为没有必要每次都创建一个新的物品，这会拖累一些性能）
+- **简介**: 是否缓存灾厄旗帜的 NBT。（因为没有必要每次都创建一个新的物品，这会拖累一些性能）
 
 #### skip-entity-move-if-movement-is-zero
 
@@ -633,7 +633,7 @@ keywords:
 #### carpet-alternative-block-placement
 
 - **默认值**: `false`
-- **简介**: 是否是否支持carpet的精确放置协议。
+- **简介**: 是否是否支持 carpet 的精确放置协议。
 
 :::tip
 
@@ -650,7 +650,7 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 是否开启对 [Syncmatica](https://github.com/End-Tech/syncmatica) 的支持来共享原理图。
- 
+
 #### syncmatica.quota
 
 - **默认值**: `false`
@@ -659,12 +659,12 @@ keywords:
 #### syncmatica.quota-limit
 
 - **默认值**: `40000000`
-- **简介**: 玩家可上传原理图的最大大小，单位为byte。
+- **简介**: 玩家可上传原理图的最大大小，单位为字节（Bytes）。
 
 #### jade-protocol
 
 - **默认值**: `false`
-- **简介**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后Jade可以显示更多信息。
+- **简介**: 是否开启对 [Jade](https://github.com/Snownee/Jade) 的支持，开启后 Jade 可以显示更多信息。
 
 #### bbor-protocol
 
@@ -674,12 +674,12 @@ keywords:
 #### pca-sync-player-entity
 
 - **默认值**: `OPS`
-- **简介**: 控制pca同步协议可以同步的玩家。
-    - `NOBODY`: 任何玩家数据都不能被同步。
-    - `BOT`: 假人的数据可以被同步。
-    - `OPS`: 假人的数据可以被同步，OP可以同步所有玩家的数据。
-    - `OPS_AND_SELF`: 假人的数据可以被同步，OP可以同步所有玩家的数据，同时玩家可以同步自己的数据。
-    - `EVERYONE`: 所有玩家数据都可以被同步。
+- **简介**: 控制 pca 同步协议可以同步的玩家。
+  - `NOBODY`: 任何玩家数据都不能被同步。
+  - `BOT`: 假人的数据可以被同步。
+  - `OPS`: 假人的数据可以被同步，OP 可以同步所有玩家的数据。
+  - `OPS_AND_SELF`: 假人的数据可以被同步，OP 可以同步所有玩家的数据，同时玩家可以同步自己的数据。
+  - `EVERYONE`: 所有玩家数据都可以被同步。
 
 #### appleskin-protocol
 
@@ -687,17 +687,17 @@ keywords:
 - **简介**: 是否开启对 [AppleSkin](https://github.com/squeek502/AppleSkin) 的支持来显示饥饿值和饱和度。
 
 #### xaero-map-protocol
- 
+
 - **默认值**: `false`
 - **简介**: 是否开启对 [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) 和
  [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持来自动在服务器间切换地图。
 
 #### leaves-carpet-support
 
- - **默认值**: `false`
- - **简介**: 是否启用由Leaves实现的carpet协议，这可以让客户端认为自己进入了一个带有carpet的服务器并提供一些客户端支持。
+- **默认值**: `false`
+- **简介**: 是否启用由 Leaves 实现的 carpet 协议，这可以让客户端认为自己进入了一个带有 carpet 的服务器并提供一些客户端支持。
 
 #### bladeren.mspt-sync-protocol
 
- - **默认值**: `false`
- - **简介**: 是否启用对 [Bladeren](https://github.com/LeavesMC/Bladeren) 中的mspt信息同步的支持。
+- **默认值**: `false`
+- **简介**: 是否启用对 [Bladeren](https://github.com/LeavesMC/Bladeren) 中的 mspt 信息同步的支持。

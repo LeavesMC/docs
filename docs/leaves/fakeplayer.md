@@ -12,7 +12,7 @@ Some information on this page may outdated.
 :::
 
 Leaves provides the support of carpet-like fakeplayer, but not completely the same.
-The command of the fakeplayer is `/bot`
+The command of the fakeplayer is `/bot`.
 
 ## What is fakeplayer
 
@@ -29,12 +29,12 @@ but the fakeplayer has 0.01/tick natural health recovery.
 
 ## Create
 
-To create a fakeplayer, you need to use the command `/bot create <Bot Name> [Skin Name]` 
+To create a fakeplayer, you need to use the command `/bot create <Bot Name> [Skin Name]`
 as a **player**.
 
 `<Bot Name>` is a required parameter, and it must comply with Minecraft's player naming rule.
 
-`[Skin Name]` is an optional parameter, which is the skin corresponding ID used by the fakeplayer. 
+`[Skin Name]` is an optional parameter, which is the skin corresponding ID used by the fakeplayer.
 If it is not filled in, the skin of the fakeplayer will be randomly selected from the default skins.
 
 The created fakeplayer will inherit the position and angle of view when the player use the command.
@@ -56,17 +56,17 @@ If a fakeplayer changes the world by instructions or other ways, the fakeplayer 
 
 ## Remove
 
-The fakeplayer will not revive. If the fakeplayer dies, it will drop all items and remove itself.
+The fakeplayer can't respawn. If the fakeplayer dies, it will drop all items and remove itself, even if the game rule `keepInventory` is set to `true`.
 
-fakeplayers are also killed before the server stop.
+Fakeplayers are also killed before the server stop.
 
 You can also use the command `/bot remove <Bot Name>` to kill a specified fakeplayer.
 
 ## Actions
 
 Actions is an important component of a fakeplayer, which allows the fakeplayer to do more work.
-Up to now, the fakeplayer has a total of 12 actions. However, each fakeplayer can only perform 
-one action at the same time. Any change to the fakeplayer action will cause the fakeplayer to 
+Up to now, the fakeplayer has a total of 12 actions. However, each fakeplayer can only perform
+one action at the same time. Any change to the fakeplayer action will cause the fakeplayer to
 lose the data of the old action.
 
 You can use `/bot action <Bot Name> <Action Name> [Action Args]` to make the specified fakeplayer perform the action.
