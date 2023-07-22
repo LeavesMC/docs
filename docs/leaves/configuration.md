@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-1.20.1-9df669b](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-9df669b).
+The last updated version of the document is [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381).
 
 :::
 
@@ -32,10 +32,15 @@ Configurations under this section will affect all worlds on a server, or the ser
 
 ### misc
 
+#### dont-respond-ping-before-start-fully
+
+- **default**: `true`
+- **description**: If enabled, then the server won't respond ping requests from clients.
+
 #### extra-yggdrasil-service.enable
 
 - **default**: `false`
-- **description**: If sets to "true", it will enable supports for [unofficial authentication servers](https://github.com/yushijinhun/authlib-injector).
+- **description**: If enabled, it will enable supports for [unofficial authentication servers](https://github.com/yushijinhun/authlib-injector).
 
 :::caution
 
@@ -45,26 +50,26 @@ This is a test function and is unofficial. Enable this configuration may cause u
 
 #### extra-yggdrasil-service.urls
 
-- **default**: 
-  - 'https://url.with.authlib-injector-yggdrasil'
+- **default**:
+  - '<https://url.with.authlib-injector-yggdrasil>'
 - **description**: The url of the unofficial authentication server (authlib-injector yggdrasil server), the url should not add "/" at the end. Will take effect when configuration "extra-yggdrasil-service.enable" is "true".
 
 #### no-chat-sign
 
 - **default**: `true`
-- **description**: If sets to "true", it will strike out the signature in player chat and the server will also send a message that the server is safe to players who have installed ["No Chat Reports"](https://github.com/Aizistral-Studios/No-Chat-Reports) Mod.
+- **description**: If enabled, it will strike out the signature in player chat and the server will also send a message that the server is safe to players who have installed ["No Chat Reports"](https://github.com/Aizistral-Studios/No-Chat-Reports) Mod.
 
 #### disable-method-profiler
 
 - **default**: `true`
-- **description**: If sets to "true", it will disable the method profiler on server. Disabling it will have a partial impact on testing and a small amount of performance improvement, but will not affect the use of the production environment.
+- **description**: If enabled, it will disable the method profiler on server. Disabling it will have a partial impact on testing and a small amount of performance improvement, but will not affect the use of the production environment.
 
 ### modify
 
 #### return-nether-portal-fix
 
 - **default**: `false`
-- **description**: If sets to "true", it will fix the problem that players incorrectly transfer to other portals when returning from nether to the overworld.
+- **description**: If enabled, it will fix the problem that players incorrectly transfer to other portals when returning from nether to the overworld.
 
 :::caution
 
@@ -75,22 +80,22 @@ This configuration is a experimental function and may not work properly.
 #### snowball-and-egg-can-knockback-player
 
 - **default**: `true`
-- **description**: If sets to "true", then snowballs and eggs can knock players back.
+- **description**: If enabled, then snowballs and eggs can knock players back.
 
 #### mc-technical-survival-mode
 
 - **default**: `true`
 - **description**: Whether to enable the "Minecraft technical survival mode". In this mode, the following configurations will be forcibly overwritten to "restore" to its vanilla form.
-    - paper-global.yml unsupported-settings.allow-headless-pistons: true
-    - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
-    - paper-global.yml allow-permanent-block-break-exploits: true
-    - paper-global.yml allow-piston-duplication: true
-    - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
-    - paper-global.yml packet-limiter.overrides: Empty
-    - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
-    - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
-    - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
-    - spigot.yml world-settings.max-tnt-per-tick: 2000
+  - paper-global.yml unsupported-settings.allow-headless-pistons: true
+  - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
+  - paper-global.yml allow-permanent-block-break-exploits: true
+  - paper-global.yml allow-piston-duplication: true
+  - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
+  - paper-global.yml packet-limiter.overrides: Empty
+  - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
+  - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
+  - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
+  - spigot.yml world-settings.max-tnt-per-tick: 2000
 
 :::note
 
@@ -101,33 +106,33 @@ If you find that there are other configurations that need to be overwritten, ple
 #### instant-block-updater-reintroduced
 
 - **default**: `false`
-- **description**: If sets to "true", it will reintroduce the instant block update behavior from versions before 1.19, with that "update suppression" is doable in 1.19+ again.
+- **description**: If enabled, it will reintroduce the instant block update behavior from versions before 1.19, with that "update suppression" is doable in 1.19+ again.
 
 #### flatten-triangular-distribution
 
 - **default**: `false`
-- **description**: If sets to "true", it will change triangle distributional randomizers in Minecraft into uniform distributional randomizers, with that edge cases are more likely to happen.
+- **description**: If enabled, it will change triangle distributional randomizers in Minecraft into uniform distributional randomizers, with that edge cases are more likely to happen.
 
 #### redstone-shears-wrench
 
 - **default**: `true`
-- **description**:  If sets to "true", then shears can rotate part of the redstone component by right clicking. (If you need to rotate more redstone components, please submit an issue)
+- **description**:  If enabled, then shears can rotate part of the redstone component by right clicking. (If you need to rotate more redstone components, please submit an issue)
 
 #### player-operation-limiter
 
 - **default**: `false`
-- **description**: If sets to "true", each player can only instantly break 1 or place 2 blocks per game tick, which works against automatic bedrock breaker mods (such as: [Fabric-Bedrock-Miner
+- **description**: If enabled, each player can only instantly break 1 or place 2 blocks per game tick, which works against automatic bedrock breaker mods (such as: [Fabric-Bedrock-Miner
 ](https://github.com/LXYan2333/Fabric-Bedrock-Miner)) and doesn't affect normal bedrock breakings.
 
 #### use-vanilla-random
 
 - **default**: `false`
-- **description**: If sets to "true", the server will use the vanilla random number generator; it may lose some performance, but will allow RNG manipulation to be used within the server.
+- **description**: If enabled, the server will use the vanilla random number generator; it may lose some performance, but will allow RNG manipulation to be used within the server.
 
 #### no-feather-falling-trample
 
 - **default**: `false`
-- **description**: If sets to "true", jump in boots on farmland while boot is enchanted with "Feather Falling" won't decay the farmland.
+- **description**: If enabled, jump in boots on farmland while boot is enchanted with "Feather Falling" won't decay the farmland.
 
 #### renewable-elytra
 
@@ -137,7 +142,7 @@ If you find that there are other configurations that need to be overwritten, ple
 #### shears-in-dispenser-can-zero-amount
 
 - **default**: `false`
-- **description**: If sets to "true", then the shears can be used to negative durability in the dispenser without breaking.
+- **description**: If enabled, then the shears can be used to negative durability in the dispenser without breaking.
 
 :::note
 
@@ -148,32 +153,32 @@ This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
 #### fix-update-suppression-crash
 
 - **default**: `true`
-- **description**: If sets to "true", it will fix crashes by update suppression.
+- **description**: If enabled, it will fix crashes by update suppression.
 
 #### disable-distance-check-for-use-item
 
 - **default**: `false`
-- **description**: If sets to "true", it will disable distance check for UseItemOnPacket.
+- **description**: If enabled, it will disable distance check for UseItemOnPacket.
 
 #### spectator-dont-get-advancement
 
 - **default**: `false`
-- **description**: If sets to "true", then players in spectator mode will not get advancements.
+- **description**: If enabled, then players in spectator mode will not get advancements.
 
 #### budding-amethyst-can-push-by-piston
 
 - **default**: `false`
-- **description**: If sets to "true", then pistons can push the budding amethyst.
+- **description**: If enabled, then pistons can push the budding amethyst.
 
 #### stick-change-armorstand-arm-status
 
 - **default**: `true`
-- **description**: If sets to "true", then players can use the "stick" (minecraft:stick) to right-click the armor stand when sneaking to change the display state of the arms of the armor stand.
+- **description**: If enabled, then players can use the "stick" (minecraft:stick) to right-click the armor stand when sneaking to change the display state of the arms of the armor stand.
 
 #### stackable-shulker-boxes
 
 - **default**: `'false'`
-- **description**: If sets to "true", then empty shulker boxes can be stacked. This must be a string and either `true` / `false` or a positive integer (integer as a string) of 64 or less.
+- **description**: If enabled, then empty shulker boxes can be stacked. This must be a string and either `true` / `false` or a positive integer (integer as a string) of 64 or less.
   If the string is an integer as string, the stackable amount of empty shulker boxes, which is treated as `2` if `true`, or 1 if `false`.
 
 :::note
@@ -186,22 +191,22 @@ However, in order not to break down the machine, empty shulker boxes are not sta
 #### shared-villager-discounts
 
 - **default**: `false`
-- **description**: If sets to "true", then for each villager, all players have the same villager discount. If one player got a discount on villager A, all players get same discount on villager A.
+- **description**: If enabled, then for each villager, all players have the same villager discount. If one player got a discount on villager A, all players get same discount on villager A.
 
 #### bedrock-break-list
 
 - **default**: `false`
-- **description**: Set "true" to enable. A bedrock break list like [this mod](https://gitee.com/harvey-husky/YH-BBL).
+- **description**: Set to "true" to enable. A bedrock break list like [this mod](https://gitee.com/harvey-husky/YH-BBL).
 
 #### fakeplayer.enable
 
 - **default**: `true`
-- **description**: If sets to "true", enable bot function and '/bot' command
+- **description**: If enabled, enable bot function and '/bot' command
 
 #### fakeplayer.unable-fakeplayer-names
 
 - **default**:
-	- player-name
+  - player-name
 - **description**: Blacklist list of name-using for bots.
 
 #### fakeplayer.limit
@@ -212,12 +217,12 @@ However, in order not to break down the machine, empty shulker boxes are not sta
 #### fakeplayer.always-send-data
 
 - **default**: `true`
-- **description**: If sets to "true", then the server will send fakeplayer data to players in the same world, regardless of distance limit.
+- **description**: If enabled, then the server will send fakeplayer data to players in the same world, regardless of distance limit.
 
 #### fakeplayer.resident-fakeplayer
 
 - **default**: `false`
-- **description**: If sets to "true", then the server will save fakeplayer when shutting down the server and automatically create the fakeplayer at the next startup.
+- **description**: If enabled, then the server will save fakeplayer when shutting down the server and automatically create the fakeplayer at the next startup.
 
 :::caution
 
@@ -228,32 +233,32 @@ This is an experimental function, and the actions of the fakeplayer will not be 
 #### fakeplayer.open-fakeplayer-inventory
 
 - **default**: `false`
-- **description**: If sets to "true", then players can right click by empty hand to open the fakeplayer inventory.
+- **description**: If enabled, then players can right click by empty hand to open the fakeplayer inventory.
 
 #### fakeplayer.skip-sleep-check
 
 - **default**: `false`
-- **description**: If sets to "true", then fakeplayers do not count towards the sleep cap
+- **description**: If enabled, then fakeplayers do not count towards the sleep cap
 
 #### redstone-wire-dont-connect-if-on-trapdoor
 
 - **default**: `false`
-- **description**: If sets to "true", then redstone dust can be linked to redstone dust on an open trapdoor.
+- **description**: If enabled, then redstone dust can be linked to redstone dust on an open trapdoor.
 
 #### disable-check-out-of-order-command
 
 - **default**: `false`
-- **description**: If sets to "true", it will disable update-chat-order (updatechatorder).
+- **description**: If enabled, it will disable update-chat-order (updatechatorder).
 
 #### despawn-enderman-with-block
 
 - **default**: `false`
-- **description**: If sets to "true", then endermen with blocks in their hands will be cleared away like other mobs, which can purge a bunch of Endermen that longlived in the server.
+- **description**: If enabled, then endermen with blocks in their hands will be cleared away like other mobs, which can purge a bunch of Endermen that longlived in the server.
 
 #### creative-no-clip
 
 - **default**: `false`
-- **description**: If sets to "true", then players in gamemode "Creative" won't have collision box while flying.
+- **description**: If enabled, then players in gamemode "Creative" won't have collision box while flying.
 
 :::note
 
@@ -264,17 +269,17 @@ This feature needs to enable configuration "leaves-carpet-support" and requires 
 #### mending-compatibility-infinity
 
 - **default**: `false`
-- **description**: If sets to "true", then both "mending" and "infinity" can exist on a bow.
+- **description**: If enabled, then both "mending" and "infinity" can exist on a bow.
 
 #### shave-snow-layers
 
 - **default**: `true`
-- **description**: If sets to "true", then shovels can dig snow layer by layer.
+- **description**: If enabled, then shovels can dig snow layer by layer.
 
 #### ignore-lc
 
 - **default**: `false`
-- **description**: If sets to "true", then mobs spawn will ignore the effect of lc value.
+- **description**: If enabled, then mobs spawn will ignore the effect of lc value.
 
 :::caution
 
@@ -285,7 +290,7 @@ This feature is an experimental feature and may (not) work correctly.
 #### elytra-aeronautics.no-chunk-load
 
 - **default**: `false`
-- **description**: If sets to "true", when the player flies at a certain height and speed, they will not load chunks or do world generation, thereby reducing server load.
+- **description**: If enabled, when the player flies at a certain height and speed, they will not load chunks or do world generation, thereby reducing server load.
 
 :::caution
 
@@ -306,7 +311,7 @@ This feature is an experimental feature and may (not) work correctly.
 #### elytra-aeronautics.message
 
 - **default**: `true`
-- **description**: If sets to "true", the server will send notice when the player enters or exits the not loading chunk state.
+- **description**: If enabled, the server will send notice when the player enters or exits the not loading chunk state.
 
 #### elytra-aeronautics.message-start
 
@@ -318,74 +323,106 @@ This feature is an experimental feature and may (not) work correctly.
 - **default**: `Flight exit cruise mode`
 - **description**: The notice when the player exits the state of not loading chunks.
 
+#### disable-packet-limit
+
+- **default**: `false`
+- **description**: If enabled, the server will disable packet limits.
+
+:::caution
+
+If your server has installed packet-limiting plugins like ViaVersion, you need to disable their limits in their config.
+
+:::
+
+#### container-passthrough
+
+- **default**: `false`
+- **description**: If enabled, then players can open chests behind a sign without items in **both two hands**. (Shift + Right-click to edit signs.)
+
+#### lava-riptide
+
+- **default**: `false`
+- **description**: If enabled, then players can use tridents with riptide enchantment in lava, like in water. (Requires [Bladeren Mod](https://github.com/LeavesMC/Bladeren))
+
+#### raider-die-skip-self-raid-check
+
+- **default**: `false`
+- **description**: If enabled, then the server will skip portions of raid migration detection.
+
+:::caution
+
+This configuration will attempt to fix the raid farm issue through a highly aggressive approach. When set to true, it will enhance raid farm efficiency by 10% to 50%, but it will have a significant impact on server performance. Please consider whether to enable it.
+
+:::
+
 ### performance
 
 #### cache-climb-check
 
 - **default**: `true`
-- **description**: If sets to "true", the server will cache climb check result.
+- **description**: If enabled, the server will cache climb check result.
 
 #### entity-target-find-optimization
 
 - **default**: `true`
-- **description**: If sets to "true", then when an entity is looking for a target, if the target cannot be found, the search will be stopped directly, which can reduce some redundant calculations.
+- **description**: If enabled, then when an entity is looking for a target, if the target cannot be found, the search will be stopped directly, which can reduce some redundant calculations.
 
 #### check-spooky-season-once-an-hour
 
 - **default**: `true`
-- **description**: If sets to "true", it will detect Halloween every hour. (Do Mojang staffs have Halloween every day?)
+- **description**: If enabled, it will detect Halloween every hour. (Do Mojang staffs have Halloween every day?)
 
 #### reduce-chuck-load-and-lookup
 
 - **default**: `true`
-- **description**: If sets to "true", it can reduce unnecessary chunk lookups and loads.
+- **description**: If enabled, it can reduce unnecessary chunk lookups and loads.
 
 #### optimize-chunk-ticking
 
 - **default**: `true`
-- **description**: If sets to "true", it will optimize the following chunk ticks, which can improve performance by 5% to 10%.
-	- Lightning
-	- Ice and Snow Generation
+- **description**: If enabled, it will optimize the following chunk ticks, which can improve performance by 5% to 10%.
+  - Lightning
+  - Ice and Snow Generation
 
 #### remove.tick-guard-lambda
 
 - **default**: `true`
-- **description**: If sets to "true", lambda expressions will be removed to improve performance.
+- **description**: If enabled, lambda expressions will be removed to improve performance.
 
 #### remove.get-nearby-players-streams
 
 - **default**: `true`
-- **description**: If sets to "true", streams' usage will be removed to improve performance.
+- **description**: If enabled, streams' usage will be removed to improve performance.
 
 #### remove.inventory-contains-iterators
 
 - **default**: `true`
-- **description**: If sets to "true", inventory contains iterators will be removed to improve performance.
+- **description**: If enabled, inventory contains iterators will be removed to improve performance.
 
 #### remove.range-check-streams-and-iterators
 
 - **default**: `true`
-- **description**: If sets to "true", the range check will be removed to improve performance.
+- **description**: If enabled, the range check will be removed to improve performance.
 
 #### reduce-entity-fluid-lookup
 
 - **default**: `true`
-- **description**: If sets to "true", it will disable inefficient fluid lookup if there are no fluids near the entity at all.
+- **description**: If enabled, it will disable inefficient fluid lookup if there are no fluids near the entity at all.
 
 #### enable-suffocation-optimization
 
 - **default**: `true`
-- **description**: If sets to "true", then suffocation is only checked every 20 ticks, it is difficult (but not impossible) for the player to notice the change.
+- **description**: If enabled, then suffocation is only checked every 20 ticks, it is difficult (but not impossible) for the player to notice the change.
 
 #### strip-raytracing-for-entity
 
 - **default**: `true`
-- **description**: If sets to "true", it will change the old rayTrace method to improve performance.
+- **description**: If enabled, it will change the old rayTrace method to improve performance.
 
 #### inactive-goal-selector-disable
 
 - **default**: `false`
-- **description**: If sets to "true", it will restrict the running of entity target finders on inactive entities. This can improve some performance and have less impact on the game.
+- **description**: If enabled, it will restrict the running of entity target finders on inactive entities. This can improve some performance and have less impact on the game.
 
 #### improve-fluid-direction-caching
 
@@ -400,12 +437,12 @@ This feature is an experimental feature and may (not) work correctly.
 #### fix.fix-paper-9372
 
 - **default**: `true`
-- **description**: If sets to "true", it can fix a bug of paper, again.
+- **description**: If enabled, it can fix a bug of paper, again.
 
 #### dont-send-useless-entity-packets
 
 - **default**: `true`
-- **description**: If sets to "true", it can reduce the sending of some entity packets that are not used at all. (This may break some mods that utilize these useless entity packs)
+- **description**: If enabled, it can reduce the sending of some entity packets that are not used at all. (This may break some mods that utilize these useless entity packs)
 
 #### optimize-entity-coordinate-key
 
@@ -415,27 +452,27 @@ This feature is an experimental feature and may (not) work correctly.
 #### use-more-thread-unsafe-random
 
 - **default**: `true`
-- **description**: If sets to "true", the server will use more thread-unsafe random number generators, which are not safe but fast.
+- **description**: If enabled, the server will use more thread-unsafe random number generators, which are not safe but fast.
 
 #### skip-poi-find-in-vehicle
 
 - **default**: `true`
-- **description**: If sets to "true", it will skip entity POI finding if stuck in vehicle, which optimize the performance of villagers' trading hall.
+- **description**: If enabled, it will skip entity POI finding if stuck in vehicle, which optimize the performance of villagers' trading hall.
 
 #### simpler-vanilla-shapeless-recipes
 
 - **default**: `true`
-- **description**: If sets to "true", it will replace the overly complex shapeless recipe system.
+- **description**: If enabled, it will replace the overly complex shapeless recipe system.
 
 #### reduce-entity-allocations
 
 - **default**: `true`
-- **description**: If sets to "true", it will reduce entity allocations.
+- **description**: If enabled, it will reduce entity allocations.
 
 #### biome-temperatures-use-aging-cache
 
 - **default**: `true`
-- **description**: If sets to "true", it will use aging cache for biome temperatures, This will bring some performance improvements.
+- **description**: If enabled, it will use aging cache for biome temperatures, This will bring some performance improvements.
 
 #### async-pathfinding
 
@@ -473,7 +510,7 @@ This feature is temporarily unavailable.
 #### optimized-dragon-respawn
 
 - **default**: `false`
-- **description**: If sets to "true", it will optimize dragon respawn.
+- **description**: If enabled, it will optimize dragon respawn.
 
 :::caution
 
@@ -484,14 +521,99 @@ This function is not exactly the same as the original function.
 #### cache-ignite-odds
 
 - **default**: `true`
-- **description**: If sets to "true", it will optimize fire ignite odds getter.
+- **description**: If enabled, it will optimize fire ignite odds getter.
+
+#### cache-CubeVoxelShape-shape-array
+
+- **default**: `true`
+- **description**: By adding caching to CubeVoxelShape can optimize some position calculations.
+
+#### use-fast-item-merge-raytracing
+
+- **default**: `true`
+- **description**: Use faster rays when fixing items merging through walls in Paper. You need to open fixItemsMergingThroughWalls in **paper.yml**.
+
+#### skip-secondary-POI-sensor-if-absent
+
+- **default**: `true`
+- **description**: If enabled, skip the subsequent detection when secondary POI is not found during villagers' search.
+
+#### cache-BlockStatePairKey-hash
+
+- **default**: `true`
+- **description**: If enabled, the hash value calculation on BlockStatePairKey will be cached.
+
+#### faster-chunk-serialization
+
+- **default**: `true`
+- **description**: If enabled, it will use [Lithium](https://github.com/CaffeineMC/lithium-fabric)'s Faster Chunk Serialization.
+
+#### optimize-world-generation-and-block-access
+
+- **default**: `true`
+- **description**: If enabled, it will optimize the process of generating blocks and chunks when generating the world, which helps to improve the speed of world generation.
+
+#### store-mob-counts-in-array
+
+- **default**: `true`
+- **description**: If enabled, it will use arrays when calculating the upper limit of spawnable entities, it can help improve performance but not much.
+
+#### optimize-noise-generation
+
+- **default**: `false`
+- **description**: If enabled, it will use [C2ME](https://github.com/RelativityMC/C2ME-fabric)'s optimized noise generator when generating worlds. (Experminal)
+
+#### cache-world-generator-sea-level
+
+- **default**: `true`
+- **description**: If enabled, the server will cache sea level height during world generation to avoid redundant retrieval. This may be helpful for world generation.
+
+#### dont-trigger-lootable-refresh-for-non-player
+
+- **default**: `true`
+- **description**: If enabled, then the loot table update is not triggered if the triggering player does not exist.
+
+#### optimize-sun-burn-tick
+
+- **default**: `true`
+- **description**: If enabled, it will optimize the detection of sunlight on entities, and it can reduce some entities' AI costs.
+
+#### use-optimized-collection
+
+- **default**: `true`
+- **description**: If enabled, then the vanilla's collections will be replaced by optimized collections.
+
+#### optimized-CubePointRange
+
+- **default**: `true`
+- **description**: If enabled, it will optimize the CubePointRange, it may be helpful for location calculating.
+
+#### check-frozen-ticks-before-landing-block
+
+- **default**: `true`
+- **description**: If enabled, then before freezing water, it will check game ticks before the slower air detections.
+
+#### cache-ominous-banner-item
+
+- **default**: `true`
+- **description**: If enabled, then the ominous banner item will be cached instead of creating a new item every time the get method is called.
+
+#### skip-entity-move-if-movement-is-zero
+
+- **default**: `true`
+- **description**: If enabled, it will skip entity movement calculating after the entity is completly stopped moving.
+
+#### skip-cloning-advancement-criteria
+
+- **default**: `true`
+- **description**: If enabled, it will skip the advancement judgment during copying. This may help optimize some data packets.
 
 ### protocol
 
 #### carpet-alternative-block-placement
 
 - **default**: `false`
-- **description**: If sets to "true", it will support alternative block placement protocol (from Litematica).
+- **description**: If enabled, it will support alternative block placement protocol.
 
 :::tip
 
@@ -502,17 +624,17 @@ If you want to use the alternative block placement protocol on the easy placemen
 #### pca-sync-protocol
 
 - **default**: `false`
-- **description**: If sets to "true", it will support [pcaSyncProtocol](https://github.com/plusls/plusls-carpet-addition).
+- **description**: If enabled, it will support [pcaSyncProtocol](https://github.com/plusls/plusls-carpet-addition).
 
 #### syncmatica.enable
 
 - **default**: `false`
-- **description**: If sets to "true", it will support [Syncmatica Mod](https://github.com/End-Tech/syncmatica).
+- **description**: If enabled, it will support [Syncmatica Mod](https://github.com/End-Tech/syncmatica).
 
 #### syncmatica.quota
 
 - **default**: `false`
-- **description**: If sets to "true", it can limit the maximum size a player can upload a schematic.
+- **description**: If enabled, it can limit the maximum size a player can upload a schematic.
 
 #### syncmatica.quota-limit
 
@@ -522,40 +644,40 @@ If you want to use the alternative block placement protocol on the easy placemen
 #### jade-protocol
 
 - **default**: `false`
-- **description**: If sets to "true", it will support [Jade Mod](https://github.com/Snownee/Jade).
+- **description**: If enabled, it will support [Jade Mod](https://github.com/Snownee/Jade).
 
 #### bbor-protocol
 
 - **default**: `false`
-- **description**: If sets to "true", it will support [BBOR Mod](https://github.com/irtimaled/BoundingBoxOutlineReloaded).
+- **description**: If enabled, it will support [BBOR Mod](https://github.com/irtimaled/BoundingBoxOutlineReloaded).
 
 #### pca-sync-player-entity
 
 - **default**: `OPS`
 - **description**: Control which players the pca sync protocol can sync.
-    - `NOBODY`: Nobody can be synced
-    - `BOT`: Fakeplayer can be synced
-    - `OPS`: Fakeplayer can be synced, OP can syncs all player datas
-    - `OPS_AND_SELF`: Fakeplayer can be synced, OP can sync all player datas, players can sync themselves datas
-    - `EVERYONE`: Everyone can be synced by everyone.
+  - `NOBODY`: Nobody can be synced
+  - `BOT`: Fakeplayer can be synced
+  - `OPS`: Fakeplayer can be synced, OP can syncs all player datas
+  - `OPS_AND_SELF`: Fakeplayer can be synced, OP can sync all player datas, players can sync themselves datas
+  - `EVERYONE`: Everyone can be synced by everyone.
 
 #### appleskin-protocol
 
 - **default**: `false`
-- **description**: If sets to "true", it will support [AppleSkin Mod](https://github.com/squeek502/AppleSkin).
+- **description**: If enabled, it will support [AppleSkin Mod](https://github.com/squeek502/AppleSkin).
 
 #### xaero-map-protocol
 
 - **default**: `false`
-- **description**: If sets to "true", it will support [Xaero's World Map Mod](https://minecraft.curseforge.com/projects/xaeros-world-map) and
+- **description**: If enabled, it will support [Xaero's World Map Mod](https://minecraft.curseforge.com/projects/xaeros-world-map) and
  [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap).
 
 #### leaves-carpet-support
 
 - **default**: `false`
-- **description**: If sets to "true", it will enable the support for carpet protocol implemented by LeavesMC, this lets the client think it's entering a server with a carpet and provides some client-side support.
+- **description**: If enabled, it will enable the support for carpet protocol implemented by LeavesMC, this lets the client think it's entering a server with a carpet and provides some client-side support.
 
 #### bladeren.mspt-sync-protocol
 
 - **default**: `false`
-- **description**: If sets to "true", it will support [Bladeren Mod](https://github.com/LeavesMC/Bladeren)'s mspt sync.
+- **description**: If enabled, it will support [Bladeren Mod](https://github.com/LeavesMC/Bladeren)'s mspt sync.
