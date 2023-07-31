@@ -12,5 +12,5 @@ so there may be some syntax errors and unclear translation.
 
 :::
 
-Leaves is a fork of the Paper Minecraft Server that aims repairing broken vanilla properties.
-Leaves contains some features, like anti exploit preventions and performance improvements not exists in Paper.
+Leaves is a Paper-based Minecraft server fork that strives to restore the vanilla properties that were broken by Paper. 
+Leaves has some new features and more performance improvements that are not present in Paper, such as anti-exploit prevention.
