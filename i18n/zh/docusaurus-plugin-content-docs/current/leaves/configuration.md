@@ -660,7 +660,7 @@ keywords:
 
 :::tip
 
-如果想在投影模组的轻松放置功能上使用精确放置协议，你需要手动调整投影模组使用的协议类型为 `V2` 而不能使用 `Auto` 模式。
+如果想在投影模组的轻松放置功能上使用精确放置协议，你需要手动调整投影模组使用的协议类型为 `V2` 或开启 leaves-carpet-support 。
 
 :::
 
@@ -692,7 +692,7 @@ keywords:
 :::caution
 
 在装载了Viaversion的服务器上使用此项目将会出现一些问题，请参考 [Leaves开发者的建议](https://github.com/LeavesMC/Leaves/issues/74) 和 [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73)。
-如果在服务端装载Via的情况下仍旧选择开启此项目，leaves团队不会接受任何与此有关的issues！
+如果在服务端装载Via的情况下仍旧选择开启此项目，Leaves 团队不会接受任何与此有关的issues！
 
 :::
 
@@ -734,6 +734,6 @@ keywords:
 
 :::note
 
-blareden按照正常来说并不会出现同步不及时的问题。如果你遇到了这种症状，那么尝试检查客户端侧的mod是否会导致这种问题。
+Blareden 按照正常来说并不会出现同步不及时的问题。如果你遇到了这种症状，那么尝试检查客户端侧的mod是否会导致这种问题。
 
 :::
