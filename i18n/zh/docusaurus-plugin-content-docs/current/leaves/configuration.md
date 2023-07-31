@@ -96,6 +96,7 @@ keywords:
   - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
   - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
   - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
+  - paper-world.yml chunks.delay-chunk-unloads-by: 0
   - spigot.yml world-settings.max-tnt-per-tick: 2000
 
 :::note
