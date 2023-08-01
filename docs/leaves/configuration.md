@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381).
+The last updated version of the document is [Leaves-bce5870](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-bce5870).
 
 :::
 
@@ -44,7 +44,7 @@ Configurations under this section will affect all worlds on a server, or the ser
 
 :::caution
 
-This is a test function and is unofficial. Enable this configuration may cause unknown problems with your server.
+This is a test feature and an unofficial implementation, using this feature may cause unknown errors.
 
 :::
 
@@ -142,7 +142,7 @@ If you find that there are other configurations that need to be overwritten, ple
 #### shears-in-dispenser-can-zero-amount
 
 - **default**: `false`
-- **description**: If enabled, then the shears can be used to negative durability in the dispenser without breaking.
+- **description**: If enabled, the shears can be used to negative durability in the dispenser without breaking.
 
 :::note
 
@@ -153,7 +153,7 @@ This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
 #### fix-update-suppression-crash
 
 - **default**: `true`
-- **description**: If enabled, it will fix crashes by update suppression.
+- **description**: If enabled, it will fix crashes by update suppression.The same effect as the yeetUpdateSuppressionCrash project in [Carpet TIS Addition](https://github.com/TISUnion/Carpet-TIS-Addition).
 
 #### disable-distance-check-for-use-item
 
@@ -168,18 +168,17 @@ This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
 #### budding-amethyst-can-push-by-piston
 
 - **default**: `false`
-- **description**: If enabled, then pistons can push the budding amethyst.
+- **description**: If enabled, then pistons can **push** the budding amethyst.
 
 #### stick-change-armorstand-arm-status
 
 - **default**: `true`
-- **description**: If enabled, then players can use the "stick" (minecraft:stick) to right-click the armor stand when sneaking to change the display state of the arms of the armor stand.
+- **description**: If enable,it will allow players to use sticks to right-click armor stands while crouching to change the display status of the armor stand arms, that is, set the NBT tag ShowArms to 1b. This will be similar to the bedrock edition performance.
 
 #### stackable-shulker-boxes
 
 - **default**: `'false'`
-- **description**: If enabled, then empty shulker boxes can be stacked. This must be a string and either `true` / `false` or a positive integer (integer as a string) of 64 or less.
-  If the string is an integer as string, the stackable amount of empty shulker boxes, which is treated as `2` if `true`, or 1 if `false`.
+- **description**:  If enable,it will allow the empty shulker box stack. This value must be a string of true / false or an integer less than or equal to 64. If the value is an integer, then this number is the stackable quantity of the shulker box. If it is true, it is defaulted to 2, and if it is false, it is considered 1.
 
 :::note
 
@@ -207,7 +206,7 @@ However, in order not to break down the machine, empty shulker boxes are not sta
 
 - **default**:
   - player-name
-- **description**: Blacklist list of name-using for bots.
+- **description**: The blacklist of names that dummies are prohibited from using. It does not allow writing player names with Chinese or special symbols.
 
 #### fakeplayer.limit
 
@@ -235,10 +234,26 @@ This is an experimental function, and the actions of the fakeplayer will not be 
 - **default**: `false`
 - **description**: If enabled, then players can right click by empty hand to open the fakeplayer inventory.
 
+:::note
+
+The structure slots in the fakeplayer's inventory are placeholders and do not have any special functions.
+
+:::
+
 #### fakeplayer.skip-sleep-check
 
 - **default**: `false`
-- **description**: If enabled, then fakeplayers do not count towards the sleep cap
+- **description**: If enabled, then fakeplayers do not count towards the sleep cap.
+
+#### fakeplayer.prefix
+
+- **default**: `bot_`
+- **description**: Set the prefix for fakeplayers. It does not allow writing with Chinese or special symbols.
+
+#### fakeplayer.suffix
+
+- **default**: `''`
+- **description**: Set the suffix for fakeplayers. It does not allow writing with Chinese or special symbols.
 
 #### redstone-wire-dont-connect-if-on-trapdoor
 
@@ -292,9 +307,15 @@ This feature is an experimental feature and may (not) work correctly.
 - **default**: `false`
 - **description**: If enabled, when the player flies at a certain height and speed, they will not load chunks or do world generation, thereby reducing server load.
 
+:::tip
+
+This feature was originally designed to cooperate with [Elytra Aeronautics](https://www.mcmod.cn/class/7844.html)。
+
+:::
+
 :::caution
 
-This feature is an experimental feature and may (not) work correctly.
+This feature is an experimental feature and may not work correctly.
 
 :::
 
@@ -375,7 +396,7 @@ This configuration will attempt to fix the raid farm issue through a highly aggr
 #### reduce-chuck-load-and-lookup
 
 - **default**: `true`
-- **description**: If enabled, it can reduce unnecessary chunk lookups and loads.
+- **description**: If enabled, the server will reduce unnecessary chunk lookups and loads.
 
 #### optimize-chunk-ticking
 
@@ -432,12 +453,12 @@ This configuration will attempt to fix the raid farm issue through a highly aggr
 #### fix.fix-paper-6045
 
 - **default**: `true`
-- **description**: Ifsets to  "true", it can fix a bug of paper.
+- **description**: Ifsets to  "true", it can fix a bug of paper.[Paper-6045](https://github.com/PaperMC/Paper/issues/6045)
 
 #### fix.fix-paper-9372
 
 - **default**: `true`
-- **description**: If enabled, it can fix a bug of paper, again.
+- **description**: If enabled, it can fix a bug of paper, again.[Paper-9372](https://github.com/PaperMC/Paper/issues/9372)
 
 #### dont-send-useless-entity-packets
 
@@ -646,6 +667,12 @@ If you want to use the alternative block placement protocol on the easy placemen
 - **default**: `false`
 - **description**: If enabled, it will support [Jade Mod](https://github.com/Snownee/Jade).
 
+:::caution
+
+Using this project on a server with Viaversion loaded will cause some problems, please refer to [Leaves developer’s suggestion](https://github.com/LeavesMC/Leaves/issues/74) and [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73). If you still choose to enable this project on the server side with Via loaded, the Leaves team will not accept any issues related to this!
+
+:::  
+
 #### bbor-protocol
 
 - **default**: `false`
@@ -681,3 +708,9 @@ If you want to use the alternative block placement protocol on the easy placemen
 
 - **default**: `false`
 - **description**: If enabled, it will support [Bladeren Mod](https://github.com/LeavesMC/Bladeren)'s mspt sync.
+
+:::note
+
+Blareden should not have the problem of synchronization lagging under normal circumstances. If you encounter this symptom, try checking if the client-side mod will cause this problem.
+
+:::
