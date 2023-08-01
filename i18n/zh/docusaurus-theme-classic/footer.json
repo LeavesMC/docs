@@ -17,7 +17,7 @@
   },
   "link.item.label.Discord": {
     "message": "Discord",
-    "description": "The label of footer link with label=Discord linking to https://discord,gg/5hgtU72w33"
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/5hgtU72w33"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
