@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381).
+The last updated version of this document is Leaves-1.20.1-bce5870(https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-bce5870). 
 
 :::
 
@@ -153,7 +153,7 @@ This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
 #### fix-update-suppression-crash
 
 - **default**: `true`
-- **description**: If enabled, it will fix crashes by update suppression.
+- **description**: If enabled, it will fix crashes by update suppression.The same effect as the yeetUpdateSuppressionCrash project in [Carpet TIS Addition](https://github.com/TISUnion/Carpet-TIS-Addition).
 
 #### disable-distance-check-for-use-item
 
@@ -168,13 +168,12 @@ This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
 #### budding-amethyst-can-push-by-piston
 
 - **default**: `false`
-- **description**: If enabled, then pistons can push the budding amethyst.
+- **description**: If enabled, then pistons can **push** the budding amethyst.
 
 #### stick-change-armorstand-arm-status
 
 - **default**: `true`
-- **description**: If enabled, then players can use the "stick" (minecraft:stick) to right-click the armor stand when sneaking to change the display state of the arms of the armor stand.
-
+- **description**: If enable,it will allow players to use sticks to right-click armor stands while crouching to change the display status of the armor stand arms, that is, set the NBT tag ShowArms to 1b. This will be similar to the bedrock edition performance.
 #### stackable-shulker-boxes
 
 - **default**: `'false'`
@@ -432,12 +431,12 @@ This configuration will attempt to fix the raid farm issue through a highly aggr
 #### fix.fix-paper-6045
 
 - **default**: `true`
-- **description**: Ifsets to  "true", it can fix a bug of paper.
+- **description**: Ifsets to  "true", it can fix a bug of paper.[Paper-6045](https://github.com/PaperMC/Paper/issues/6045)
 
 #### fix.fix-paper-9372
 
 - **default**: `true`
-- **description**: If enabled, it can fix a bug of paper, again.
+- **description**: If enabled, it can fix a bug of paper, again.[Paper-9372](https://github.com/PaperMC/Paper/issues/9372)
 
 #### dont-send-useless-entity-packets
 
@@ -645,6 +644,12 @@ If you want to use the alternative block placement protocol on the easy placemen
 
 - **default**: `false`
 - **description**: If enabled, it will support [Jade Mod](https://github.com/Snownee/Jade).
+
+:::caution
+
+Using this project on a server with Viaversion loaded will cause some problems, please refer to [Leaves developer’s suggestion](https://github.com/LeavesMC/Leaves/issues/74) and [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73). If you still choose to enable this project on the server side with Via loaded, the Leaves team will not accept any issues related to this!
+
+:::  
 
 #### bbor-protocol
 
