@@ -70,7 +70,7 @@ keywords:
 #### return-nether-portal-fix
 
 - **默认值**: `false`
-- **简介**: 如果为是，那么服务端将会修复玩家从地狱返回主世界时地狱门串门的问题。这可能会导致原有的地狱门链接不可用。
+- **简介**: 如果为是，那么服务端将会修复玩家从下界返回主世界时下界传送门串门的问题。这可能会导致原有的下界传送门链接不可用。
 
 :::caution
 
@@ -123,7 +123,7 @@ keywords:
 #### player-operation-limiter
 
 - **默认值**: `false`
-- **简介**: 是否限制玩家行为速度。如果为是那么每 gt 每个玩家只能秒破1个或放置2个方块，这可以对抗自动破基岩 mod，但不会影响正常的无头活塞破基岩。
+- **简介**: 是否限制玩家行为速度。如果为是那么每 gt 每个玩家只能秒破 1 个或放置 2 个方块，这可以对抗自动破基岩 mod，但不会影响正常的无头活塞破基岩。
 
 #### use-vanilla-random
 
@@ -147,7 +147,7 @@ keywords:
 
 :::note
 
-这是一个老版本 Minecraft 的 bug。
+这是一个旧版本 Minecraft 的 bug。
 
 :::
 
@@ -169,22 +169,22 @@ keywords:
 #### budding-amethyst-can-push-by-piston
 
 - **默认值**: `false`
-- **简介**: 是否允许活塞**推动**紫水晶母岩。
+- **简介**: 是否允许活塞 **推动** 紫水晶母岩。
 
 #### stick-change-armorstand-arm-status
 
 - **默认值**: `true`
-- **简介**: 是否允许玩家在下蹲时使用木棍右键盔甲架来改变盔甲架手臂的显示状态，即将NBT标签 ShowArms 设置为1b。这将会与基岩版表现相近。
+- **简介**: 是否允许玩家在下蹲时使用木棍右键盔甲架来改变盔甲架手臂的显示状态，即将 NBT 标签 ShowArms 设置为 1b 。这将会与基岩版表现相近。
 
 #### stackable-shulker-boxes
 
 - **默认值**: `false`
-- **简介**: 是否启用空潜影盒堆叠功能。此项值必须为一个为 `true` / `false` 的字符串或小于等于64的整数。
- 如值为一个整数，则这个数值便为空潜影盒的可堆叠数量。如为 `true` 则默认视为 `2`，如为 `false` 则视为1。
+- **简介**: 是否启用空潜影盒堆叠功能。此项值必须为一个为 `true` / `false` 的字符串或小于等于 64 的正整数。
+ 如值为一个整数，则这个数值便为空潜影盒的可堆叠数量。如为 `true` 则默认视为 `2`，如为 `false` 则视为 `1` 。
 
 :::note
 
-空潜影盒会在地上和被玩家捡起时自动堆叠，如果玩家安装了支持的mod则也可以在背包内手动堆叠。
+空潜影盒会在地上和被玩家捡起时自动堆叠，如果玩家安装了支持的 mod 则也可以在背包内手动堆叠。
 但为了不破坏机器，空潜影盒不会在漏斗内被堆叠，并且堆叠的空潜影盒会在漏斗运行时被分开。
 
 :::
@@ -270,7 +270,7 @@ keywords:
 #### despawn-enderman-with-block
 
 - **默认值**: `false`
-- **简介**: 是否让手中有方块的末影人会被刷新。如果为是，那么这可以消除服务器里一堆刷不掉的末影人。
+- **简介**: 是否让手持方块的末影人会被刷新。如果为是，那么这可以消除服务器里一堆刷不掉的末影人。
 
 #### creative-no-clip
 
@@ -286,7 +286,7 @@ keywords:
 #### mending-compatibility-infinity
 
 - **默认值**: `false`
-- **简介**: 如果为是，那么经验修补和无限将可以同时附魔在弓上。
+- **简介**: 如果为是，那么“经验修补”和“无限”附魔将可以同时附魔在弓上。
 
 #### shave-snow-layers
 
@@ -307,7 +307,7 @@ keywords:
 #### elytra-aeronautics.no-chunk-load
 
 - **默认值**: `false`
-- **简介**: 如果为是，那么玩家在一定高度和一定速度时鞘翅飞行不加载区块也不进行世界生成，以此减少服务器负荷。
+- **简介**: 如果为是，那么玩家在一定高度和一定速度使用鞘翅飞行时不加载区块也不进行世界生成，以此减少服务器负荷。
 
 :::tip
 
@@ -324,7 +324,7 @@ keywords:
 #### elytra-aeronautics.no-chunk-height
 
 - **默认值**: `500.0`
-- **简介**: 玩家进入不加载区块状态时飞行需要的y轴高度。
+- **简介**: 玩家进入不加载区块状态时飞行需要的 y 轴高度。
 
 #### elytra-aeronautics.no-chunk-speed
 
@@ -360,12 +360,12 @@ keywords:
 #### container-passthrough
 
 - **默认值**: `false`
-- **简介**: 如果此项为 **true**，那么玩家可以无视挂在箱子上的告示牌直接打开箱子。此时玩家需要**主副手**均不拿物品，按住潜行的同时右键才能编辑告示牌。
+- **简介**: 如果此项为 **true**，那么玩家可以无视挂在箱子上的告示牌直接打开箱子。此时玩家需要 **主副手** 均不拿物品，按住潜行的同时右键才能编辑告示牌。
 
 #### lava-riptide
 
 - **默认值**: `false`
-- **简介**: 如果为是，则允许玩家在岩浆中使用激流进行突刺。（需要安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren) 配合使用。）
+- **简介**: 如果为是，则允许玩家在岩浆中使用“激流”附魔的三叉戟进行突刺。（需要安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren) 配合使用。）
 
 #### raider-die-skip-self-raid-check
 
@@ -374,7 +374,7 @@ keywords:
 
 :::caution
 
-这个配置将会通过十分激进的方案尝试修复袭击塔断流。当值为 **true** 时会让袭击塔的效率提高 10%~50%，会对服务器的性能造成较大影响，请酌情考虑是否开启。
+这个配置将会通过十分激进的方案尝试修复袭击塔断流。当值为 **true** 时会让袭击塔的效率提高 10%~50%，同时会对服务器的性能造成较大影响，请酌情考虑是否开启。
 
 :::
 
@@ -403,7 +403,7 @@ keywords:
 #### optimize-chunk-ticking
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会优化以下的区块tick，可以提高 5% 到 10% 的性能。
+- **简介**: 如果为是，那么服务端将会优化以下的区块 tick，可以提高 5% 到 10% 的性能。
   - 闪电
   - 冰和雪的生成
 
@@ -460,12 +460,12 @@ keywords:
 #### fix.fix-paper-6045
 
 - **默认值**: `true`
-- **简介**: 修复了一个Paper的bug。[Paper-6045](https://github.com/PaperMC/Paper/issues/6045)
+- **简介**: 修复了一个 Paper 的 bug 。[Paper-6045](https://github.com/PaperMC/Paper/issues/6045)
 
 #### fix.fix-paper-9372
 
 - **默认值**: `true`
-- **简介**: 修复了一个Paper的bug。[Paper-9372](https://github.com/PaperMC/Paper/issues/9372)
+- **简介**: 修复了一个 Paper 的 bug 。[Paper-9372](https://github.com/PaperMC/Paper/issues/9372)
 
 #### dont-send-useless-entity-packets
 
@@ -692,8 +692,8 @@ keywords:
 
 :::caution
 
-在装载了Viaversion的服务器上使用此项目将会出现一些问题，请参考 [Leaves开发者的建议](https://github.com/LeavesMC/Leaves/issues/74) 和 [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73)。
-如果在服务端装载Via的情况下仍旧选择开启此项目，Leaves 团队不会接受任何与此有关的 issues！
+在装载了 Viaversion 的服务器上使用此项目将会出现一些问题，请参考 [Leaves开发者的建议](https://github.com/LeavesMC/Leaves/issues/74) 和 [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73)。
+如果在服务端装载 Via 的情况下仍旧选择开启此项目，Leaves 团队不会接受任何与此有关的 issues！
 
 :::
 
