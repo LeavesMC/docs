@@ -19,7 +19,7 @@ keywords:
 
 :::tip
 
-部分配置可能覆盖上游服务端的配置（比如paper.yml）。
+部分配置可能覆盖上游服务端的配置（比如 paper.yml）。
 
 :::
 
@@ -36,7 +36,7 @@ keywords:
 #### dont-respond-ping-before-start-fully
 
 - **默认值**: `true`
-- **简介**: 如果此项设置为是，那么服务端在未完全启动之前将不会回复客户端的ping请求。
+- **简介**: 如果此项设置为是，那么服务端在未完全启动之前将不会回复客户端的 ping 请求。
 
 #### extra-yggdrasil-service.enable
 
@@ -58,7 +58,7 @@ keywords:
 #### no-chat-sign
 
 - **默认值**: `true`
-- **简介**: 是否删除玩家聊天内的签名来保护玩家聊天。如果开启此选项，服务器将会向安装了NoChatReport的玩家发送同样受到保护的信息。
+- **简介**: 是否删除玩家聊天内的签名来保护玩家聊天。如果开启此选项，服务器将会向安装了 NoChatReport 的玩家发送同样受到保护的信息。
 
 #### disable-method-profiler
 
@@ -123,7 +123,7 @@ keywords:
 #### player-operation-limiter
 
 - **默认值**: `false`
-- **简介**: 是否限制玩家行为速度。如果为是那么每 gt 每个玩家只能秒破1个或放置2个方块，这可以对抗自动破基岩mod，但不会影响正常的无头活塞破基岩。
+- **简介**: 是否限制玩家行为速度。如果为是那么每 gt 每个玩家只能秒破1个或放置2个方块，这可以对抗自动破基岩 mod，但不会影响正常的无头活塞破基岩。
 
 #### use-vanilla-random
 
@@ -147,14 +147,14 @@ keywords:
 
 :::note
 
-这是一个老版本Minecraft的 bug。
+这是一个老版本 Minecraft 的 bug。
 
 :::
 
 #### fix-update-suppression-crash
 
 - **默认值**: `true`
-- **简介**: 是否修复更新抑制造成的崩溃。与[Carpet TIS Addition](https://github.com/TISUnion/Carpet-TIS-Addition)中的yeetUpdateSuppressionCrash项目效果相同。
+- **简介**: 是否修复更新抑制造成的崩溃。与[Carpet TIS Addition](https://github.com/TISUnion/Carpet-TIS-Addition)中的 yeetUpdateSuppressionCrash 项目效果相同。
 
 #### disable-distance-check-for-use-item
 
@@ -164,7 +164,7 @@ keywords:
 #### spectator-dont-get-advancement
 
 - **默认值**: `false`
-- **简介**: 如果为是，那么观察者模式的玩家是否不会获得进度。
+- **简介**: 如果为是，那么观察者模式的玩家不会获得进度。
 
 #### budding-amethyst-can-push-by-piston
 
@@ -174,11 +174,11 @@ keywords:
 #### stick-change-armorstand-arm-status
 
 - **默认值**: `true`
-- **简介**: 是否允许玩家在下蹲时使用木棍右键盔甲架来改变盔甲架手臂的显示状态，即将NBT标签ShowArms设置为1b。这将会与基岩版表现相近。
+- **简介**: 是否允许玩家在下蹲时使用木棍右键盔甲架来改变盔甲架手臂的显示状态，即将NBT标签 ShowArms 设置为1b。这将会与基岩版表现相近。
 
 #### stackable-shulker-boxes
 
-- **默认值**: `'false'`
+- **默认值**: `false`
 - **简介**: 是否启用空潜影盒堆叠功能。此项值必须为一个为 `true` / `false` 的字符串或小于等于64的整数。
  如值为一个整数，则这个数值便为空潜影盒的可堆叠数量。如为 `true` 则默认视为 `2`，如为 `false` 则视为1。
 
@@ -260,12 +260,12 @@ keywords:
 #### redstone-wire-dont-connect-if-on-trapdoor
 
 - **默认值**: `false`
-- **简介**: 是否让红石粉不再连接到活板门上，如果为是，这可以恢复1.20前的简易更新抑制。
+- **简介**: 是否让红石粉不再连接到活板门上，如果为是，这可以恢复 1.20 前的简易更新抑制。
 
 #### disable-check-out-of-order-command
 
 - **默认值**: `false`
-- **简介**: 是否禁用聊天信息顺序检查。如果为是，那么可以修复使用Velocity作为上游代理时粘贴原理图失败的问题。
+- **简介**: 是否禁用聊天信息顺序检查。如果为是，那么可以修复使用 Velocity 作为上游代理时粘贴原理图失败的问题。
 
 #### despawn-enderman-with-block
 
@@ -279,7 +279,7 @@ keywords:
 
 :::note
 
-此功能需要启用leaves-carpet-support并且需要玩家安装carpet才可正常使用。
+此功能需要启用 leaves-carpet-support 并且需要玩家安装 carpet 才可正常使用。
 
 :::
 
@@ -334,7 +334,7 @@ keywords:
 #### elytra-aeronautics.message
 
 - **默认值**: `true`
-- **简介**: 是否在玩家进入和退出不加载区块状态时进行提示。如果为是那么将会在进入和退出时向客户端以title @s subtitle的形式提示玩家。
+- **简介**: 是否在玩家进入和退出不加载区块状态时进行提示。如果为是那么将会在进入和退出时向客户端以 title @s subtitle 的形式提示玩家。
 
 #### elytra-aeronautics.message-start
 
@@ -349,7 +349,7 @@ keywords:
 #### disable-packet-limit
 
 - **默认值**: `false`
-- **简介**: 是否禁用发包限制。如果为是那么将会关闭paper原有的所有发包限制。
+- **简介**: 是否禁用发包限制。如果为是那么将会关闭 paper 原有的所有发包限制。
 
 :::caution
 
@@ -365,7 +365,7 @@ keywords:
 #### lava-riptide
 
 - **默认值**: `false`
-- **简介**: 如果为是，则允许玩家在岩浆中使用激流进行突刺。（需要安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren)配合使用。）
+- **简介**: 如果为是，则允许玩家在岩浆中使用激流进行突刺。（需要安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren) 配合使用。）
 
 #### raider-die-skip-self-raid-check
 
@@ -440,7 +440,7 @@ keywords:
 #### enable-suffocation-optimization
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将每隔20tick才检查一次窒息，玩家很难（但不是不可能）注意到这一变化。
+- **简介**: 如果为是，那么服务端将每隔 20tick 才检查一次窒息，玩家很难（但不是不可能）注意到这一变化。
 
 #### strip-raytracing-for-entity
 
@@ -455,7 +455,7 @@ keywords:
 #### improve-fluid-direction-caching
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会重新实现FluidTypeFlowing的缓存系统，并使其执行效率更高。
+- **简介**: 如果为是，那么服务端将会重新实现 FluidTypeFlowing 的缓存系统，并使其执行效率更高。
 
 #### fix.fix-paper-6045
 
@@ -470,12 +470,12 @@ keywords:
 #### dont-send-useless-entity-packets
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会减少根本没用的一些实体包的发送。（这可能会破坏一些利用这些无用实体包的mod的表现。）
+- **简介**: 如果为是，那么服务端将会减少根本没用的一些实体包的发送。（这可能会破坏一些利用这些无用实体包的 mod 的表现。）
 
 #### optimize-entity-coordinate-key
 
 - **默认值**: `true`
-- **简介**: 当为实体（热路径）执行getCoordinateKey 时，JVM 需要重复将 double 转换为long。
+- **简介**: 当为实体（热路径）执行 getCoordinateKey 时，JVM 需要重复将 double 转换为 long。
  这对性能的影响取决于CPU架构，但通常在 FPU 和 ALU 之间切换会导致严重的性能损失。
  blockPosition 结构中已提供了已转换/舍入的数据，因此当此项为是时，我们将会继续使用该数据而不是重新进行转换。
 
@@ -487,7 +487,7 @@ keywords:
 #### skip-poi-find-in-vehicle
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会跳过在载具内村民的poi计算，这对密集的村民交易大厅的优化十分明显。
+- **简介**: 如果为是，那么服务端将会跳过在载具内村民的 poi 计算，这对密集的村民交易大厅的优化十分明显。
 
 #### simpler-vanilla-shapeless-recipes
 
@@ -540,7 +540,7 @@ keywords:
 
 :::caution
 
-如果不想干扰任何生成机制，则可禁用此功能。但是此功能在拥有上千实体的服务器上可以带来足足15%的性能提升。
+如果不想干扰任何生成机制，则可禁用此功能。但是此功能在拥有上千实体的服务器上可以带来足足 15% 的性能提升。
 在我看来，为了这些性能提升而承担较小的实体生成不一致的风险是非常值得的。
 
 :::
@@ -606,6 +606,7 @@ keywords:
 这是一个实验性功能，它可能不会工作。
 
 :::
+
 #### cache-world-generator-sea-level
 
 - **默认值**: `true`
@@ -639,7 +640,7 @@ keywords:
 #### cache-ominous-banner-item
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么将会缓存灾厄旗帜的NBT数据。（因为没有必要每次都创建一个新的物品，这会拖累一些性能）
+- **简介**: 如果为是，那么将会缓存灾厄旗帜的 NBT 数据。（因为没有必要每次都创建一个新的物品，这会拖累一些性能）
 
 #### skip-entity-move-if-movement-is-zero
 
@@ -692,7 +693,7 @@ keywords:
 :::caution
 
 在装载了Viaversion的服务器上使用此项目将会出现一些问题，请参考 [Leaves开发者的建议](https://github.com/LeavesMC/Leaves/issues/74) 和 [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73)。
-如果在服务端装载Via的情况下仍旧选择开启此项目，Leaves 团队不会接受任何与此有关的issues！
+如果在服务端装载Via的情况下仍旧选择开启此项目，Leaves 团队不会接受任何与此有关的 issues！
 
 :::
 
@@ -734,6 +735,6 @@ keywords:
 
 :::note
 
-Blareden 按照正常来说并不会出现同步不及时的问题。如果你遇到了这种症状，那么尝试检查客户端侧的mod是否会导致这种问题。
+Blareden 按照正常来说并不会出现同步不及时的问题。如果你遇到了这种症状，那么尝试检查客户端侧的 mod 是否会导致这种问题。
 
 :::

@@ -22,10 +22,10 @@ slug: /leaves/migration
 
 ### 从 CraftBukkit/Spigot/Paper
 
-从 CraftBukkit/Spigot/Paper 迁移到 Leaves是十分简单快捷的，你只需要按照以下步骤即可。
+从 CraftBukkit/Spigot/Paper 迁移到 Leaves 是十分简单快捷的，你只需要按照以下步骤即可。
 
 1. 关闭你的服务器然后备份服务器。
-2. 从 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 下载最新的Leaves。
+2. 从 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 下载最新的 Leaves。
 3. 用最新下载的 Jar 文件替换旧的 Jar 文件。
 4. 编辑你的启动脚本（比如 `start.bat` 或 `start.sh`），将其中的 Jar 名替换为最新的 Jar 名（比如 `leaves-1.20.1.jar`）。
 5. 启动服务器。
@@ -85,7 +85,7 @@ Leaves 的世界储存的格局是大不相同的，因此你需要手动更改�
 | 原版     | `/world` | `/world/DIM-1`        | `/world/DIM1`         |
 | Leaves  | `/world` | `/world_nether/DIM-1` | `/world_the_end/DIM1` |
 
-你需要按照以下步骤来从Leaves迁移到原版:
+你需要按照以下步骤来从 Leaves 迁移到原版:
 
 :::note
 
@@ -98,7 +98,7 @@ Leaves 的世界储存的格局是大不相同的，因此你需要手动更改�
 3. 将 `/world_nether/DIM-1` 文件夹复制到 `/world` 内。
 4. 将 `/world_the_end/DIM1` 文件夹复制到 `/world` 内。
 5. 删除 `/world_nether` 和 `/world_the_end` 文件夹（不必要）。
-6. 用原版服Jar文件替换掉Leaves的Jar文件。
+6. 用原版服 Jar 文件替换掉 Leaves 的 Jar 文件。
 7. 启动服务器。
 
 ### 迁移到 CraftBukkit/Spigot/Paper
