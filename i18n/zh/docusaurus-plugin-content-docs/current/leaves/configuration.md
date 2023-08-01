@@ -12,7 +12,7 @@ keywords:
 
 :::note
 
-此文档的最后更新版本为 [Leaves-1.20.1-bce5870](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-bce5870)。
+此文档的最后更新版本为 [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381)。
 如无特殊说明，本文档中所有的 `是` / `否` 均指代 `true` / `false` 。
 
 :::
