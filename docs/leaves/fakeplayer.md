@@ -98,6 +98,12 @@ You can use `/bot action <Bot Name> <Action Name> [Action Args]` to make the spe
 - **args**: `[TickDelay]` `[DoNumber]`
 - **description**: The fakeplayer will try to attack the nearest entity.
 
+### Attack Self Action
+
+- **name**: `attack_self`
+- **args**: `[TickDelay]` `[DoNumber]`
+- **description**: When the fakeplayer starts performing this action, the fakeplayer will try to collide with entities inside its own **hitbox**.
+
 ### Break Block Action
 
 - **name**: `break`
@@ -184,3 +190,18 @@ The behavior of the fakeplayer trying to use a entity with GUI is undefined.
 - **name**: `fish`
 - **args**: `[TickDelay]` `[DoNumber]`
 - **description**: The fakeplayer will try auto fishing.
+
+### Lay Action
+
+- **name**: `lay`
+- **args**: `none`
+- **description**: When the fakeplayer starts performing this action, the fakeplayer will try to lie down.
+
+## Botlist
+
+/bot list [world] to view the global/world-specific bots.
+
+[world] is an optional parameter. It defaults to world/world_nether/world_the_end. You can also enter the name of your own custom world to view the bots in that world.
+
+Generally, the final output command is in this style: Total number:(current number of bots/max player capacity) World 1 (number):(will not be displayed if empty) World 2 (number):(will not be displayed if empty) World 3 (number):bot name 1, bot name 2…
+
