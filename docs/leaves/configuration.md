@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381).
+The last updated version of the document is [Leaves-63548e5](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-63548e5).
 
 :::
 
@@ -63,6 +63,11 @@ This is a test feature and an unofficial implementation, using this feature may 
 
 - **default**: `true`
 - **description**: If enabled, it will disable the method profiler on server. Disabling it will have a partial impact on testing and a small amount of performance improvement, but will not affect the use of the production environment.
+
+ #### bstats-privacy-mode
+
+- **default**: `false`
+- **description**: If enabled, it will enable the bstats privacy mode on the server, which means that bstats no longer collect the number of players, the java version used by the server, and the online mode information.
 
 ### modify
 
@@ -376,6 +381,21 @@ This configuration will attempt to fix the raid farm issue through a highly aggr
 
 :::
 
+#### avoid-anvil-too-expensive
+
+- **default**: `true`
+- **description**: If enabled, the expensive setting of the anvil will be cancelled.
+
+#### bow-infinity-fix
+
+- **default**: `false`
+- **description**: If enabled, then the server will allow the use of infinite bows even when there are no arrows in the inventory.
+
+ #### zero-tick-plants
+
+- **default**: `false`
+- **description**: If enabled, then the server will re-add the 0-tick ripening mechanism to the game.
+
 ### performance
 
 #### cache-climb-check
@@ -629,6 +649,21 @@ This function is not exactly the same as the original function.
 - **default**: `true`
 - **description**: If enabled, it will skip the advancement judgment during copying. This may help optimize some data packets.
 
+#### skip-unnecessary-mob-spawning-computations
+
+- **default**: `true`
+- **description**: If enabled, the server will skip unnecessary biological generation calculations.
+
+#### skip-negligible-planar-movement-multiplication
+
+- **default**: `true`
+- **description**: If enabled, server will skip unnecessary multiplication calculations during player movement.
+
+ #### fix-villagers-dont-release-memory
+
+- **default**: `true`
+- **description**: If enabled, the problem of villagers occupying memory and not releasing it will be effectively solved. 
+  
 ### protocol
 
 #### carpet-alternative-block-placement
