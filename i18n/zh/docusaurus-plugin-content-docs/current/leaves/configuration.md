@@ -65,6 +65,11 @@ keywords:
 - **默认值**: `true`
 - **简介**: 是否禁用方法检查器。这可能会对测试造成一定影响，但不影响实际的使用，并可以获得一定的性能提升。
 
+#### bstats-privacy-mode
+
+- **默认值**: `false`
+- **简介**: 如果为此项目为true，bstats将开启隐私模式，也就是说它将不会收集服务端版本，游玩人数和使用java版本。
+
 ### modify
 
 #### return-nether-portal-fix
@@ -378,6 +383,21 @@ keywords:
 
 :::
 
+#### avoid-anvil-too-expensive
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么铁砧过于昂贵的设定将会取消
+
+#### bow-infinity-fix
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么背包里没有箭的情况下也可以使用带有无限附魔的弓。
+
+#### zero-tick-plants
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么0tick催熟植物将重新可用。
+
 ### performance
 
 #### cache-climb-check
@@ -651,6 +671,21 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 如果为是，那么服务端将会跳过进度判断的复制。这可能有助于优化部分数据包。
+
+#### skip-unnecessary-mob-spawning-computations
+
+- **默认值**: `true`
+- **简介**: 如果此项为是，那么服务端将会跳过无必要的生物生成计算。
+
+#### skip-negligible-planar-movement-multiplication
+
+- **默认值**: `true`
+- **简介**: 如果此项为是，那么服务端将会跳过玩家移动中不必要的乘法计算。
+
+#### fix-villagers-dont-release-memory
+
+- **默认值**: `true`
+- **简介**: 如果此项为是，那么村民占用内存不释放的问题将得到有效解决。
 
 ### protocol
 
