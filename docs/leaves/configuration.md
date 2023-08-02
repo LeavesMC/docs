@@ -64,6 +64,11 @@ This is a test feature and an unofficial implementation, using this feature may 
 - **default**: `true`
 - **description**: If enabled, it will disable the method profiler on server. Disabling it will have a partial impact on testing and a small amount of performance improvement, but will not affect the use of the production environment.
 
+ #### bstats-privacy-mode
+
+- **default**: `false`
+- **description**: If enabled, it will enable the bstats privacy mode on the server, which means that bstats no longer collect the number of players, the java version used by the server, and the online mode information.
+
 ### modify
 
 #### return-nether-portal-fix
@@ -375,6 +380,16 @@ If your server has installed packet-limiting plugins like ViaVersion, you need t
 This configuration will attempt to fix the raid farm issue through a highly aggressive approach. When set to true, it will enhance raid farm efficiency by 10% to 50%, but it will have a significant impact on server performance. Please consider whether to enable it.
 
 :::
+
+#### bow-infinity-fix
+
+- **default**: `false`
+- **description**: If enabled, then the server will allow the use of infinite bows even when there are no arrows in the inventory.
+
+ #### zero-tick-plants
+
+- **default**: `false`
+- **description**: If enabled, then the server will re-add the 0-tick ripening mechanism to the game.
 
 ### performance
 
