@@ -539,12 +539,6 @@ This feature is temporarily unavailable.
 
 #### async-mob-spawning
 
-:::danger
-
-This feature is temporarily unavailable.
-
-:::
-
 - **default**: `false`
 - **description**: NOT AVAILABLE YET
 
