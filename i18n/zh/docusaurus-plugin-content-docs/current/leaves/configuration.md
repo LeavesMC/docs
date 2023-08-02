@@ -12,7 +12,7 @@ keywords:
 
 :::note
 
-此文档的最后更新版本为 [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381)。
+此文档的最后更新版本为 [Leaves-1.20.1-63548e5](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-63548e5)。
 如无特殊说明，本文档中所有的 `是` / `否` 均指代 `true` / `false` 。
 
 :::
@@ -547,12 +547,6 @@ keywords:
 - **简介**: 如果为是，那么服务端将会开启异步化的实体追踪。
 
 #### async-mob-spawning
-
-:::danger
-
-此功能暂时不可用。
-
-:::
 
 - **默认值**: `false`
 - **简介**: 如果为是，那么服务端将会将尽可能多的工作卸载到其他线程来减少实体生成对主线程的影响。
