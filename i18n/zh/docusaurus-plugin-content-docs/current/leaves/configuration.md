@@ -12,7 +12,7 @@ keywords:
 
 :::note
 
-此文档的最后更新版本为 [Leaves-1.20.1-8623381](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-8623381)。
+此文档的最后更新版本为 [Leaves-1.20.1-63548e5](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-63548e5)。
 如无特殊说明，本文档中所有的 `是` / `否` 均指代 `true` / `false` 。
 
 :::
@@ -64,6 +64,11 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 是否禁用方法检查器。这可能会对测试造成一定影响，但不影响实际的使用，并可以获得一定的性能提升。
+
+#### bstats-privacy-mode
+
+- **默认值**: `false`
+- **简介**: 如果为此项目为true，bstats将开启隐私模式，也就是说它将不会收集服务端版本，游玩人数和使用java版本。
 
 ### modify
 
@@ -378,6 +383,21 @@ keywords:
 
 :::
 
+#### avoid-anvil-too-expensive
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么铁砧过于昂贵的设定将会取消
+
+#### bow-infinity-fix
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么背包里没有箭的情况下也可以使用带有无限附魔的弓。
+
+#### zero-tick-plants
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么0tick催熟植物将重新可用。
+
 ### performance
 
 #### cache-climb-check
@@ -528,12 +548,6 @@ keywords:
 
 #### async-mob-spawning
 
-:::danger
-
-此功能暂时不可用。
-
-:::
-
 - **默认值**: `false`
 - **简介**: 如果为是，那么服务端将会将尽可能多的工作卸载到其他线程来减少实体生成对主线程的影响。
 这可能会出现生成不一致的情况，但当问题发生时并不会出现错误，只会造成实体生成波动的问题。
@@ -651,6 +665,21 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 如果为是，那么服务端将会跳过进度判断的复制。这可能有助于优化部分数据包。
+
+#### skip-unnecessary-mob-spawning-computations
+
+- **默认值**: `true`
+- **简介**: 如果此项为是，那么服务端将会跳过无必要的生物生成计算。
+
+#### skip-negligible-planar-movement-multiplication
+
+- **默认值**: `true`
+- **简介**: 如果此项为是，那么服务端将会跳过玩家移动中不必要的乘法计算。
+
+#### fix-villagers-dont-release-memory
+
+- **默认值**: `true`
+- **简介**: 如果此项为是，那么村民占用内存不释放的问题将得到有效解决。
 
 ### protocol
 
