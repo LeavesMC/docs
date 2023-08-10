@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-63548e5](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-63548e5).
+The last updated version of the document is [Leaves-24b7527](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-24b7527).
 
 :::
 
@@ -69,6 +69,18 @@ This is a test feature and an unofficial implementation, using this feature may 
 - **default**: `false`
 - **description**: If enabled, it will enable the bstats privacy mode on the server, which means that bstats no longer collect the number of players, the java version used by the server, and the online mode information.
 
+  #### auto-update.enable
+
+- **default**: `false`
+- **description**: If enabled, the server will automatically detect the version and update to the latest version at the time you specify.
+
+ #### auto-update.time
+
+- **default**: '- '14:00' - '2:00' '
+- **description**: Set the time for automatic updates. This function needs to be used with the auto-update. enable option.
+
+
+
 ### modify
 
 #### return-nether-portal-fix
@@ -101,7 +113,7 @@ This configuration is a experimental function and may not work properly.
   - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
   - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
   - spigot.yml world-settings.max-tnt-per-tick: 2000
-
+  - paper-global.yml item-validation.resolve-selectors-in-books: true
 :::note
 
 If you find that there are other configurations that need to be overwritten, please submit an issue.
