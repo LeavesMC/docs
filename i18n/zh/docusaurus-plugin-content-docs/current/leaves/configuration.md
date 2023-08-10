@@ -12,7 +12,7 @@ keywords:
 
 :::note
 
-此文档的最后更新版本为 [Leaves-1.20.1-63548e5](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-63548e5)。
+此文档的最后更新版本为 [Leaves-24b7527](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-24b7527)。
 如无特殊说明，本文档中所有的 `是` / `否` 均指代 `true` / `false` 。
 
 :::
@@ -70,6 +70,15 @@ keywords:
 - **默认值**: `false`
 - **简介**: 如果为此项目为true，bstats将开启隐私模式，也就是说它将不会收集服务端版本，游玩人数和使用java版本。
 
+#### auto-update.enable
+
+- **默认值**: `false`
+- **简介**: 是否启用服务端自动更新功能，如果启用此功能，服务端将在你指定的时间自动检测版本并更新至最新版。
+
+#### auto-update.time
+- **默认值**: '- '14:00' - '2:00' '
+- **简介**: 指定自动更新的时间。此项目需搭配auto-update.enable项使用。
+
 ### modify
 
 #### return-nether-portal-fix
@@ -103,6 +112,7 @@ keywords:
   - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
   - paper-world.yml chunks.delay-chunk-unloads-by: 0
   - spigot.yml world-settings.max-tnt-per-tick: 2000
+  - paper-global.yml item-validation.resolve-selectors-in-books: true
 
 :::note
 
