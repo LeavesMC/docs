@@ -18,13 +18,13 @@ function Projects({title, description, repo, link}) {
   return (
     <div className={styles.project}>
       <div className={styles.flex}>
-        <Link className={styles.projectGitHub} to={`https://github.com/${repo}`}>
+        <Link className={styles.projectGitHub} to={`https://github.com/${repo}`} data-umami-event="Go to project">
           {title}
         </Link>
         <p>{description}</p>
       </div>
       <div>
-        <Link className="button button--primary" to={link}>
+        <Link className="button button--primary" to={link} data-umami-event="Read Documentation">
           Go
         </Link>
       </div>
