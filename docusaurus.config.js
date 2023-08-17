@@ -86,6 +86,10 @@ const config = {
                 label: 'Leaves',
                 to: '/leaves',
               },
+              {
+                label: 'Javadocs',
+                href: 'https://repo.leavesmc.top',
+              },
             ],
           },
           {
@@ -100,6 +104,10 @@ const config = {
           {
             title: 'Other',
             items: [
+              {
+                label: 'Main Site',
+                href: 'https://leavesmc.top',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/LeavesMC',
