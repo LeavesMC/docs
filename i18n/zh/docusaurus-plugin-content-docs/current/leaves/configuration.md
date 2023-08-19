@@ -117,7 +117,7 @@ keywords:
   - paper-world.yml chunks.delay-chunk-unloads-by: 0
   - spigot.yml world-settings.max-tnt-per-tick: 2000
   - paper-global.yml item-validation.resolve-selectors-in-books: true
-  - paper-world-deafult.yml disableUnloadedChunkEnderpearlExploit
+  - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit: false
 
 :::note
 
