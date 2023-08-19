@@ -12,7 +12,7 @@ keywords:
 
 :::note
 
-此文档的最后更新版本为 [Leaves-24b7527](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-24b7527)。
+此文档的最后更新版本为 [Leaves-4ac26dd](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-4ac26dd)。
 如无特殊说明，本文档中所有的 `是` / `否` 均指代 `true` / `false` 。
 
 :::
@@ -79,6 +79,10 @@ keywords:
 - **默认值**: '- '14:00' - '2:00' '
 - **简介**: 指定自动更新的时间。此项目需搭配auto-update.enable项使用。
 
+#### server-lang
+- **默认值**: 'en_us'
+- **简介**: 指定服务端的语言。目前有en_us和zh_cn两种选项。
+
 ### modify
 
 #### return-nether-portal-fix
@@ -113,6 +117,7 @@ keywords:
   - paper-world.yml chunks.delay-chunk-unloads-by: 0
   - spigot.yml world-settings.max-tnt-per-tick: 2000
   - paper-global.yml item-validation.resolve-selectors-in-books: true
+  - paper-world-deafult.yml disableUnloadedChunkEnderpearlExploit
 
 :::note
 
@@ -693,10 +698,11 @@ keywords:
 
 ### protocol
 
-#### carpet-alternative-block-placement
+#### alternative-block-placement
 
-- **默认值**: `false`
-- **简介**: 是否支持 carpet 的精确放置协议。
+- **此项曾用名**: `carpet-alternative-block-placement`
+- **默认值**: `CARPET`
+- **简介**: 是否支持 carpet 的精确放置协议。目前已有选项：NONE CARPET CARPET_FIX LITEMATICA
 
 :::tip
 
