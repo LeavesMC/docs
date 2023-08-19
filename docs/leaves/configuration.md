@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-24b7527](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-24b7527).
+The last updated version of the document is [Leaves-bc4728c](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-bc4728c).
 
 :::
 
