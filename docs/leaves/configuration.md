@@ -79,6 +79,11 @@ This is a test feature and an unofficial implementation, using this feature may 
 - **default**: '- '14:00' - '2:00' '
 - **description**: Set the time for automatic updates. This function needs to be used with the auto-update. enable option.
 
+ #### server-lang
+
+- **default**: 'en_us '
+- **description**: Set the language of the server. Currently supports en_ Us and zh_ Cn. 
+
 
 
 ### modify
@@ -114,6 +119,7 @@ This configuration is a experimental function and may not work properly.
   - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
   - spigot.yml world-settings.max-tnt-per-tick: 2000
   - paper-global.yml item-validation.resolve-selectors-in-books: true
+  - paper-world-default.yml disableUnloadedChunkEnderpearlExploit
 :::note
 
 If you find that there are other configurations that need to be overwritten, please submit an issue.
@@ -672,10 +678,11 @@ This function is not exactly the same as the original function.
   
 ### protocol
 
-#### carpet-alternative-block-placement
+#### alternative-block-placement
 
-- **default**: `false`
-- **description**: If enabled, it will support alternative block placement protocol.
+- **former name**:'carpet-alternative-block-placement'
+- **default**: `carpet`
+- **description**: If enabled, it will support alternative block placement protocol.There are four options available：NONE CARPET CARPET_FIX LITEMATICA.
 
 :::tip
 
