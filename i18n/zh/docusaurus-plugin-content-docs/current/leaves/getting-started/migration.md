@@ -25,7 +25,7 @@ slug: /leaves/migration
 从 CraftBukkit/Spigot/Paper 迁移到 Leaves 是十分简单快捷的，你只需要按照以下步骤即可。
 
 1. 关闭你的服务器然后备份服务器。
-2. 从 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 下载最新的 Leaves。
+2. 从 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 或者 [Leaves官网](https://leavesmc.top/) 上下载最新的 Leaves。
 3. 用最新下载的 Jar 文件替换旧的 Jar 文件。
 4. 编辑你的启动脚本（比如 `start.bat` 或 `start.sh`），将其中的 Jar 名替换为最新的 Jar 名（比如 `leaves-1.20.1.jar`）。
 5. 启动服务器。
@@ -34,7 +34,7 @@ Leaves 完全支持所有 Paper 和 Spigot 插件（如果插件作者没有特�
 
 :::info
 
-无需删除之前的配置文件，Leaves 也会读取 `bukkit.yml`, `spigot.yml`, `config/paper-global.yml` 和 Paper 世界配置，所有的新增配置都只会在 `leaves.yml` 里存放。
+无需删除之前的配置文件，Leaves 也会读取 `bukkit.yml`, `spigot.yml`, `config/paper-global.yml` 和 Paper 的世界配置，所有的新增配置都只会在 `leaves.yml` 里存放。
 
 :::
 
@@ -43,22 +43,22 @@ Leaves 完全支持所有 Paper 和 Spigot 插件（如果插件作者没有特�
 世界格式会在从原版迁移到 Leaves 的过程中自动更改。如果你想重新使用原版端，你需要按照 [原版迁移指南](#to-vanilla) 进行操作。
 
 1. 关闭你的服务器然后备份服务器。
-2. 从 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 下载最新的 Leaves。
+2. 从 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 或者 [Leaves官网](https://leavesmc.top/) 上下载最新的 Leaves。
 3. 用最新下载的 Jar 文件替换旧的 Jar 文件。
 4. 编辑你的启动脚本（比如 `start.bat` 或 `start.sh`），将其中的 Jar 名替换为最新的 Jar 名（比如 `leaves-1.20.1.jar`）。
 5. 启动服务器。
 
 ### 从 Forge/Fabric
 
-因为 Forge 和 Fabric 都使用了原版的世界目录结构，所以你可以直接参考 [原版迁移指南](#from-vanilla)。
-但要注意的是，如果你之前使用 mod 向游戏中添加了新的方块/物品/数据，那么 Leaves 将不能加载这些功能。
+因为 Forge 和 Fabric 都使用了原版的世界目录结构，所以你可以直接参考 [原版迁移指南](#from-vanilla) 进行迁移操作。
+但是需要注意的是，如果你之前使用 mod 向游戏中添加了新的方块/物品/数据，那么 Leaves 将不能加载这些方块/物品/数据。
 
 请注意，Leaves 是 **不支持** 任何 Forge 或 Fabric 的 mod 的。同时任何尝试混合插件和 mod 的服务端都有根本性的缺陷，我们不建议你使用这些服务端。
 
 :::info
 
 如果你必须使用可同时使用插件和 mod 的服务器，我们有一些推荐。
-我们不为使用这些服务器造成的任何损失负责！
+但是我们并不为使用这些插件和 mod 的服务器造成的任何损失负责！
 
 - 1.12.2 [SpongeForge](https://github.com/SpongePowered/SpongeForge)
 - 1.20.x/1.19.x/1.18.x/1.16.x [Arclight](https://github.com/IzzelAliz/Arclight)
