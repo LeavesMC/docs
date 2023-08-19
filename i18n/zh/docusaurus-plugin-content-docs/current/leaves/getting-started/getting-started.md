@@ -10,19 +10,19 @@ slug: /leaves/getting-started
 | --------- | ----------- |
 | 1.20.1+   | Java 17     |
 
-## 迁移到Leaves
+## 如何迁移到Leaves
 
 ### 从原版迁移
 
-Leaves 会像 Paper 一样自动处理好一切，无需任何额外操作。
+Leaves 会像 Paper 一样自动处理好一切，无需进行任何额外操作。
 
 ### 从 CraftBukkit/Spigot/Paper 迁移
 
-Leaves 是 CraftBukkit/Spigot/Paper 的下游替代品，所以你无需任何操作。
+Leaves 是 CraftBukkit/Spigot/Paper 的下游替代品，所以你无需进行任何额外操作。
 
 ## 下载Leaves
 
-Leaves在 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 或者 [Leaves官网](https://leavesmc.top/) 上提供可直接运行的 Jar，你可以直接下载。
+Leaves在 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 或者 [Leaves官网](https://leavesmc.top/) 上提供可直接运行的 Jar ，你可以直接下载。
 
 :::caution
 
@@ -34,14 +34,14 @@ Leaves在 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 或者 
 
 你只需像运行其他 Java 程序一样运行 Leaves 即可。
 
-如果说你想要为 Leaves 分配2G的云心内存，打开你的终端（cmd 或者 powershell）然后输入 `java -Xms2G -Xmx2G -jar leaves.jar nogui` 。
-别忘了把 `leaves.jar` 改为你所下载的Jar文件的名称。
+如果说你想要为 Leaves 分配2G的运行内存，打开你的终端（cmd 或者 powershell）然后输入 `java -Xms2G -Xmx2G -jar leaves.jar nogui` 。
+别忘了把 `leaves.jar` 改为你所下载的 Jar 文件的名称。
 
-你可以通过修改 `-Xms` 和 `-Xmx` 后的数字来控制服务器使用的内存数量。而 `nogui` 参数则可以禁用原版的 Gui（虽然说它十分不好用）。
+你可以通过修改 `-Xms` 和 `-Xmx` 后的数字来控制服务器所使用的内存数量。而 `nogui` 参数则可以禁用原版的 Gui（虽然说它十分不好用）。
 
-如果你想获得更多的 Java 高级参数，可以访问 [Aikar's Flags](https://docs.papermc.io/paper/aikars-flags) 来获得更多信息。
+如果你想了解/使用更多的 Java 高级参数，你也可以访问 [Aikar's Flags](https://docs.papermc.io/paper/aikars-flags) 来获得更多信息。
 
-你可能还需要访问 [Leaves配置](../configuration.md) 来更改你的服务器配置。
+并且你可能还需要访问 [Leaves配置](../configuration.md) 页面来更改你的服务器配置。
 
 因为 Leaves 是 Paper 的下游服务端，因此你可能还需要修改 Paper 的配置文件。你可以查看以下页面以参考。
 
@@ -59,13 +59,13 @@ Leaves在 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 或者 
 升级 Leaves 是十分容易的。
 
 1. 从 [GitHub Releases](https://github.com/LeavesMC/Leaves/releases) 或者 [Leaves官网](https://leavesmc.top/) 上下载最新的 Jar 文件。
-2. 关闭你的服务器，在服务器运行时替换 Jar 文件肯定导致未知的问题。
-3. 用新 Jar 文件替换掉你的旧 Jar 文件。
-4. 重新启动你的服务器并且观察它是否按计划运行，如果出现了一些错误（这通常在 Minecraft 版本更新时发生），那么你可能需要向插件作者求助。  
+2. 首先关闭你的服务器，如果在服务器运行时替换 Jar 文件肯定导致未知的问题。
+3. 再用新下载的 Jar 文件替换掉你的旧 Jar 文件。
+4. 重新启动你的服务器，并且观察它是否按计划运行，如果出现了一些错误（这通常在 Minecraft 版本更新时发生），那么你可能需要向插件作者求助。  
 
 在新版本 Leaves 更新之后，Leaves 同时也提供了在游戏内进行更新的选项。  
 
-1. 在你的客户端或者是服务端后台内键入 `/leaves update` 。
+1. 在你的客户端或者是服务端的后台内键入 `/leaves update` 。
 2. 输入命令之后，后台将会自动下载最新版本的 Leaves 。
 3. 在下载完毕之后，重启你的服务端。
 4. 享受最新版本的 Leaves! 如果出现了一些错误（这通常在 Minecraft 版本更新时发生），那么你可能需要向插件作者求助。
