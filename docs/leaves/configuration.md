@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-24b7527](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-24b7527).
+The last updated version of the document is [Leaves-bc4728c](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-bc4728c).
 
 :::
 
@@ -79,6 +79,11 @@ This is a test feature and an unofficial implementation, using this feature may 
 - **default**: '- '14:00' - '2:00' '
 - **description**: Set the time for automatic updates. This function needs to be used with the auto-update. enable option.
 
+ #### server-lang
+
+- **default**: 'en_us '
+- **description**: Set the language of the server. Currently supports zh_cn and en_us. 
+
 
 
 ### modify
@@ -114,6 +119,7 @@ This configuration is a experimental function and may not work properly.
   - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
   - spigot.yml world-settings.max-tnt-per-tick: 2000
   - paper-global.yml item-validation.resolve-selectors-in-books: true
+  - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit：false
 :::note
 
 If you find that there are other configurations that need to be overwritten, please submit an issue.
@@ -672,14 +678,15 @@ This function is not exactly the same as the original function.
   
 ### protocol
 
-#### carpet-alternative-block-placement
+#### alternative-block-placement
 
-- **default**: `false`
-- **description**: If enabled, it will support alternative block placement protocol.
+- **former name**:'carpet-alternative-block-placement'
+- **default**: `NONE`
+- **description**: If enabled, it will support alternative block placement protocol.There are four options available：`NONE` `CARPET` `CARPET_FIX` `LITEMATICA` .
 
 :::tip
 
-If you want to use the alternative block placement protocol on the easy placement function of the litematica mod, you need to manually adjust the protocol type used by the litematica mod to `V2` instead of using `Auto` mode.
+In easy placement, `CARPET` and `CARPET_FIX` corresponds to the `V2` mode, while `LITEMATICA` corresponds to the `V3` mode.Please note `CARPET_FIX` mode may require the client to install the `MasaGadget` mod in order to function properly.
 
 :::
 
