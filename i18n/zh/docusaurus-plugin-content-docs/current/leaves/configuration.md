@@ -701,12 +701,13 @@ keywords:
 #### alternative-block-placement
 
 - **此项曾用名**: `carpet-alternative-block-placement`
-- **默认值**: `CARPET`
-- **简介**: 是否支持 carpet 的精确放置协议。目前已有选项：NONE CARPET CARPET_FIX LITEMATICA
+- **默认值**: `NONE`
+- **简介**: 是否支持的精确放置协议。目前已有选项：`NONE` `CARPET` `CARPET_FIX` `LITEMATICA`
 
 :::tip
 
-如果想在投影模组的轻松放置功能上使用精确放置协议，你需要手动调整投影模组使用的协议类型为 `V2` 或开启 leaves-carpet-support 。
+在轻松放置中，`CARPET` 和 `CARPET_FIX` 对应 `V2` 模式， `LITEMATICA` 对应 `V3` 模式。
+请注意 `CARPET_FIX` 模式可能需要客户端安装 `MasaGadget` 模组才能正常使用。
 
 :::
 
