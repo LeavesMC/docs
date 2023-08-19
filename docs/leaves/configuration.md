@@ -681,12 +681,12 @@ This function is not exactly the same as the original function.
 #### alternative-block-placement
 
 - **former name**:'carpet-alternative-block-placement'
-- **default**: `carpet`
+- **default**: `NONE`
 - **description**: If enabled, it will support alternative block placement protocol.There are four options available：NONE CARPET CARPET_FIX LITEMATICA.
 
 :::tip
 
-If you want to use the alternative block placement protocol on the easy placement function of the litematica mod, you need to manually adjust the protocol type used by the litematica mod to `V2` instead of using `Auto` mode.
+In easy placement, 'CARPET' and 'CARPET'_ FIX 'corresponds to the' V2 'mode, while LITEMATICA' corresponds to the 'V3' mode.Please note ` CARPET_ The FIX mode may require the client to install the 'MasaGadget' module in order to function properly.
 
 :::
 
