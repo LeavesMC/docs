@@ -682,11 +682,11 @@ This function is not exactly the same as the original function.
 
 - **former name**:'carpet-alternative-block-placement'
 - **default**: `NONE`
-- **description**: If enabled, it will support alternative block placement protocol.There are four options available：NONE CARPET CARPET_FIX LITEMATICA.
+- **description**: If enabled, it will support alternative block placement protocol.There are four options available：`NONE` `CARPET` `CARPET_FIX` `LITEMATICA` .
 
 :::tip
 
-In easy placement, 'CARPET' and 'CARPET'_ FIX 'corresponds to the' V2 'mode, while LITEMATICA' corresponds to the 'V3' mode.Please note ` CARPET_ The FIX mode may require the client to install the 'MasaGadget' module in order to function properly.
+In easy placement, `CARPET` and `CARPET_FIX` corresponds to the `V2` mode, while `LITEMATICA` corresponds to the `V3` mode.Please note `CARPET_FIX` mode may require the client to install the `MasaGadget` mod in order to function properly.
 
 :::
 
