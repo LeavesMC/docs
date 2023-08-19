@@ -119,7 +119,7 @@ This configuration is a experimental function and may not work properly.
   - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
   - spigot.yml world-settings.max-tnt-per-tick: 2000
   - paper-global.yml item-validation.resolve-selectors-in-books: true
-  - paper-world.yml disable-Unloaded-Chunk-Enderpear-lExploit：false
+  - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit：false
 :::note
 
 If you find that there are other configurations that need to be overwritten, please submit an issue.
