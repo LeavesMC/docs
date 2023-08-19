@@ -82,7 +82,7 @@ This is a test feature and an unofficial implementation, using this feature may 
  #### server-lang
 
 - **default**: 'en_us '
-- **description**: Set the language of the server. Currently supports en_ Us and zh_ Cn. 
+- **description**: Set the language of the server. Currently supports zh_cn and en_us. 
 
 
 
