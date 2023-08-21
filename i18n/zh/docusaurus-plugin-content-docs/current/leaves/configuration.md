@@ -6,7 +6,7 @@ keywords:
   - leaves.yml settings
 ---
 
-# Leaves配置
+# Leaves 配置文件
 
 所有Leaves配置都存于 `leaves.yml` 文件内。
 
@@ -76,12 +76,14 @@ keywords:
 - **简介**: 是否启用服务端自动更新功能，如果启用此功能，服务端将在你指定的时间自动检测版本并更新至最新版。
 
 #### auto-update.time
-- **默认值**: '- '14:00' - '2:00' '
+- **默认值**: 
+  - `14:00` 
+  - `2:00`
 - **简介**: 指定自动更新的时间。此项目需搭配auto-update.enable项使用。
 
 #### server-lang
-- **默认值**: 'en_us'
-- **简介**: 指定服务端的语言。目前有en_us和zh_cn两种选项。
+- **默认值**: `en_us`
+  - **简介**: 指定服务端的语言。目前有 `en_us` 和 `zh_cn` 两种选项。
 
 ### modify
 
@@ -111,13 +113,13 @@ keywords:
   - paper-global.yml allow-piston-duplication: true
   - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
   - paper-global.yml packet-limiter.overrides: Empty
+  - paper-global.yml item-validation.resolve-selectors-in-books: true
   - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
   - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
   - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
   - paper-world.yml chunks.delay-chunk-unloads-by: 0
-  - spigot.yml world-settings.max-tnt-per-tick: 2000
-  - paper-global.yml item-validation.resolve-selectors-in-books: true
   - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit: false
+  - spigot.yml world-settings.max-tnt-per-tick: 2000
 
 :::note
 
@@ -153,7 +155,7 @@ keywords:
 #### no-feather-falling-trample
 
 - **默认值**: `false`
-- **简介**: 如果为是，那么靴子上附魔“摔落缓冲”时在耕地上跳跃不会导致耕地退化为普通泥土。
+- **简介**: 如果为是，那么靴子上附魔 `摔落缓冲` 时在耕地上跳跃不会导致耕地退化为普通泥土。
 
 #### renewable-elytra
 
@@ -163,7 +165,7 @@ keywords:
 #### shears-in-dispenser-can-zero-amount
 
 - **默认值**: `false`
-- **简介**: 是否允许剪刀在发射器内可以被使用到负耐久并且不会损坏。如果为是那么发射器内剪刀可以近乎无限使用。
+- **简介**: 是否允许剪刀在发射器内可以被使用到负耐久并且不会损坏。如果为是那么发射器内剪刀可以无限使用。
 
 :::note
 
@@ -174,12 +176,18 @@ keywords:
 #### fix-update-suppression-crash
 
 - **默认值**: `true`
-- **简介**: 是否修复更新抑制造成的崩溃。与[Carpet TIS Addition](https://github.com/TISUnion/Carpet-TIS-Addition)中的 yeetUpdateSuppressionCrash 项目效果相同。
+- **简介**: 是否修复更新抑制造成的崩溃。
 
 #### disable-distance-check-for-use-item
 
 - **默认值**: `false`
-- **简介**: 是否禁用对方块使用物品的距离检测。如果你无法破基岩，开启此选项可能有一定帮助。
+- **简介**: 是否禁用对方块使用物品的距离检测。
+
+:::note
+
+当 `alternative-block-placement` 配置不为 `NONE` 时，此配置会自动开启来支持轻松放置。
+
+:::
 
 #### spectator-dont-get-advancement
 
@@ -206,6 +214,7 @@ keywords:
 
 空潜影盒会在地上和被玩家捡起时自动堆叠，如果玩家安装了支持的 mod 则也可以在背包内手动堆叠。
 但为了不破坏机器，空潜影盒不会在漏斗内被堆叠，并且堆叠的空潜影盒会在漏斗运行时被分开。
+请注意，在使用物品整流的全物品中，此功能可能导致物品整流出现问题。
 
 :::
 
@@ -228,7 +237,7 @@ keywords:
 
 - **默认值**:
   - player-name
-- **简介**: 假人禁止使用的名称列表。此项不允许写入带有中文或特殊符号的玩家名称。
+- **简介**: 假人禁止使用的名称列表。
 
 #### fakeplayer.limit
 
@@ -245,9 +254,9 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否在关闭服务器后保存假人数据并在开启服务器后自动重新生成假人。
 
-:::caution
+:::note
 
-这是一个实验性功能，并且假人的动作暂时不会被保存。
+假人的当前动作，背包，位置信息，皮肤将会被保存。
 
 :::
 
@@ -270,12 +279,12 @@ keywords:
 #### fakeplayer.prefix
 
 - **默认值**: `bot_`
-- **简介**: 设置假人的前缀。此项不允许写入带有中文或特殊符号。
+- **简介**: 设置假人的前缀。此项不允许写入带有中文或 `_` 外的特殊符号。
 
 #### fakeplayer.suffix
 
 - **默认值**: `''`
-- **简介**: 设置假人的后缀。此项不允许写入带有中文或特殊符号。
+- **简介**: 设置假人的后缀。此项不允许写入带有中文或 `_` 外的特殊符号。
 
 #### redstone-wire-dont-connect-if-on-trapdoor
 
@@ -299,14 +308,14 @@ keywords:
 
 :::note
 
-此功能需要启用 leaves-carpet-support 并且需要玩家安装 carpet 才可正常使用。
+此功能需要启用 `leaves-carpet-support` 并且需要客户端安装 carpet 才可正常使用。
 
 :::
 
 #### mending-compatibility-infinity
 
 - **默认值**: `false`
-- **简介**: 如果为是，那么“经验修补”和“无限”附魔将可以同时附魔在弓上。
+- **简介**: 如果为是，那么 `经验修补` 和 `无限` 附魔将可以同时附魔在弓上。
 
 #### shave-snow-layers
 
@@ -385,7 +394,7 @@ keywords:
 #### lava-riptide
 
 - **默认值**: `false`
-- **简介**: 如果为是，则允许玩家在岩浆中使用“激流”附魔的三叉戟进行突刺。（需要安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren) 配合使用。）
+- **简介**: 如果为是，则允许玩家在岩浆中使用“激流”附魔的三叉戟进行突刺。（需要客户端安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren) 才可使用。）
 
 #### raider-die-skip-self-raid-check
 
@@ -401,7 +410,15 @@ keywords:
 #### avoid-anvil-too-expensive
 
 - **默认值**：`false`
-- **简介**: 如果为是，那么铁砧过于昂贵的设定将会取消
+- **简介**: 如果为是，那么铁砧过于昂贵的设定将会取消。
+
+:::note
+
+仅开启此功能会使过于昂贵可以点击，但客户端不会显示真实的附魔等级。
+
+如果需要客户端显示真实的附魔等级则需要开启 `leaves-carpet-support` 并且需要客户端安装 plusls-carpet-addition。
+
+:::
 
 #### bow-infinity-fix
 
@@ -412,6 +429,17 @@ keywords:
 
 - **默认值**：`false`
 - **简介**: 如果为是，那么0tick催熟植物将重新可用。
+
+#### tick-command
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么将启用 `leaves tick` 指令来支持控制服务器运行。
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
+
+:::
 
 ### performance
 
@@ -445,27 +473,27 @@ keywords:
 #### remove.tick-guard-lambda
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会删除 Lambda 表达式来提高性能。
+- **简介**: 如果为是，那么服务端将会删除 `Lambda` 来提高性能。
 
 #### remove.get-nearby-players-streams
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会禁止获取附近的玩家数据来提高性能。
+- **简介**: 如果为是，那么服务端将会删除获取附近的玩家数据中的 `流` 来提高性能。
 
 #### remove.inventory-contains-iterators
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会删除选择器来提高性能。
+- **简介**: 如果为是，那么服务端将会删除物品栏中的 `迭代器` 来提高性能。
 
 #### remove.range-check-streams-and-iterators
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会删除流和选择器来提高性能。
+- **简介**: 如果为是，那么服务端将会删除距离检查中的 `流` 和 `迭代器` 来提高性能。
 
 #### performance.remove.damage-lambda
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端会删除伤害检测中的 Lambda，可以些微提高性能。
+- **简介**: 如果为是，那么服务端会删除伤害检测中的 `Lambda`，可以些微提高性能。
 
 #### reduce-entity-fluid-lookup
 
@@ -598,7 +626,7 @@ keywords:
 #### use-fast-item-merge-raytracing
 
 - **默认值**: `true`
-- **简介**: 在 Paper 修复物品穿墙合并的时候使用更快的射线。如果为是，那么你需要手动在 **paper.yml** 中打开 fixItemsMergingThroughWalls。
+- **简介**: 在 Paper 修复物品穿墙合并的时候使用更快的射线。
 
 #### skip-secondary-POI-sensor-if-absent
 
@@ -632,7 +660,7 @@ keywords:
 
 :::caution
 
-这是一个实验性功能，它可能不会工作。
+这是一个实验性功能，它可能不会正常工作。
 
 :::
 
@@ -707,6 +735,7 @@ keywords:
 :::tip
 
 在轻松放置中，`CARPET` 和 `CARPET_FIX` 对应 `V2` 模式， `LITEMATICA` 对应 `V3` 模式。
+
 请注意 `CARPET_FIX` 模式可能需要客户端安装 `MasaGadget` 模组才能正常使用。
 
 :::
@@ -715,6 +744,16 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 是否开启对 [pca数据同步协议](https://github.com/plusls/plusls-carpet-addition) 的支持。
+
+#### pca-sync-player-entity
+
+- **默认值**: `OPS`
+- **简介**: 控制 pca 同步协议可以同步的玩家。
+  - `NOBODY`: 任何玩家数据都不能被同步。
+  - `BOT`: 假人的数据可以被同步。
+  - `OPS`: 假人的数据可以被同步，OP 可以同步所有玩家的数据。
+  - `OPS_AND_SELF`: 假人的数据可以被同步，OP 可以同步所有玩家的数据，同时玩家可以同步自己的数据。
+  - `EVERYONE`: 所有玩家数据都可以被同步。
 
 #### syncmatica.enable
 
@@ -747,16 +786,6 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 是否开启对 [BBOR](https://github.com/irtimaled/BoundingBoxOutlineReloaded) 的支持。
-
-#### pca-sync-player-entity
-
-- **默认值**: `OPS`
-- **简介**: 控制 pca 同步协议可以同步的玩家。
-  - `NOBODY`: 任何玩家数据都不能被同步。
-  - `BOT`: 假人的数据可以被同步。
-  - `OPS`: 假人的数据可以被同步，OP 可以同步所有玩家的数据。
-  - `OPS_AND_SELF`: 假人的数据可以被同步，OP 可以同步所有玩家的数据，同时玩家可以同步自己的数据。
-  - `EVERYONE`: 所有玩家数据都可以被同步。
 
 #### appleskin-protocol
 

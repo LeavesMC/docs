@@ -3,7 +3,7 @@ id: fakeplayer
 slug: /leaves/fakeplayer
 ---
 
-# Leaves假人
+# Leaves 假人
 
 :::caution
 
