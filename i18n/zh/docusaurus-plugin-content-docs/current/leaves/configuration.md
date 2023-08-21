@@ -228,38 +228,40 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否启用破基岩榜。此功能的行为和此 [mod](https://gitee.com/harvey-husky/YH-BBL) 一致。
 
-#### fakeplayer.enable
+### fakeplayer
+
+#### enable
 
 - **默认值**: `true`
 - **简介**: 是否启用假人功能和 `/bot` 指令。
 
-#### fakeplayer.unable-fakeplayer-names
+#### unable-fakeplayer-names
 
 - **默认值**:
   - player-name
 - **简介**: 假人禁止使用的名称列表。
 
-#### fakeplayer.limit
+#### limit
 
 - **默认值**: `10`
 - **简介**: 假人的数量限制。（同时，假人会计算到玩家数量中。）
 
-#### fakeplayer.prefix
+#### prefix
 
 - **默认值**: `bot_`
 - **简介**: 设置假人的前缀。此项不允许写入带有中文或 `_` 外的特殊符号。
 
-#### fakeplayer.suffix
+#### suffix
 
 - **默认值**: `''`
 - **简介**: 设置假人的后缀。此项不允许写入带有中文或 `_` 外的特殊符号。
 
-#### fakeplayer.always-send-data
+#### always-send-data
 
 - **默认值**: `true`
 - **简介**: 是否无视距离始终向同世界的玩家发送假人数据。
 
-#### fakeplayer.resident-fakeplayer
+#### resident-fakeplayer
 
 - **默认值**: `false`
 - **简介**: 是否在关闭服务器后保存假人数据并在开启服务器后自动重新生成假人。
@@ -270,7 +272,7 @@ keywords:
 
 :::
 
-#### fakeplayer.open-fakeplayer-inventory
+#### open-fakeplayer-inventory
 
 - **默认值**: `false`
 - **简介**: 是否允许玩家空手右键假人来打开假人背包。
@@ -281,7 +283,7 @@ keywords:
 
 :::
 
-#### fakeplayer.skip-sleep-check
+#### skip-sleep-check
 
 - **默认值**: `false`
 - **简介**: 如果为是，那么假人将不计入睡眠计数。
