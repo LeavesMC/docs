@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-bc4728c](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-bc4728c).
+The last updated version of the document is [Leaves-ab27c52](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-ab27c52).
 
 :::
 
@@ -120,6 +120,7 @@ This configuration is a experimental function and may not work properly.
   - spigot.yml world-settings.max-tnt-per-tick: 2000
   - paper-global.yml item-validation.resolve-selectors-in-books: true
   - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit：false
+
 :::note
 
 If you find that there are other configurations that need to be overwritten, please submit an issue.
@@ -182,6 +183,13 @@ This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
 
 - **default**: `false`
 - **description**: If enabled, it will disable distance check for UseItemOnPacket.
+
+:::note
+
+When the alternative-block-placement configuration is not NONE, this configuration will automatically turn on to support easy placement.
+
+:::
+  
 
 #### spectator-dont-get-advancement
 
@@ -404,15 +412,33 @@ This configuration will attempt to fix the raid farm issue through a highly aggr
 - **default**: `true`
 - **description**: If enabled, the expensive setting of the anvil will be cancelled.
 
+:::note
+
+Just turning on this feature will make it too expensive to use, and your client will not display the real enchantment level. 
+If you want your client to display the real enchantment level, you have to turn on 'leaves-carpet-support' and install 'plusls-carpet-addition' on your client.
+
+:::
+
 #### bow-infinity-fix
 
 - **default**: `false`
 - **description**: If enabled, then the server will allow the use of infinite bows even when there are no arrows in the inventory.
 
- #### zero-tick-plants
+#### zero-tick-plants
 
 - **default**: `false`
 - **description**: If enabled, then the server will re-add the 0-tick ripening mechanism to the game.
+
+#### tick-command
+
+- **default**：`false`
+- **description**: If enabled, the command 'leaves tick' will be enabled to support controlling the server operation.
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
+
+:::
 
 ### performance
 
@@ -559,6 +585,13 @@ This feature is temporarily unavailable.
 
 - **default**: `false`
 - **description**: NOT AVAILABLE YET
+
+:::caution
+
+If you don’t want to interfere with any generation mechanism, you can disable this feature. But this feature can bring a whopping 15% performance improvement on servers with thousands of entities. 
+In my opinion, it is very worthwhile to take the small risk of entity generation inconsistency for these performance improvements. ——Leaves author
+
+:::
 
 #### optimized-dragon-respawn
 
