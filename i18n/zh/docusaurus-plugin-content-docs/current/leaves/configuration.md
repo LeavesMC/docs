@@ -441,6 +441,58 @@ keywords:
 
 :::
 
+#### force-void-trade
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么将启用强制虚空交易。在玩家穿过一次折跃门之后便视为虚空交易，无需等待区块卸载。
+
+:::caution
+
+此功能是一个实验性功能，它不一定可以正常工作。
+
+:::
+
+#### spider-jockeys-drop-gapples
+
+- **默认值**: `false`
+- **简介**: 蜘蛛骑士是否可以掉落金苹果。
+
+#### minecraft-old.armor-stand-cant-kill-by-mob-projectile
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么由实体发射的弹射物无法摧毁（杀死）盔甲架。
+
+#### minecraft-old.cce-update-suppression
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么CCE更新抑制将重新可用。有关CCE详见[Void0的专栏](https://www.bilibili.com/read/cv24323749/?spm_id_from=333.999.0.0)
+
+#### minecraft-old.villager-infinite-discounts
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么村民将可以和旧版本一样无限打折。
+
+#### minecraft-old.loot-world-random
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么服务端将恢复战利品表（loot table）的种子生成逻辑到1.19.4之前。
+
+:::caution
+
+这是一个实验性功能，它可能不会正常工作。
+
+:::
+
+#### disable-moved-wrongly-threshold
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么服务端将禁用spigot的玩家移动速度检测。这可以有效避免玩家由于速度超出正常速度时导致的大量无用的“moved wrongly”。
+
+#### hopper-counter
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么[Carpet的漏斗计数器](https://github.com/gnembon/fabric-carpet/wiki/Current-Available-Settings#hoppercounters)将可以使用。
+
 ### performance
 
 #### cache-climb-check
@@ -730,7 +782,7 @@ keywords:
 
 - **此项曾用名**: `carpet-alternative-block-placement`
 - **默认值**: `NONE`
-- **简介**: 是否支持的精确放置协议。目前已有选项：`NONE` `CARPET` `CARPET_FIX` `LITEMATICA`
+- **简介**: 是否支持精确放置协议以及其类型。目前已有选项：`NONE` `CARPET` `CARPET_FIX` `LITEMATICA`
 
 :::tip
 
@@ -803,6 +855,11 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否启用由 Leaves 实现的 carpet 协议。如果为是，那么这可以让客户端认为自己进入了一个带有 carpet 的服务器并提供一些客户端支持。
 
+#### bladeren.protocol
+
+- **默认值**: `false`
+- **简介**: [Bladeren](https://github.com/LeavesMC/Bladeren) 协议的主开关。
+
 #### bladeren.mspt-sync-protocol
 
 - **默认值**: `false`
@@ -813,3 +870,8 @@ keywords:
 Blareden 按照正常来说并不会出现同步不及时的问题。如果你遇到了这种症状，那么尝试检查客户端侧的 mod 是否会导致这种问题。
 
 :::
+
+#### servux-protocol
+
+- **默认值**: `false`
+- **简介**: 启用对于Servux协议的支持。
