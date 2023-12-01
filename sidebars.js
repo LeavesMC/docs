@@ -13,23 +13,23 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  leaves: [
-    "leaves/leaves",
-	{
-		type: "category",
-		label: "Getting Started",
-		link: {
-			type: "generated-index",
-            slug: "leaves/cat/getting-started",
-		},
-        items: [
-			"leaves/getting-started/getting-started",
-			"leaves/getting-started/migration"
-        ],
-	},
-	"leaves/configuration",
-	"leaves/fakeplayer"
-  ],
+    leaves: [
+        "leaves/leaves",
+        {
+            type: "category",
+            label: "Getting Started",
+            link: {
+                type: "generated-index",
+                slug: "leaves/cat/getting-started",
+            },
+            items: [
+                "leaves/getting-started/getting-started",
+                "leaves/getting-started/migration"
+            ],
+        },
+        "leaves/configuration",
+        "leaves/fakeplayer"
+    ],
 };
 
 module.exports = sidebars;

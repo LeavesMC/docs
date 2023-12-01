@@ -12,7 +12,7 @@ keywords:
 
 :::note
 
-此文档的最后更新版本为 [Leaves-4ac26dd](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-4ac26dd)。
+此文档的最后更新版本为 [Leaves-1.20.2-e8203ab](https://github.com/LeavesMC/Leaves/releases/tag/1.20.2-e8203ab)。
 如无特殊说明，本文档中所有的 `是` / `否` 均指代 `true` / `false` 。
 
 :::
@@ -52,7 +52,7 @@ keywords:
 #### extra-yggdrasil-service.urls
 
 - **默认值**:
-  - '<https://url.with.authlib-injector-yggdrasil>'
+    - '<https://url.with.authlib-injector-yggdrasil>'
 - **简介**: 外置登录服务器的连接，链接最后应不加 `/` 。
 
 #### no-chat-sign
@@ -75,17 +75,65 @@ keywords:
 - **默认值**: `false`
 - **简介**: 是否启用服务端自动更新功能，如果启用此功能，服务端将在你指定的时间自动检测版本并更新至最新版。
 
+:::note
+
+此功能需要配合自动重启插件使用，服务器并不会自己重启。
+
+:::
+
 #### auto-update.time
-- **默认值**: 
-  - `14:00` 
-  - `2:00`
+
+- **默认值**:
+    - `14:00`
+    - `2:00`
 - **简介**: 指定自动更新的时间。此项目需搭配auto-update.enable项使用。
 
 #### server-lang
+
 - **默认值**: `en_us`
-  - **简介**: 指定服务端的语言。目前有 `en_us` 和 `zh_cn` 两种选项。
+- **简介**: 指定服务端的语言。目前有 `en_us` 和 `zh_cn` 两种选项。
+
+### server-mod-name
+
+- **默认值**: `Leaves`
+- **简介**: 指定服务端的名称。更改此值可能引发不可测的错误。
 
 ### modify
+
+#### mc-technical-survival-mode
+
+- **默认值**: `true`
+- **简介**: 是否启用生电模式。如果为是，那么以下配置会被强制覆盖来修复各种被影响的生电机制。
+    - paper-global.yml unsupported-settings.allow-headless-pistons: true
+    - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
+    - paper-global.yml allow-permanent-block-break-exploits: true
+    - paper-global.yml allow-piston-duplication: true
+    - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
+    - paper-global.yml packet-limiter.overrides: Empty
+    - paper-global.yml item-validation.resolve-selectors-in-books: true
+    - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
+    - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
+    - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
+    - paper-world.yml chunks.delay-chunk-unloads-by: 0
+    - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit: false
+    - spigot.yml world-settings.max-tnt-per-tick: 2000
+
+:::note
+
+如果你发现了更多需要覆盖的配置，欢迎提出 issue。
+
+:::
+
+#### force-void-trade
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么将启用强制虚空交易。在玩家穿过一次折跃门之后便视为虚空交易，无需等待区块卸载。
+
+:::danger
+
+此功能有严重的漏洞，它会造成原版村民交易机制的大幅度改变。
+
+:::
 
 #### return-nether-portal-fix
 
@@ -103,34 +151,63 @@ keywords:
 - **默认值**: `true`
 - **简介**: 如果为是，那么鸡蛋和雪球将可以击退玩家。
 
-#### mc-technical-survival-mode
+:::info
 
-- **默认值**: `true`
-- **简介**: 是否启用生电模式。如果为是，那么以下配置会被强制覆盖来修复各种被影响的生电机制。
-  - paper-global.yml unsupported-settings.allow-headless-pistons: true
-  - paper-global.yml unsupported-settings.allow-grindstone-overstacking: true
-  - paper-global.yml allow-permanent-block-break-exploits: true
-  - paper-global.yml allow-piston-duplication: true
-  - paper-global.yml packet-limiter.all-packets.max-packet-rate: 5000.0
-  - paper-global.yml packet-limiter.overrides: Empty
-  - paper-global.yml item-validation.resolve-selectors-in-books: true
-  - paper-world.yml entities.spawning.count-all-mobs-for-spawning: true
-  - paper-world.yml unsupported-settings.fix-invulnerable-end-crystal-exploit: false
-  - paper-world.yml fixes.fix-curing-zombie-villager-discount-exploit: false
-  - paper-world.yml chunks.delay-chunk-unloads-by: 0
-  - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit: false
-  - spigot.yml world-settings.max-tnt-per-tick: 2000
-
-:::note
-
-如果你发现了更多需要覆盖的配置，欢迎提出 issue。
+minecraft-old中的配置均是在历代minecraft中出现过的bug/特性。
 
 :::
 
-#### instant-block-updater-reintroduced
+#### minecraft-old.instant-block-updater-reintroduced
 
 - **默认值**: `false`
 - **简介**: 是否重新引入 1.19 前的瞬时方块更新机制。如果为是，这会让一些更新抑制重新可用。
+
+#### minecraft-old.shears-in-dispenser-can-zero-amount
+
+- **默认值**: `false`
+- **简介**: 是否允许剪刀在发射器内可以被使用到负耐久并且不会损坏。如果为是那么发射器内剪刀可以无限使用。
+
+#### minecraft-old.armor-stand-cant-kill-by-mob-projectile
+
+- **默认值**: `false`
+    - **简介**: 是否**不**允许生物弹射物破坏盔甲架，此特性在1.20.2中被移除。
+
+#### minecraft-old.villager-infinite-discounts
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么村民可以被无限次打折，此特性在1.20.2中被移除。
+
+#### minecraft-old.mending-compatibility-infinity
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么 `经验修补` 和 `无限` 附魔将可以同时附魔在弓上。
+
+#### minecraft-old.loot-world-random
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么服务端将恢复战利品表（loot table）的种子生成逻辑到1.19.4之前。
+
+:::caution
+
+这是一个实验性功能，它可能不会正常工作。
+
+:::
+
+#### minecraft-old.zero-tick-plants
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么服务端将允许0tick催熟机制。
+
+#### minecraft-old.redstone-wire-dont-connect-if-on-trapdoor
+
+- **默认值**: `false`
+- **简介**: 是否让红石粉不再连接到活板门上，如果为是，这可以恢复 1.20 前的简易更新抑制。
+
+#### minecraft-old.cce-update-suppression
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么CCE更新抑制将重新可用。有关CCE详见[Void0的专栏]
+  (https://www.bilibili.com/read/cv24323749/?spm_id_from=333.999.0.0)。
 
 #### flatten-triangular-distribution
 
@@ -145,7 +222,8 @@ keywords:
 #### player-operation-limiter
 
 - **默认值**: `false`
-- **简介**: 是否限制玩家行为速度。如果为是那么每 gt 每个玩家只能秒破 1 个或放置 2 个方块，这可以对抗自动破基岩 mod，但不会影响正常的无头活塞破基岩。
+- **简介**: 是否限制玩家行为速度。如果为是那么每 gt 每个玩家只能秒破 1 个或放置 2 个方块，这可以对抗自动破基岩
+  mod，但不会影响正常的无头活塞破基岩。
 
 #### use-vanilla-random
 
@@ -162,16 +240,10 @@ keywords:
 - **默认值**: `-1.0`
 - **简介**: 当潜影贝杀死幻翼时掉落破损的鞘翅的概率，如值为负则禁用此功能。
 
-#### shears-in-dispenser-can-zero-amount
+#### spider-jockeys-drop-gapples
 
 - **默认值**: `false`
-- **简介**: 是否允许剪刀在发射器内可以被使用到负耐久并且不会损坏。如果为是那么发射器内剪刀可以无限使用。
-
-:::note
-
-这是一个旧版本 Minecraft 的 bug。
-
-:::
+- **简介**: 当蜘蛛骑士被杀死时掉落附魔金苹果的概率，如值为负则禁用此功能。
 
 #### fix-update-suppression-crash
 
@@ -185,7 +257,7 @@ keywords:
 
 :::note
 
-当 `alternative-block-placement` 配置不为 `NONE` 时，此配置会自动开启来支持轻松放置。
+当 `alternative-block-placement` 配置不为 `NONE` 时，此配置会被自动开启来支持轻松放置。
 
 :::
 
@@ -202,13 +274,14 @@ keywords:
 #### stick-change-armorstand-arm-status
 
 - **默认值**: `true`
-- **简介**: 是否允许玩家在下蹲时使用木棍右键盔甲架来改变盔甲架手臂的显示状态，即将 NBT 标签 ShowArms 设置为 1b 。这将会与基岩版表现相近。
+- **简介**: 是否允许玩家在下蹲时使用木棍右键盔甲架来改变盔甲架手臂的显示状态，
+  即将 NBT 标签 ShowArms 设置为 1b。这将会与基岩版表现相近。
 
 #### stackable-shulker-boxes
 
 - **默认值**: `false`
 - **简介**: 是否启用空潜影盒堆叠功能。此项值必须为一个为 `true` / `false` 的字符串或小于等于 64 的正整数。
- 如值为一个整数，则这个数值便为空潜影盒的可堆叠数量。如为 `true` 则默认视为 `2`，如为 `false` 则视为 `1` 。
+  如值为一个整数，则这个数值便为空潜影盒的可堆叠数量。如为 `true` 则默认视为 `2`，如为 `false` 则视为 `1` 。
 
 :::note
 
@@ -236,7 +309,7 @@ keywords:
 #### fakeplayer.unable-fakeplayer-names
 
 - **默认值**:
-  - player-name
+    - player-name
 - **简介**: 假人禁止使用的名称列表。
 
 #### fakeplayer.limit
@@ -286,10 +359,15 @@ keywords:
 - **默认值**: `''`
 - **简介**: 设置假人的后缀。此项不允许写入带有中文或 `_` 外的特殊符号。
 
-#### redstone-wire-dont-connect-if-on-trapdoor
+#### fakeplayer.spawn-phantom
 
 - **默认值**: `false`
-- **简介**: 是否让红石粉不再连接到活板门上，如果为是，这可以恢复 1.20 前的简易更新抑制。
+- **简介**: 如果为是，那么假人将可以生成幻翼。
+
+#### fakeplayer.regen-amount
+
+- **默认值**: `0.009999999776482582`
+- **简介**: 假人某tick将恢复的生命值，如果为负数，假人则会缓慢流失生命。
 
 #### disable-check-out-of-order-command
 
@@ -311,11 +389,6 @@ keywords:
 此功能需要启用 `leaves-carpet-support` 并且需要客户端安装 carpet 才可正常使用。
 
 :::
-
-#### mending-compatibility-infinity
-
-- **默认值**: `false`
-- **简介**: 如果为是，那么 `经验修补` 和 `无限` 附魔将可以同时附魔在弓上。
 
 #### shave-snow-layers
 
@@ -363,7 +436,8 @@ keywords:
 #### elytra-aeronautics.message
 
 - **默认值**: `true`
-- **简介**: 是否在玩家进入和退出不加载区块状态时进行提示。如果为是那么将会在进入和退出时向客户端以 title @s subtitle 的形式提示玩家。
+- **简介**: 是否在玩家进入和退出不加载区块状态时进行提示。如果为是那么将会在进入和退出时向客户端以 title @s subtitle
+  的形式提示玩家。
 
 #### elytra-aeronautics.message-start
 
@@ -389,12 +463,15 @@ keywords:
 #### container-passthrough
 
 - **默认值**: `false`
-- **简介**: 如果此项为 **true**，那么玩家可以无视挂在箱子上的告示牌直接打开箱子。此时玩家需要 **主副手** 均不拿物品，按住潜行的同时右键才能编辑告示牌。
+- **简介**: 如果此项为 **true**，那么玩家可以无视挂在箱子上的告示牌直接打开箱子。此时玩家需要 **主副手**
+  均不拿物品，按住潜行的同时右键才能编辑告示牌。
 
 #### lava-riptide
 
 - **默认值**: `false`
-- **简介**: 如果为是，则允许玩家在岩浆中使用“激流”附魔的三叉戟进行突刺。（需要客户端安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren) 才可使用。）
+- **简介**:
+  如果为是，则允许玩家在岩浆中使用“激流”附魔的三叉戟进行突刺。
+  （需要客户端安装 [Bladeren Mod](https://github.com/LeavesMC/Bladeren)才可使用。）
 
 #### raider-die-skip-self-raid-check
 
@@ -403,9 +480,15 @@ keywords:
 
 :::caution
 
-这个配置将会通过十分激进的方案尝试修复袭击塔断流。当值为 **true** 时会让袭击塔的效率提高 10%~50%，同时会对服务器的性能造成较大影响，请酌情考虑是否开启。
+这个配置将会通过十分激进的方案尝试修复袭击塔断流。当值为 **true** 时会让袭击塔的效率提高 10%~
+50%，同时会对服务器的性能造成较大影响，请酌情考虑是否开启。
 
 :::
+
+#### hopper-counter
+
+- **默认值**：`false`
+- **简介**: 如果为是，那么将启用 `leaves counter` 指令与和carpet基本一致的羊毛漏斗 计数器系统。
 
 #### avoid-anvil-too-expensive
 
@@ -425,11 +508,6 @@ keywords:
 - **默认值**：`false`
 - **简介**: 如果为是，那么背包里没有箭的情况下也可以使用带有无限附魔的弓。
 
-#### zero-tick-plants
-
-- **默认值**：`false`
-- **简介**: 如果为是，那么0tick催熟植物将重新可用。
-
 #### tick-command
 
 - **默认值**：`false`
@@ -438,8 +516,15 @@ keywords:
 :::caution
 
 此功能是一个实验性功能，它不一定可以正常工作。
+此功能将在1.20.3中被移除，因为mojang已经提供了相同作用的指令。
 
 :::
+
+#### disable-moved-wrongly-threshold
+
+- **默认值**: `false`
+- **简介**: 如果为是，那么服务端将禁用spigot的玩家移动速度检测。
+  这可以有效避免玩家由于速度超出正常速度时导致的大量无用的“moved wrongly”。
 
 ### performance
 
@@ -467,8 +552,8 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 如果为是，那么服务端将会优化以下的区块 tick，可以提高 5% 到 10% 的性能。
-  - 闪电
-  - 冰和雪的生成
+    - 闪电
+    - 冰和雪的生成
 
 #### remove.tick-guard-lambda
 
@@ -539,8 +624,8 @@ keywords:
 
 - **默认值**: `true`
 - **简介**: 当为实体（热路径）执行 getCoordinateKey 时，JVM 需要重复将 double 转换为 long。
- 这对性能的影响取决于CPU架构，但通常在 FPU 和 ALU 之间切换会导致严重的性能损失。
- blockPosition 结构中已提供了已转换/舍入的数据，因此当此项为是时，我们将会继续使用该数据而不是重新进行转换。
+  这对性能的影响取决于CPU架构，但通常在 FPU 和 ALU 之间切换会导致严重的性能损失。
+  blockPosition 结构中已提供了已转换/舍入的数据，因此当此项为是时，我们将会继续使用该数据而不是重新进行转换。
 
 #### use-more-thread-unsafe-random
 
@@ -593,7 +678,7 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 如果为是，那么服务端将会将尽可能多的工作卸载到其他线程来减少实体生成对主线程的影响。
-这可能会出现生成不一致的情况，但当问题发生时并不会出现错误，只会造成实体生成波动的问题。
+  这可能会出现生成不一致的情况，但当问题发生时并不会出现错误，只会造成实体生成波动的问题。
 
 :::caution
 
@@ -651,7 +736,9 @@ keywords:
 #### store-mob-counts-in-array
 
 - **默认值**: `true`
-- **简介**: 如果为是，那么服务端将会在生物生成上限计算时使用数组（Array）。这可能对于性能有优化。使用了 [VMP](https://github.com/RelativityMC/VMP-fabric) 的方案。
+- **简介**:
+  如果为是，那么服务端将会在生物生成上限计算时使用数组（Array）。这可能对于性能有优化。使用了 [VMP](https://github.com/RelativityMC/VMP-fabric)
+  的方案。
 
 #### optimize-noise-generation
 
@@ -730,7 +817,7 @@ keywords:
 
 - **此项曾用名**: `carpet-alternative-block-placement`
 - **默认值**: `NONE`
-- **简介**: 是否支持的精确放置协议。目前已有选项：`NONE` `CARPET` `CARPET_FIX` `LITEMATICA`
+- **简介**: 是否支持精确放置协议以及其类型。目前已有选项：`NONE` `CARPET` `CARPET_FIX` `LITEMATICA` 。
 
 :::tip
 
@@ -749,11 +836,11 @@ keywords:
 
 - **默认值**: `OPS`
 - **简介**: 控制 pca 同步协议可以同步的玩家。
-  - `NOBODY`: 任何玩家数据都不能被同步。
-  - `BOT`: 假人的数据可以被同步。
-  - `OPS`: 假人的数据可以被同步，OP 可以同步所有玩家的数据。
-  - `OPS_AND_SELF`: 假人的数据可以被同步，OP 可以同步所有玩家的数据，同时玩家可以同步自己的数据。
-  - `EVERYONE`: 所有玩家数据都可以被同步。
+    - `NOBODY`: 任何玩家数据都不能被同步。
+    - `BOT`: 假人的数据可以被同步。
+    - `OPS`: 假人的数据可以被同步，OP 可以同步所有玩家的数据。
+    - `OPS_AND_SELF`: 假人的数据可以被同步，OP 可以同步所有玩家的数据，同时玩家可以同步自己的数据。
+    - `EVERYONE`: 所有玩家数据都可以被同步。
 
 #### syncmatica.enable
 
@@ -777,7 +864,9 @@ keywords:
 
 :::caution
 
-在装载了 Viaversion 的服务器上使用此项目将会出现一些问题，请参考 [Leaves开发者的建议](https://github.com/LeavesMC/Leaves/issues/74) 和 [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73)。
+在装载了 Viaversion
+的服务器上使用此项目将会出现一些问题，请参考 [Leaves开发者的建议](https://github.com/LeavesMC/Leaves/issues/74)
+和 [Leaves-73](https://github.com/LeavesMC/Leaves/issues/73)。
 如果在服务端装载 Via 的情况下仍旧选择开启此项目，Leaves 团队不会接受任何与此有关的 issues！
 
 :::
@@ -796,20 +885,36 @@ keywords:
 
 - **默认值**: `false`
 - **简介**: 是否开启对 [Xaero's World Map](https://minecraft.curseforge.com/projects/xaeros-world-map) 和
- [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持，来自动在服务器间切换地图。
+  [Xaero's Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) 的支持，来自动在服务器间切换地图。
 
 #### leaves-carpet-support
 
 - **默认值**: `false`
-- **简介**: 是否启用由 Leaves 实现的 carpet 协议。如果为是，那么这可以让客户端认为自己进入了一个带有 carpet 的服务器并提供一些客户端支持。
+- **简介**: 是否启用由 Leaves 实现的 carpet 协议。如果为是，那么这可以让客户端认为自己进入了一个带有 carpet
+  的服务器并提供一些客户端支持。
+
+#### bladeren.protocol
+
+- **默认值**: `false`
+- **简介**: [Bladeren](https://github.com/LeavesMC/Bladeren) 协议的主开关。
 
 #### bladeren.mspt-sync-protocol
 
 - **默认值**: `false`
 - **简介**: 是否启用对 [Bladeren](https://github.com/LeavesMC/Bladeren) 中的 mspt 信息同步的支持。
 
+#### bladeren.mspt-sync-tick-interval
+
+- **默认值**: `20`
+- **简介**: mspt 信息同步的频率，单位为tick。
+
 :::note
 
 Blareden 按照正常来说并不会出现同步不及时的问题。如果你遇到了这种症状，那么尝试检查客户端侧的 mod 是否会导致这种问题。
 
 :::
+
+#### servux-protocol
+
+- **默认值**: `false`
+- **简介**: 启用对于 [Servux](https://github.com/maruohon/servux) 协议（minihud结构显示）的支持。
