@@ -27,6 +27,10 @@ Fakeplayer is a player entity. It can do most of the things a player can do. Suc
 As a player entity, the monster will also be attracted by the fakeplayer and attack it,
 but the fakeplayer has 0.01/tick natural health recovery.
 
+## Permissions
+
+- `bukkit.command.bot` - Allows the player to use the `/bot` command.
+
 ## Create
 
 To create a fakeplayer, you need to use the command `/bot create <Bot Name> [Skin Name]`
@@ -84,7 +88,7 @@ You can use `/bot action <Bot Name> <Action Name> [Action Args]` to make the spe
 - **type**: `Int`
 - **default**: `-1`
 - **description**: The number of times this action can complete a successful operation,
- or an infinite number of times if it is `-1`.
+  or an infinite number of times if it is `-1`.
 
 #### X or Y or Z
 
@@ -151,7 +155,7 @@ You can use `/bot action <Bot Name> <Action Name> [Action Args]` to make the spe
 - **name**: `use`
 - **args**: `[TickDelay]` `[DoNumber]`
 - **description**: The fakeplayer will attempt to use the item of the main hand.
- This action will not attempt to select a block or entity.
+  This action will not attempt to select a block or entity.
 
 :::caution
 
@@ -164,7 +168,7 @@ The behavior of the fakeplayer trying to use a item with GUI is undefined.
 - **name**: `use_on`
 - **args**: `[TickDelay]` `[DoNumber]`
 - **description**: The fakeplayer will attempt to use the item on the main hand for the
- nearest block.
+  nearest block.
 
 :::caution
 
@@ -177,7 +181,7 @@ The behavior of the fakeplayer trying to use a block with GUI is undefined.
 - **name**: `use_to`
 - **args**: `[TickDelay]` `[DoNumber]`
 - **description**: The fakeplayer will attempt to use the item on the main hand for the
- nearest entity. This action allows the fakeplayer to enter the vehicle.
+  nearest entity. This action allows the fakeplayer to enter the vehicle.
 
 :::caution
 
@@ -204,4 +208,3 @@ The behavior of the fakeplayer trying to use a entity with GUI is undefined.
 [world] is an optional parameter. It defaults to world/world_nether/world_the_end. You can also enter the name of your own custom world to view the bots in that world.
 
 Generally, the final output command is in this style: Total number:(current number of bots/max player capacity) World 1 (number):(will not be displayed if empty) World 2 (number):(will not be displayed if empty) World 3 (number):bot name 1, bot name 2…
-
