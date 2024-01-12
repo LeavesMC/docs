@@ -12,7 +12,7 @@ Any configuration for the "Leaves" server is in file `leaves.yml`.
 
 :::note
 
-The last updated version of the document is [Leaves-bc4728c](https://github.com/LeavesMC/Leaves/releases/tag/1.20.1-bc4728c).
+The last updated version of the document is [Leaves-1.20.4-45c933a](https://github.com/LeavesMC/Leaves/releases/tag/1.20.4-45c933a).
 
 :::
 
@@ -69,17 +69,23 @@ This is a test feature and an unofficial implementation, using this feature may 
 - **default**: `false`
 - **description**: If enabled, it will enable the bstats privacy mode on the server, which means that bstats no longer collect the number of players, the java version used by the server, and the online mode information.
 
-  #### auto-update.enable
+#### auto-update.enable
 
 - **default**: `false`
 - **description**: If enabled, the server will automatically detect the version and update to the latest version at the time you specify.
 
- #### auto-update.time
+:::note
+
+This function needs to be used with the automatic restart plugin.The server won't restart itself.
+
+:::
+
+#### auto-update.time
 
 - **default**: '- '14:00' - '2:00' '
 - **description**: Set the time for automatic updates. This function needs to be used with the auto-update. enable option.
 
- #### server-lang
+#### server-lang
 
 - **default**: 'en_us '
 - **description**: Set the language of the server. Currently supports zh_cn and en_us. 
@@ -87,22 +93,6 @@ This is a test feature and an unofficial implementation, using this feature may 
 
 
 ### modify
-
-#### return-nether-portal-fix
-
-- **default**: `false`
-- **description**: If enabled, it will fix the problem that players incorrectly transfer to other portals when returning from nether to the overworld.
-
-:::caution
-
-This configuration is a experimental function and may not work properly.
-
-:::
-
-#### snowball-and-egg-can-knockback-player
-
-- **default**: `true`
-- **description**: If enabled, then snowballs and eggs can knock players back.
 
 #### mc-technical-survival-mode
 
@@ -120,16 +110,92 @@ This configuration is a experimental function and may not work properly.
   - spigot.yml world-settings.max-tnt-per-tick: 2000
   - paper-global.yml item-validation.resolve-selectors-in-books: true
   - paper-world.yml fixes.disable-unloaded-chunk-enderpearl-exploit：false
+
 :::note
 
 If you find that there are other configurations that need to be overwritten, please submit an issue.
 
 :::
 
-#### instant-block-updater-reintroduced
+#### force-void-trade
+
+- **default**: `false`
+- **description**: "If enabled, the Force Void Trade feature will be activated. Void trades are considered triggered after a player passes through a nether portal once, without the need to wait for chunk unloading.
+
+:::danger
+
+This feature has serious vulnerabilities that lead to significant alterations in the original villager trading mechanics.
+
+:::
+
+#### return-nether-portal-fix
+
+- **default**: `false`
+- **description**: If enabled, it will fix the problem that players incorrectly transfer to other portals when returning from nether to the overworld.
+
+:::caution
+
+This configuration is a experimental function and may not work properly.
+
+:::
+
+#### snowball-and-egg-can-knockback-player
+
+- **default**: `true`
+- **description**: If enabled, then snowballs and eggs can knock players back.
+
+
+#### minecraft-old.instant-block-updater-reintroduced
 
 - **default**: `false`
 - **description**: If enabled, it will reintroduce the instant block update behavior from versions before 1.19, with that "update suppression" is doable in 1.19+ again.
+
+#### minecraft-old.shears-in-dispenser-can-zero-amount
+
+- **default**: `false`
+- **description**: If enabled, the shears can be used to negative durability in the dispenser without breaking.
+
+#### minecraft-old.armor-stand-cant-kill-by-mob-projectile
+
+- **default**：`false`
+- **description**：If enabled, it allows projectiles from creatures to damage armor stands. This feature was removed in 1.20.2.
+
+#### minecraft-old.villager-infinite-discounts
+
+- **default**：`false`
+- **description**：If enabled, the villagers can be discounted unlimited times. This feature was removed in 1.20.2.
+
+#### minecraft-old.mending-compatibility-infinity
+
+- **default**: `false`
+- **description**: If enabled, then both "mending" and "infinity" can exist on a bow.
+
+#### minecraft-old.loot-world-random
+
+- **default**：`false`
+- **description**：If enabled, the server will revert the loot table seed generation logic to pre-1.19.4.
+
+:::caution
+
+This configuration is a experimental function and may not work properly.
+
+:::
+
+ #### minecraft-old.zero-tick-plants
+
+- **default**: `false`
+- **description**: If enabled, then the server will re-add the 0-tick ripening mechanism to the game.
+
+#### minecraft-old.redstone-wire-dont-connect-if-on-trapdoor
+
+- **default**: `false`
+- **description**: If enabled, then redstone dust can be linked to redstone dust on an open trapdoor.This can restore the Simple Update Suppression before version 1.20.
+
+#### minecraft-old.cce-update-suppression
+
+- **default**: `false`
+- **description**: If enabled, the CCE update suppression will be re-enabled. For more information on CCE, refer to [Void0's column]
+  (https://www.bilibili.com/read/cv24323749/?spm_id_from=333.999.0.0).
 
 #### flatten-triangular-distribution
 
@@ -162,16 +228,10 @@ If you find that there are other configurations that need to be overwritten, ple
 - **default**: `-1.0`
 - **description**: The value is the probability that a phantom will drop a broken elytra when a shulker bullet killed it, if value is negative (value < 0, sgn(value) = -1), disable this configuration.
 
-#### shears-in-dispenser-can-zero-amount
+#### spider-jockeys-drop-gapples
 
 - **default**: `false`
-- **description**: If enabled, the shears can be used to negative durability in the dispenser without breaking.
-
-:::note
-
-This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
-
-:::
+- **description**: The probability of dropping an enchanted golden apple when a Spider Jockey is killed. If the value is negative, this feature is disabled.
 
 #### fix-update-suppression-crash
 
@@ -182,6 +242,12 @@ This is an bug of old version of minecraft. ~~It's not a bug it's a feature~~
 
 - **default**: `false`
 - **description**: If enabled, it will disable distance check for UseItemOnPacket.
+
+:::note
+
+When the `alternative-block-placement` configuration is not set to `NONE`, this setting will be automatically enabled to support easy placement.
+
+:::
 
 #### spectator-dont-get-advancement
 
@@ -248,7 +314,7 @@ However, in order not to break down the machine, empty shulker boxes are not sta
 
 :::caution
 
-This is an experimental function, and the actions of the fakeplayer will not be saved temporarily.
+The current actions, inventory, positional information, and skin of the fakeplayer will be saved.
 
 :::
 
@@ -278,15 +344,15 @@ The structure slots in the fakeplayer's inventory are placeholders and do not ha
 - **default**: `''`
 - **description**: Set the suffix for fakeplayers. It does not allow writing with Chinese or special symbols.
 
-#### redstone-wire-dont-connect-if-on-trapdoor
+#### fakeplayer.regen-amount
 
-- **default**: `false`
-- **description**: If enabled, then redstone dust can be linked to redstone dust on an open trapdoor.
+- **deafult**: `0.009999999776482582`
+- **description**: The amount of health the fakeplayer will recover per tick. If negative, the dummy will slowly lose health.
 
 #### disable-check-out-of-order-command
 
 - **default**: `false`
-- **description**: If enabled, it will disable update-chat-order (updatechatorder).
+- **description**: If enabled, it will fix the issue of schematic pasting failure when using Velocity as an upstream proxy.
 
 #### despawn-enderman-with-block
 
@@ -303,11 +369,6 @@ The structure slots in the fakeplayer's inventory are placeholders and do not ha
 This feature needs to enable configuration "leaves-carpet-support" and requires the player to install the carpet mod to work properly.
 
 :::
-
-#### mending-compatibility-infinity
-
-- **default**: `false`
-- **description**: If enabled, then both "mending" and "infinity" can exist on a bow.
 
 #### shave-snow-layers
 
@@ -399,21 +460,46 @@ This configuration will attempt to fix the raid farm issue through a highly aggr
 
 :::
 
+#### hopper-counter
+
+- **default**：`false`
+- **description**: If enabled,it will enable the `leaves counter` command and a wool hopper counter system similar to `Carpet`.
+
 #### avoid-anvil-too-expensive
 
 - **default**: `true`
 - **description**: If enabled, the expensive setting of the anvil will be cancelled.
+
+:::note
+
+Enabling only this feature allows excessively expensive enchants to be clickable, but the client won't display the actual enchantment level.
+
+If you want the client to display the actual enchantment level, you need to enable `leaves-carpet-support` and installed `plusls-carpet-addition` on the client.
+
+:::
 
 #### bow-infinity-fix
 
 - **default**: `false`
 - **description**: If enabled, then the server will allow the use of infinite bows even when there are no arrows in the inventory.
 
- #### zero-tick-plants
+#### tick-command
+
+- **default**：`false`
+- **description**: If enabled, it will activate the `leaves tick` command to control the server.
+
+:::caution
+
+This feature is an experimental feature and may not work correctly.
+This feature has been removed in 1.20.3 as Mojang has already provided commands with the same functionality
+
+:::
+
+#### disable-moved-wrongly-threshold
 
 - **default**: `false`
-- **description**: If enabled, then the server will re-add the 0-tick ripening mechanism to the game.
-
+- **description**: If enabled, the server will disable Spigot's player movement speed detection.\
+ This can effectively prevent players from receiving numerous unnecessary `moved wrongly` messages caused by exceeding normal movement speed.
 ### performance
 
 #### cache-climb-check
@@ -686,7 +772,8 @@ This function is not exactly the same as the original function.
 
 :::tip
 
-In easy placement, `CARPET` and `CARPET_FIX` corresponds to the `V2` mode, while `LITEMATICA` corresponds to the `V3` mode.Please note `CARPET_FIX` mode may require the client to install the `MasaGadget` mod in order to function properly.
+In easy placement, `CARPET` and `CARPET_FIX` corresponds to the `V2` mode, while `LITEMATICA` corresponds to the `V3` mode.\
+Please note `CARPET_FIX` mode may require the client to install the `MasaGadget` mod in order to function properly.
 
 :::
 
@@ -694,6 +781,16 @@ In easy placement, `CARPET` and `CARPET_FIX` corresponds to the `V2` mode, while
 
 - **default**: `false`
 - **description**: If enabled, it will support [pcaSyncProtocol](https://github.com/plusls/plusls-carpet-addition).
+
+#### pca-sync-player-entity
+
+- **default**: `OPS`
+- **description**: Control which players the pca sync protocol can sync.
+  - `NOBODY`: Nobody can be synced
+  - `BOT`: Fakeplayer can be synced
+  - `OPS`: Fakeplayer can be synced, OP can syncs all player datas
+  - `OPS_AND_SELF`: Fakeplayer can be synced, OP can sync all player datas, players can sync themselves datas
+  - `EVERYONE`: Everyone can be synced by everyone.
 
 #### syncmatica.enable
 
@@ -726,16 +823,6 @@ Using this project on a server with Viaversion loaded will cause some problems, 
 - **default**: `false`
 - **description**: If enabled, it will support [BBOR Mod](https://github.com/irtimaled/BoundingBoxOutlineReloaded).
 
-#### pca-sync-player-entity
-
-- **default**: `OPS`
-- **description**: Control which players the pca sync protocol can sync.
-  - `NOBODY`: Nobody can be synced
-  - `BOT`: Fakeplayer can be synced
-  - `OPS`: Fakeplayer can be synced, OP can syncs all player datas
-  - `OPS_AND_SELF`: Fakeplayer can be synced, OP can sync all player datas, players can sync themselves datas
-  - `EVERYONE`: Everyone can be synced by everyone.
-
 #### appleskin-protocol
 
 - **default**: `false`
@@ -757,8 +844,18 @@ Using this project on a server with Viaversion loaded will cause some problems, 
 - **default**: `false`
 - **description**: If enabled, it will support [Bladeren Mod](https://github.com/LeavesMC/Bladeren)'s mspt sync.
 
+#### bladeren.mspt-sync-tick-interval
+
+- **default**: `20`
+- **description**: The frequency of `MSPT` information synchronization, measured in ticks.
+
 :::note
 
 Blareden should not have the problem of synchronization lagging under normal circumstances. If you encounter this symptom, try checking if the client-side mod will cause this problem.
 
 :::
+
+#### servux-protocol
+
+- **deafult**: `false`
+- **description**: If enabled,it will support [Servux](https://github.com/maruohon/servux) (minihud structure display")
