@@ -858,4 +858,4 @@ Blareden should not have the problem of synchronization lagging under normal cir
 #### servux-protocol
 
 - **deafult**: `false`
-- **description**: If enabled,it will support [Servux](https://github.com/maruohon/servux) (minihud structure display")
+- **description**: If enabled,it will support [Servux](https://github.com/maruohon/servux) (minihud structure display)
