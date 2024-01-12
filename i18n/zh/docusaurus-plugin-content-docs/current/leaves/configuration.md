@@ -367,7 +367,7 @@ minecraft-old中的配置均是在历代minecraft中出现过的bug/特性。
 #### fakeplayer.regen-amount
 
 - **默认值**: `0.009999999776482582`
-- **简介**: 假人某tick将恢复的生命值，如果为负数，假人则会缓慢流失生命。
+- **简介**: 假人每tick将恢复的生命值，如果为负数，假人则会缓慢流失生命。
 
 #### disable-check-out-of-order-command
 
@@ -488,7 +488,7 @@ minecraft-old中的配置均是在历代minecraft中出现过的bug/特性。
 #### hopper-counter
 
 - **默认值**：`false`
-- **简介**: 如果为是，那么将启用 `leaves counter` 指令与和carpet基本一致的羊毛漏斗 计数器系统。
+- **简介**: 如果为是，那么将启用 `leaves counter` 指令与和carpet基本一致的羊毛漏斗计数器系统。
 
 #### avoid-anvil-too-expensive
 
