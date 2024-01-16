@@ -5,6 +5,27 @@
  */
 
 /* You can override the default Infima variables here. */
+
+.reactMarkDown {
+  display: flex;
+  flex-direction: column;
+}
+
+.reactMarkDown p {
+  margin-bottom: 0;
+}
+
+.reactMarkDown ul {
+  margin: 0;
+  list-style: disc outside none;
+}
+
+.reactMarkDown li {
+  margin: 0;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -19,6 +40,10 @@
 
   --ifm-font-family-monospace: "JetBrains Mono", "SFMono-Regular", "Menlo", "Consolas",
     "Liberation Mono", monospace;
+
+  /* Config Node */
+  --default-config-node-text-color: rgb(148, 148, 148);
+  --config-node-highlight-text-color: black;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -31,6 +56,10 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Config Node */
+  --default-config-node-text-color: rgb(128, 128, 128);
+  --config-node-highlight-text-color: white;
 }
 
 .header-icon-link::before {
@@ -133,4 +162,144 @@
   border-left-color: var(--ifm-menu-color-active);
   /* prevent text wrapping changes by shifting text to match new border */
   padding-left: calc(var(--ifm-menu-link-padding-horizontal) - var(--size));
+}
+
+.config-node {
+  font: var(--ifm-font-size-base)/var(--ifm-pre-line-height) var(--ifm-font-family-monospace);
+  text-decoration: none !important; /* SHOULD work without !important, but doesn't... */
+  text-align: left;
+}
+
+.with-value {
+  transition: color 0.3s;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.with-value:hover {
+  color: var(--ifm-color-primary);
+}
+
+.with-value:hover .expand-list-text {
+  color: var(--ifm-color-primary);
+}
+
+.with-value-active {
+  cursor: pointer;
+  color: var(--ifm-color-primary);
+}
+
+.indent-2 {
+  margin-left: 20px;
+}
+
+.description_word_wrap {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.outlined-box {
+  border-left: 5px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-alert-border-radius);
+  padding: 8px;
+}
+
+.color-offset-box {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.description-text {
+  margin-top: 7px;
+  margin-bottom: 0;
+  width: fit-content;
+}
+
+.config-container {
+  font-variant-ligatures: no-contextual;
+  position: relative;
+}
+
+.config-button {
+  position: absolute;
+  padding: 0px;
+  width: 90px;
+  top: 10px;
+  right: 10px;
+}
+
+.config-anchor {
+  text-decoration: none;
+}
+
+.config-anchor:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.config-auxiliary-node {
+  padding-left: 2px;
+  color: var(--default-config-node-text-color);
+}
+
+@keyframes fadein {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--default-config-node-text-color);
+  }
+  15% {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--default-config-node-text-color)
+  }
+  100% {
+    background-color: var(--ifm-color-primary-lightest);
+    color: var(--config-node-highlight-text-color);
+  }
+}
+
+.highlight-config-node:hover > .config-auxiliary-node {
+  color: var(--config-node-highlight-text-color);
+}
+
+.highlight-config-node:hover > .config-auxiliary-node {
+  background-color: var(--ifm-color-primary-lightest);
+  border-radius: 0.2em;
+  animation: fadein 0.55s;
+  -moz-animation: fadein 0.55s;
+  width: fit-content;
+}
+
+ul.yaml-list-elem {
+  margin: 0;
+  list-style-type: none;
+}
+
+ul.yaml-list-elem > li {
+  margin: 0;
+  text-indent: -15px;
+}
+
+ul.yaml-list-elem > li:before {
+  content: "- ";
+}
+
+.expand-list-text {
+  transition: color 0.3s;
+}
+
+.expand-list-text:hover {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .expand-list-text {
+  color: rgb(128, 128, 128);
+}
+
+[data-theme="light"] .expand-list-text {
+  color: rgb(148, 148, 148);
+}
+
+.padding-md{
+  padding: 0.5rem;
+  border-radius: 8px;
 }

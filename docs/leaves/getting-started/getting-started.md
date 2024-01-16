@@ -46,7 +46,7 @@ disables Vanilla's GUI, so you don't get double interfaces when using the comman
 
 For more advanced Java tuning, see [Aikar's Flags](https://docs.papermc.io/paper/aikars-flags).
 
-To configure your server, see the [Leaves Configuration](../configuration.md) page.
+To configure your server, see the [Leaves Configuration](../configuration.mdx) page.
 
 You also need to see the [Paper Global Configuration](https://docs.papermc.io/paper/reference/global-configuration) and
 [Paper Per World Configuration](https://docs.papermc.io/paper/reference/world-configuration) pages to configure the paper config.

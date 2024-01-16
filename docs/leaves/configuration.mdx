@@ -1,0 +1,36 @@
+---
+slug: /leaves/configuration
+toc_max_heading_level: 4
+keywords:
+  - leaves.yml
+  - leaves.yml settings
+---
+
+import Config from '@site/src/components/Config';
+import GlobalConfigSpec from '!!raw-loader!@site/config-specs/leaves/leaves.yml';
+
+# Leaves Configuration
+
+Any configuration for the "Leaves" server is in file `leaves.yml`.
+
+:::note
+
+The last updated version of the document is [Leaves-1.20.4-08bc505](https://github.com/LeavesMC/Leaves/releases/tag/1.20.4-08bc505).
+
+:::
+
+:::tip
+
+Some configurations may override the upstream configuration (such as paper.yml).
+
+:::
+
+:::info
+
+The below YAML shows you the structure and default values for the leaves configuration (`leaves.yml`).
+
+Click on a leaf node to view the description for that setting.
+
+:::
+
+<Config data={GlobalConfigSpec}/>
