@@ -24,11 +24,7 @@
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-markdown": "^9.0.1",
-    "remark-admonitions": "^1.2.1",
-    "remark-directive": "^3.0.0",
-    "remarkable": "^2.0.1",
-    "remarkable-admonitions": "^0.2.2"
+    "remarkable": "^2.0.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.4.1",
